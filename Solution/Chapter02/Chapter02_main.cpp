@@ -9,12 +9,14 @@ int getArrayLength(T& array)
 	return (sizeof(array) / sizeof(array[0]));
 }
 
-string Menu[5] = {
+string Menu[] = {
 	"Print personal info.",
 	"Covert distance.",
 	"Print str.",
 	"Covert age to how month.",
 	"Covert celsius to fahrenheit.",
+	"Covert light years to astronomical units.",
+	"Print enter hour and minute",
 };
 
 void CreateMenu()
@@ -34,6 +36,8 @@ int convertDistance(int length);//2.7	02.
 void displayString(string str);//2.7	03.
 int convertAgeToMonth(int age);//2.7	04.
 float convertCelsiusToFahrenheit(float celsius);//2.7	05.
+double convertLightYearsToAstrUnits(double lYears);//2.7	06.
+int displayTime(int hour, int min);//2.7	07.
 
 void ChooseStep()
 {
@@ -70,7 +74,7 @@ void ChooseStep()
 			cout << "输入年龄:" << ends;//04.
 			int age;
 			cin >> age;
-			float month = convertAgeToMonth(age);
+			int month = convertAgeToMonth(age);
 			cout << "该年龄包含" << month << "个月" << endl;
 			break;
 		}
@@ -83,7 +87,27 @@ void ChooseStep()
 			cout << "摄氏度:" << celsius << " " << "华氏度:" << fahrenheit << endl;
 			break;
 		}
+		case 6:
+		{
+			cout << "输入光年:" << ends;//06.
+			int lYears;
+			cin >> lYears;
+			float astrUnits = convertLightYearsToAstrUnits(lYears);
+			cout << "光年:" << lYears << " " << "天文单位:" << astrUnits << endl;
+			break;
+		}
+		case 7:
+		{
+			int hour, minute;
+			cout << "输入小时:" << ends;//07.
+			cin >> hour;
+			cout << "输入分钟:" << ends;
+			cin >> minute;
+			displayTime(hour, minute);
+			break;
+		}
 		default:
+			if (enterNum == 0) return;
 			cout << "无此操作！" << endl;
 			CreateMenu();
 			break;
@@ -126,4 +150,16 @@ float convertCelsiusToFahrenheit(float celsius)
 {
 	float fahrenheit = celsius * 1.8 + 32.0;
 	return fahrenheit;
+}
+
+double convertLightYearsToAstrUnits(double lYears)
+{
+	double astrUnits = lYears * 63240;
+	return astrUnits;
+}
+
+int displayTime(int hour, int min)
+{
+	cout << "Time:" << hour << ":" << min << endl;
+	return 0;
 }
