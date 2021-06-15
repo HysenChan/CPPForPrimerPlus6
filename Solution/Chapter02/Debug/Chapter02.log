@@ -1,0 +1,5 @@
+﻿  Chapter02_main.cpp
+D:\GithubProjects\CPPForPrimerPlus6\Solution\Chapter02\Chapter02_main.cpp(86,50): warning C4244: “参数”: 从“int”转换到“float”，可能丢失数据
+D:\GithubProjects\CPPForPrimerPlus6\Solution\Chapter02\Chapter02_main.cpp(95,20): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+D:\GithubProjects\CPPForPrimerPlus6\Solution\Chapter02\Chapter02_main.cpp(151,19): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+  Chapter02.vcxproj -> D:\GithubProjects\CPPForPrimerPlus6\Solution\Debug\Chapter02.exe
