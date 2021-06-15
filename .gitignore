@@ -31,7 +31,6 @@
 *.out
 *.app
 /Solution/.vs/Solution/v16/Preview
-/Solution/Solution.sln
 /Solution/Chapter02/Chapter02.vcxproj.user
 /Solution/Chapter02/Chapter02.vcxproj.filters
 /Solution/Chapter02/Chapter02.vcxproj
