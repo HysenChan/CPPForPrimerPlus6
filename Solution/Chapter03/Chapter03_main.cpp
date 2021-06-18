@@ -8,7 +8,8 @@ using namespace std;
 int main()
 {
 	//sizeofBaseType();
-	displayFloatAndDouble();
+	//displayFloatAndDouble();
+	//displayFloatAndDoubleCalc();
 	return 0;
 }
 
@@ -45,4 +46,14 @@ void displayFloatAndDouble()
 	cout << "10 * tub * million=" << 10 * tub * million << endl;
 	cout << "mint=" << mint << endl;
 	cout << "mint*million=" << mint * million << endl;
+}
+
+void displayFloatAndDoubleCalc()
+{
+	float a = 2.34e+22f;
+	float b = a + 1.0f;
+
+	cout << "a=" << a << endl;
+	cout << "b=" << b << endl;
+	cout << "b-a=" << b - a << endl;
 }
