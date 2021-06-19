@@ -33,6 +33,10 @@
 
 /.vs/
 /x64/
-/Solution/.vs/Solution/v16/Preview
-/Solution/Chapter02/Debug
-/Solution/Chapter03/Debug
+/Solution/.vs/Solution/v16/
+*.ilk
+*.tlog
+*.recipe
+*.pdb
+*.log
+*.idb
