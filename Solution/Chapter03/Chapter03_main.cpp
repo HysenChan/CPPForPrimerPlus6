@@ -10,7 +10,8 @@ int main()
 	//sizeofBaseType();
 	//displayFloatAndDouble();
 	//displayFloatAndDoubleCalc();
-	divideCalc();
+	//divideCalc();
+	modulusCalc();
 	return 0;
 }
 
@@ -67,4 +68,16 @@ void divideCalc()
 	cout << "Mixed division:9.0/5=" << 9.0/5 << endl;
 	cout << "Double constants:1e7/9.0=" << 1.e7 / 9.0 << endl;
 	cout << "Float constants:1e7f/9.0f=" << 1.e7f / 9.0f << endl;
+}
+
+void modulusCalc()
+{
+	const int perLbsStn = 14;
+	int lbs;
+
+	cout << "Enter your weight in pounds:";
+	cin >> lbs;
+	int stone = lbs / perLbsStn;
+	int pounds = lbs % perLbsStn;
+	cout << "stone:" << stone << "\npounds:" << pounds << endl;
 }
