@@ -11,7 +11,10 @@ int main()
 	//displayFloatAndDouble();
 	//displayFloatAndDoubleCalc();
 	//divideCalc();
-	modulusCalc();
+	//modulusCalc();
+	//conversionType();
+	//conversionTypeOfCpp11();
+	conversionTypeCast();
 	return 0;
 }
 
@@ -39,7 +42,7 @@ void sizeofBaseType()
 void displayFloatAndDouble()
 {
 	cout.setf(ios_base::fixed, ios_base::floatfield);
-	float tub = 10.0 / 3.0;
+	float tub = 10.0f / 3.0f;
 	double mint = 10.0 / 3.0;
 	const float million = 1.0e6;
 
@@ -80,4 +83,49 @@ void modulusCalc()
 	int stone = lbs / perLbsStn;
 	int pounds = lbs % perLbsStn;
 	cout << "stone:" << stone << "\npounds:" << pounds << endl;
+}
+
+void conversionType()
+{
+	cout.setf(ios_base::fixed, ios_base::floatfield);
+	float tree = 3;
+	int guess(3.1415f);
+	int debt = 7.2E12;
+
+	cout << "tree:" << tree << endl;
+	cout << "guess:" << guess << endl;
+	cout << "debt:" << debt << endl;
+}
+
+void conversionTypeOfCpp11()
+{
+	const int code = 66;
+	int x = 66;
+	//char c1{ 31325 };//not allow
+	char c2 = { 66 };
+	char c3{ code };
+	//char c4 = { x };//not allow
+	x = 31325;
+	char c5 = x;
+
+	//cout << "c1:" << c1 << endl;
+	cout << "c2:" << c2 << endl;
+	cout << "c3:" << c3 << endl;
+	//cout << "c4:" << c4 << endl;
+	cout << "c5:" << c5 << endl;
+}
+
+void conversionTypeCast()
+{
+	int auks, bats, coots;
+
+	auks = 19.99 + 11.99;//31.98->31
+
+	bats = (int)19.99 + (int)11.99;//19+11->30
+	coots = int(19.99) + int(11.99);//ditto
+
+	cout << "auks:" << auks << ends << "bats:" << bats << ends << "coots:" << coots << endl;
+
+	char ch = 'Z';
+	cout << "ch:" << ch << ends << "int(ch):" << int(ch) << ends << "static_cast<int>:" << static_cast<int>(ch) << endl;
 }
