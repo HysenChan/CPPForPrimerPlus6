@@ -1,7 +1,10 @@
 #include<iostream>
 #include<climits>
 #include<cfloat>
+#include<math.h>
 #include "Chapter03_main.h"
+
+#define PI acos(-1)
 
 using namespace std;
 
@@ -14,7 +17,10 @@ int main()
 	//modulusCalc();
 	//conversionType();
 	//conversionTypeOfCpp11();
-	conversionTypeCast();
+	//conversionTypeCast();
+	//PrecisionConversion();
+	DoubleToInt();
+
 	return 0;
 }
 
@@ -68,7 +74,7 @@ void divideCalc()
 	cout.setf(ios_base::fixed, ios_base::floatfield);
 	cout << "Integer division: 9/5=" << 9 / 5 << endl;
 	cout << "Floating-point division:9.0/5.0=" << 9.0 / 5.0 << endl;
-	cout << "Mixed division:9.0/5=" << 9.0/5 << endl;
+	cout << "Mixed division:9.0/5=" << 9.0 / 5 << endl;
 	cout << "Double constants:1e7/9.0=" << 1.e7 / 9.0 << endl;
 	cout << "Float constants:1e7f/9.0f=" << 1.e7f / 9.0f << endl;
 }
@@ -128,4 +134,32 @@ void conversionTypeCast()
 
 	char ch = 'Z';
 	cout << "ch:" << ch << ends << "int(ch):" << int(ch) << ends << "static_cast<int>:" << static_cast<int>(ch) << endl;
+}
+
+void PrecisionConversion()
+{
+	cout.setf(ios_base::fixed, ios::floatfield);
+	cout << LONG_MAX << endl;
+	float a = LONG_MAX;
+	cout << a << endl;//ÓÐÎó²î
+	double b = LONG_MAX;
+	cout << b << endl;//ÎÞÎó²î
+
+	cout << LLONG_MAX << endl;
+	float c = LLONG_MAX;
+	cout << c << endl;//ÓÐÎó²î
+	double d = LLONG_MAX;
+	cout << d << endl;//ÓÐÎó²î
+}
+
+void DoubleToInt()
+{
+	double x1 = 1.999999;
+	double x2 = 8.999999;
+	cout.setf(ios_base::fixed, ios_base::floatfield);
+	cout << "x1:" << double(x1) << ends << "x2:" << double(x2) << endl;
+	int a = int(x1) + int(x2);
+	cout << "a:" << a << endl;
+	int b = x1 + x2;
+	cout << "b:" << b << endl;
 }
