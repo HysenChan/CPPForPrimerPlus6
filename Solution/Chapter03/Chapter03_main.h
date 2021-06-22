@@ -16,3 +16,6 @@ void conversionTypeCast();//强制类型转换；转换前后的区别等
 //Chapter03 P68
 void PrecisionConversion();//long ->float & double; long long ->float & double	07.
 void DoubleToInt();//09.
+
+//练习题：
+void InchToFoot();//英寸->英尺

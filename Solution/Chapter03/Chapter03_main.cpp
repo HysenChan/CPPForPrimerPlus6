@@ -19,7 +19,8 @@ int main()
 	//conversionTypeOfCpp11();
 	//conversionTypeCast();
 	//PrecisionConversion();
-	DoubleToInt();
+	//DoubleToInt();
+	InchToFoot();
 
 	return 0;
 }
@@ -162,4 +163,16 @@ void DoubleToInt()
 	cout << "a:" << a << endl;
 	int b = x1 + x2;
 	cout << "b:" << b << endl;
+}
+
+void InchToFoot()
+{
+	const float ONE_INCH = 1.0f / 12.0f;
+	cout.setf(ios_base::fixed, ios_base::floatfield);
+	cout << "Please enter your height by inch:____\b\b\b\b";
+	int inch;
+	cin >> inch;
+	float foot = inch * ONE_INCH;
+	cout << "Height inch is:" << inch << endl;
+	cout << "Height foot is:" << foot << endl;
 }
