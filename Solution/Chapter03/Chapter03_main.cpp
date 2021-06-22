@@ -24,7 +24,9 @@ int main()
 	//CalcBMI();
 	//CalcDegress();
 	//SecToSpecific();
-	PrecentOfPerson();
+	//PrecentOfPerson();
+	//EuropeStyleOil();
+	UsStypeOil();
 
 	return 0;
 }
@@ -250,4 +252,40 @@ void PrecentOfPerson()
 	double precent = double(chinaPerson) / worldPerson;
 	precent *= 100;
 	cout << "The population of the china is " << precent << "% of the world population.";
+}
+
+void EuropeStyleOil()
+{
+	//输入英里和加仑
+	float mile, gallon;
+	cout << "Please enter mile:";
+	cin >> mile;
+	cout << "Please enter gallon:";
+	cin >> gallon;
+	//欧洲风格
+	cout << "one gallon run:" << mile / gallon << endl;//1加仑跑的距离
+
+	//输入公里和升
+	float km, liter;
+	cout << "Please enter km:";
+	cin >> km;
+	cout << "Please enter liter:";
+	cin >> liter;
+	cout << "one hundred km consume " << 100 * (liter / km) << "L." << endl;//欧洲风格100km耗油量?L
+}
+
+void UsStypeOil()
+{
+	const float one_hundred_km_for_mile = 62.14;
+	const float one_gallon_for_liter = 3.875;
+	const float one_hundred_km_for_liter = 12.4;
+
+	//输入耗油量
+	float liter;
+	cout << "Please enter consume liter:";
+	cin >> liter;
+	cout << "use gallon:" << liter / one_gallon_for_liter << endl;
+	//美国风格
+	cout << "one gallon can run " << one_hundred_km_for_mile / (one_hundred_km_for_liter / one_gallon_for_liter) << " mile." << endl;//每加仑？英里
+	cout << "one mile consume gallon " << one_hundred_km_for_liter / one_gallon_for_liter / one_hundred_km_for_mile << " L." << endl;//每英里？加仑
 }

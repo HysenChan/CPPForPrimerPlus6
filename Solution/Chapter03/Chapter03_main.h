@@ -23,3 +23,5 @@ void CalcBMI();//计算BMI	Test02
 void CalcDegress();//计算纬度	Test03
 void SecToSpecific();//秒数转换成对应时间	Test04
 void PrecentOfPerson();//某国家人口占总人口的百分比	Test05
+void EuropeStyleOil();//欧洲风格(燃料/距离)	Test06
+void UsStypeOil();//美国风格(距离/燃料)	Test07
