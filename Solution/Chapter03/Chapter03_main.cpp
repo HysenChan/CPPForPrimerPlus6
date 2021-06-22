@@ -22,7 +22,8 @@ int main()
 	//DoubleToInt();
 	//InchToFoot();
 	//CalcBMI();
-	CalcDegress();
+	//CalcDegress();
+	SecToSpecific();
 
 	return 0;
 }
@@ -216,4 +217,22 @@ void CalcDegress()
 	float minToDegrees = secToMin / one_degress_for_min + float(minutes) / one_degress_for_min;
 	float finallDegrees = float(degrees) + minToDegrees;
 	cout << degrees << " degrees , " << minutes << " minutes , " << seconds << " seconds = " << finallDegrees << " degrees." << endl;
+}
+
+void SecToSpecific()
+{
+	const int one_day_for_hour = 24;//1day->24h
+	const int one_hour_for_min = 60;//1hour->60min
+	const int one_min_for_sec = 60;//1min->60sec
+	const int oneDaySec = one_day_for_hour * one_hour_for_min * one_min_for_sec;//1day->86400sec
+
+	cout << "Enter the number of seconds:";
+	long inputSec;
+	cin >> inputSec;
+
+	int seconds = inputSec % one_min_for_sec;//秒数取余
+	int minutes = (inputSec / one_min_for_sec) % one_min_for_sec;//转换成分钟，分钟取余
+	int hours = (inputSec / one_min_for_sec / one_hour_for_min) % one_day_for_hour;//转换成小时，小时取余
+	int days = inputSec / oneDaySec;//总秒数/一天总秒数
+	printf("%ld seconds = %d days, %d hours, %d minutes, %d seconds:", inputSec, days, hours, minutes, seconds);
 }

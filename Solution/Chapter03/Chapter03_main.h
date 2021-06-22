@@ -21,3 +21,4 @@ void DoubleToInt();//09.
 void InchToFoot();//英寸->英尺	Test01
 void CalcBMI();//计算BMI	Test02
 void CalcDegress();//计算纬度	Test03
+void SecToSpecific();//秒数转换成对应时间	Test04
