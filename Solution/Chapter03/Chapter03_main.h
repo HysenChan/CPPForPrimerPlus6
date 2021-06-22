@@ -19,3 +19,4 @@ void DoubleToInt();//09.
 
 //¡∑œ∞Ã‚£∫
 void InchToFoot();//”¢¥Á->”¢≥ﬂ
+void CalcBMI();//º∆À„BMI

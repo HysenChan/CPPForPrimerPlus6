@@ -20,7 +20,8 @@ int main()
 	//conversionTypeCast();
 	//PrecisionConversion();
 	//DoubleToInt();
-	InchToFoot();
+	//InchToFoot();
+	CalcBMI();
 
 	return 0;
 }
@@ -167,12 +168,33 @@ void DoubleToInt()
 
 void InchToFoot()
 {
-	const float ONE_INCH = 1.0f / 12.0f;
+	const float one_inch_for_foot = 1.0f / 12.0f;
 	cout.setf(ios_base::fixed, ios_base::floatfield);
 	cout << "Please enter your height by inch:____\b\b\b\b";
 	int inch;
 	cin >> inch;
-	float foot = inch * ONE_INCH;
+	float foot = inch * one_inch_for_foot;
 	cout << "Height inch is:" << inch << endl;
 	cout << "Height foot is:" << foot << endl;
+}
+
+void CalcBMI()
+{
+	const int one_foot_for_inch = 12;
+	const float one_foot_for_meter = 0.0254f;
+	const float one_kg_for_pounds = 2.2f;
+	int foot, inch;
+	float pounds;
+	cout << "Please enter your foot and inch:" << ends;
+	cin >> foot;
+	cin >> inch;
+	int convertInch = foot * one_foot_for_inch + inch;
+	float height = convertInch * one_foot_for_meter;
+	cout << "Your height is:" << height << endl;
+	cout << "Please enter your pounds:" << ends;
+	cin >> pounds;
+	float weight = pounds / one_kg_for_pounds;
+	cout << "Your weight is:" << weight << endl;
+	double bmi = pow(weight / height, 2);
+	cout << "Your BMI is:" << bmi << endl;
 }
