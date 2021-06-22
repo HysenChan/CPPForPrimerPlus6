@@ -21,7 +21,8 @@ int main()
 	//PrecisionConversion();
 	//DoubleToInt();
 	//InchToFoot();
-	CalcBMI();
+	//CalcBMI();
+	CalcDegress();
 
 	return 0;
 }
@@ -197,4 +198,22 @@ void CalcBMI()
 	cout << "Your weight is:" << weight << endl;
 	double bmi = pow(weight / height, 2);
 	cout << "Your BMI is:" << bmi << endl;
+}
+
+void CalcDegress()
+{
+	const int one_degress_for_min = 60;
+	const int one_min_for_sec = 60;
+	int degrees, minutes, seconds;
+	cout << "Enter a latitude in degress, minutes, and seconds:" << endl;
+	cout << "First, enter the degrees:" << ends;
+	cin >> degrees;
+	cout << "Next, enter the minutes of arc:" << ends;
+	cin >> minutes;
+	cout << "Finally, enter the seconds of arc:" << ends;
+	cin >> seconds;
+	float secToMin = float(seconds) / one_min_for_sec;
+	float minToDegrees = secToMin / one_degress_for_min + float(minutes) / one_degress_for_min;
+	float finallDegrees = float(degrees) + minToDegrees;
+	cout << degrees << " degrees , " << minutes << " minutes , " << seconds << " seconds = " << finallDegrees << " degrees." << endl;
 }

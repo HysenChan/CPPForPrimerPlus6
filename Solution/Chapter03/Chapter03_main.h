@@ -18,5 +18,6 @@ void PrecisionConversion();//long ->float & double; long long ->float & double	0
 void DoubleToInt();//09.
 
 //¡∑œ∞Ã‚£∫
-void InchToFoot();//”¢¥Á->”¢≥ﬂ
-void CalcBMI();//º∆À„BMI
+void InchToFoot();//”¢¥Á->”¢≥ﬂ	Test01
+void CalcBMI();//º∆À„BMI	Test02
+void CalcDegress();//º∆À„Œ≥∂»	Test03
