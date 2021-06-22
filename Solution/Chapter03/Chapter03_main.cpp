@@ -23,7 +23,8 @@ int main()
 	//InchToFoot();
 	//CalcBMI();
 	//CalcDegress();
-	SecToSpecific();
+	//SecToSpecific();
+	PrecentOfPerson();
 
 	return 0;
 }
@@ -235,4 +236,18 @@ void SecToSpecific()
 	int hours = (inputSec / one_min_for_sec / one_hour_for_min) % one_day_for_hour;//转换成小时，小时取余
 	int days = inputSec / oneDaySec;//总秒数/一天总秒数
 	printf("%ld seconds = %d days, %d hours, %d minutes, %d seconds:", inputSec, days, hours, minutes, seconds);
+}
+
+void PrecentOfPerson()
+{
+	long long worldPerson;
+	long long chinaPerson;
+	cout << "Enter the world's population:";
+	cin >> worldPerson;
+	cout << "Enter the china's population:";
+	cin >> chinaPerson;
+
+	double precent = double(chinaPerson) / worldPerson;
+	precent *= 100;
+	cout << "The population of the china is " << precent << "% of the world population.";
 }

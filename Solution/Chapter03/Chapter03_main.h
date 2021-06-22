@@ -22,3 +22,4 @@ void InchToFoot();//英寸->英尺	Test01
 void CalcBMI();//计算BMI	Test02
 void CalcDegress();//计算纬度	Test03
 void SecToSpecific();//秒数转换成对应时间	Test04
+void PrecentOfPerson();//某国家人口占总人口的百分比	Test05
