@@ -6,7 +6,8 @@ using namespace std;
 int main()
 {
 	//ArrayOne();
-	StringBase();
+	//StringBase();
+	InStr1Cpp();
 	return 0;
 }
 
@@ -42,4 +43,17 @@ void StringBase()
 	cout << "B:	Your initial is " << name1[0] << ".\n";
 	name2[3] = '\0';
 	cout << "A:	Here are the first 3 character of my name:" << name2 << endl;
+}
+
+void InStr1Cpp()
+{
+	const int ArSize = 20;
+	char name[ArSize];
+	char dessert[ArSize];
+
+	cout << "Enter your name:\n";
+	cin >> name;
+	cout << "Enter your favorite dessert:\n";
+	cin >> dessert;
+	cout << "I have some delicious " << dessert << " for you," << name<<".\n";
 }
