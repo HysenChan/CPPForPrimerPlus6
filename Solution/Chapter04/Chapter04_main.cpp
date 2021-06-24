@@ -52,8 +52,10 @@ void InStr1Cpp()
 	char dessert[ArSize];
 
 	cout << "Enter your name:\n";
-	cin >> name;
+	//cin >> name;
+	cin.getline(name, ArSize);
 	cout << "Enter your favorite dessert:\n";
-	cin >> dessert;
+	//cin >> dessert;
+	cin.getline(dessert, ArSize);
 	cout << "I have some delicious " << dessert << " for you," << name<<".\n";
 }
