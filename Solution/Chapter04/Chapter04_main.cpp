@@ -7,7 +7,8 @@ int main()
 {
 	//ArrayOne();
 	//StringBase();
-	InStr1Cpp();
+	//InStr1Cpp();
+	NumStr();
 	return 0;
 }
 
@@ -62,4 +63,16 @@ void InStr1Cpp()
 	//cin.getline(name, ArSize).getline(dessert, ArSize);
 	cin.get(dessert, ArSize).get();
 	cout << "I have some delicious " << dessert << " for you," << name<<".\n";
+}
+
+void NumStr()
+{
+	cout << "What year was your house built?\n";
+	int year;
+	//cin >> year;//会导致地址没办法输入，需要先摒弃换行符'\n'
+	(cin >> year).get();
+	cout << "What is its stree address?\n";
+	char address[80];
+	cin.getline(address, 80);
+	cout << "Year built:" << year << " and address is " << address << endl;
 }
