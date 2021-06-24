@@ -5,7 +5,8 @@ using namespace std;
 
 int main()
 {
-	ArrayOne();
+	//ArrayOne();
+	StringBase();
 	return 0;
 }
 
@@ -25,6 +26,20 @@ void ArrayOne()
 	int elementNum = sizeof yamcosts / sizeof(int);
 	cout << "The element num of yamcosts is " << elementNum << ".\n";
 
-	cout << "\nSize of yams array = " << sizeof yams<<" bytes.\n";
+	cout << "\nSize of yams array = " << sizeof yams << " bytes.\n";
 	cout << "Size of one element = " << sizeof yams[0] << " bytes.\n";
+}
+
+void StringBase()
+{
+	const int Size = 15;
+	char name1[Size];
+	char name2[Size] = "C++owboy";
+
+	cout << "B:	Hi,I'm " << name2 << ",What's your name?\n";
+	cin >> name1;
+	cout << "A:	My name is " << name1 << ",has " << strlen(name1) << " letters and is stored in an array of " << sizeof(name1) << " bytes.\n";
+	cout << "B:	Your initial is " << name1[0] << ".\n";
+	name2[3] = '\0';
+	cout << "A:	Here are the first 3 character of my name:" << name2 << endl;
 }
