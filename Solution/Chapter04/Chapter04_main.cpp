@@ -9,7 +9,8 @@ int main()
 	//StringBase();
 	//InStr1Cpp();
 	//NumStr();
-	StrType();
+	//StrType();
+	StrType2();
 	return 0;
 }
 
@@ -98,4 +99,21 @@ void StrType()
 	cout << "Here are some felines;\n" << charr1 << " " << charr2 << " " << str1 << " " << str2 << endl;
 	cout << "The third letter in " << charr2 << " is " << charr2[2] << endl;
 	cout << "The third letter in " << str2 << " is " << str2[2] << endl;
+}
+
+void StrType2()
+{
+	string s1 = "penguin";
+	string s2, s3;
+
+	cout << "You can assign one string object to another: s2 = s1\n";
+	s2 = s1;
+	cout << "s1: " << s1 << ",s2:" << s2 << endl;
+	cout << "s2 = 'buzzard'\n";
+	s2 = "buzzard";
+	cout << "s2:" << s2 << endl;
+	s3 = s1 + s2;
+	cout << "s3=s1+s2:" << s3 << endl;
+	s1 += s3;
+	cout << "s1+=s3:" << s1 << endl;
 }
