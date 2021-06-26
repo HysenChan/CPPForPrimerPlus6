@@ -1,4 +1,3 @@
-#include<iostream>
 #include"Chapter04_main.h"
 
 using namespace std;
@@ -10,7 +9,9 @@ int main()
 	//InStr1Cpp();
 	//NumStr();
 	//StrType();
-	StrType2();
+	//StrType2();
+	//StrType3();
+	StrType4();
 	return 0;
 }
 
@@ -116,4 +117,44 @@ void StrType2()
 	cout << "s3=s1+s2:" << s3 << endl;
 	s1 += s3;
 	cout << "s1+=s3:" << s1 << endl;
+}
+
+void StrType3()
+{
+	char charr1[20];
+	char charr2[20] = "jaguar";
+	string str1;
+	string str2 = "panther";
+
+	str1 = str2;
+	strcpy_s(charr1, charr2);
+	cout << "after copy charr1:" << charr1 << endl;
+	cout << "after copy charr2:" << charr2 << endl;
+
+	str1 += "paste";
+	strcat_s(charr1, " juice");
+	cout << "str1:" << str1 << endl;
+	cout << "charr1:" << charr1 << endl;
+
+	size_t  len1 = str1.size();
+	size_t  len2 = strlen(charr1);
+
+	cout << "len1:" << len1 << endl;
+	cout << "len2:" << len2 << endl;
+}
+
+void StrType4()
+{
+	char charr[20] = { '\0' };
+	string str;
+
+	cout << "Length of charr:" << strlen(charr) << endl;//unsafe;-> use '\0' to initialize charr array
+	cout << "Length of str:" << str.size() << endl;
+
+	cout << "Enter a line to charr:";
+	cin.getline(charr, 20);
+	cout << "Enter a line to str:";
+	getline(cin, str);
+	cout << "After enter line,charr length is:" << strlen(charr) << " str length is:" << str.size() << endl;
+	cout << "charr:" << charr << '\t' << "str:" << str << endl;
 }
