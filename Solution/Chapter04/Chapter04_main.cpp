@@ -11,7 +11,8 @@ int main()
 	//StrType();
 	//StrType2();
 	//StrType3();
-	StrType4();
+	//StrType4();
+	StrType5();
 	return 0;
 }
 
@@ -157,4 +158,17 @@ void StrType4()
 	getline(cin, str);
 	cout << "After enter line,charr length is:" << strlen(charr) << " str length is:" << str.size() << endl;
 	cout << "charr:" << charr << '\t' << "str:" << str << endl;
+}
+
+void StrType5()
+{
+	wchar_t title[] = L"Chief Astrogator";//w_char string
+	char16_t name[] = u"Felonia Ripova";//char_16 string
+	char32_t car[] = U"Humber Super Snipe";//char_32 string
+
+	cout << R"(Jim "King" Tutt uses "\n" instead of endl.)" << '\n';//Jim "King" Tutt uses "\n" instead of endl.
+	cout<<R"(Hysen\b\n\tChan)"<<endl;//Hysen\b\n\tChan
+	cout << R"+*(Hello World)+*" << endl;//Hello World
+	cout << R"^(Oh no)^" << endl;//Oh no
+	cout << R".*(Oh no).*" << endl;//Oh no
 }

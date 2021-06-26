@@ -11,3 +11,4 @@ void StrType();
 void StrType2();
 void StrType3();
 void StrType4();
+void StrType5();
