@@ -8,7 +8,8 @@ int main()
 	//ArrayOne();
 	//StringBase();
 	//InStr1Cpp();
-	NumStr();
+	//NumStr();
+	StrType();
 	return 0;
 }
 
@@ -62,7 +63,7 @@ void InStr1Cpp()
 	//cin.get(dessert, ArSize);
 	//cin.getline(name, ArSize).getline(dessert, ArSize);
 	cin.get(dessert, ArSize).get();
-	cout << "I have some delicious " << dessert << " for you," << name<<".\n";
+	cout << "I have some delicious " << dessert << " for you," << name << ".\n";
 }
 
 void NumStr()
@@ -75,4 +76,26 @@ void NumStr()
 	char address[80];
 	cin.getline(address, 80);
 	cout << "Year built:" << year << " and address is " << address << endl;
+}
+
+void StrType()
+{
+	char charr1[20];
+	char charr2[20] = "jaguar";
+	string str1;
+	string str2 = "panther";
+
+	//define in c++11
+	char first_data[] = { "Le Chapon Dodu" };
+	char second_data[]{ "The elegant Plate" };
+	string third_data = { "The Bread Bowl" };
+	string fourth_data{ "Hank's Fine Eates" };
+
+	cout << "Enter a kind of feline:";
+	cin >> charr1;
+	cout << "Enter another kind of feline:";
+	cin >> str1;
+	cout << "Here are some felines;\n" << charr1 << " " << charr2 << " " << str1 << " " << str2 << endl;
+	cout << "The third letter in " << charr2 << " is " << charr2[2] << endl;
+	cout << "The third letter in " << str2 << " is " << str2[2] << endl;
 }
