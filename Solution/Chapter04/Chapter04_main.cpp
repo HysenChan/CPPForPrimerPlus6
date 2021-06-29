@@ -12,7 +12,8 @@ int main()
 	//StrType2();
 	//StrType3();
 	//StrType4();
-	StrType5();
+	//StrType5();
+	Structur();
 	return 0;
 }
 
@@ -167,8 +168,34 @@ void StrType5()
 	char32_t car[] = U"Humber Super Snipe";//char_32 string
 
 	cout << R"(Jim "King" Tutt uses "\n" instead of endl.)" << '\n';//Jim "King" Tutt uses "\n" instead of endl.
-	cout<<R"(Hysen\b\n\tChan)"<<endl;//Hysen\b\n\tChan
+	cout << R"(Hysen\b\n\tChan)" << endl;//Hysen\b\n\tChan
 	cout << R"+*(Hello World)+*" << endl;//Hello World
 	cout << R"^(Oh no)^" << endl;//Oh no
 	cout << R".*(Oh no).*" << endl;//Oh no
+}
+
+struct inflatable
+{
+	char name[20];
+	float volume;
+	double price;
+};
+void Structur()
+{
+	inflatable guest =
+	{
+		"Glorious Gloria",
+		1.88,
+		29.99,
+	};
+
+	inflatable pal =
+	{
+		"Audacious Arthur",
+		3.12,
+		32.99,
+	};
+
+	cout << "Expand your guest list with " << guest.name << " and " << pal.name << ".\n";
+	cout << "You can have both for $" << guest.price + pal.price << "!\n";
 }

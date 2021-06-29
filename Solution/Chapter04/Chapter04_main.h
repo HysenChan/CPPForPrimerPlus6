@@ -12,3 +12,6 @@ void StrType2();
 void StrType3();
 void StrType4();
 void StrType5();
+
+//4.4
+void Structur();
