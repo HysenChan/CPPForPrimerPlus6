@@ -180,6 +180,11 @@ struct inflatable
 	float volume;
 	double price;
 };
+struct
+{
+	int x;
+	int y;
+}position;
 void Structur()
 {
 	inflatable guest =
@@ -199,4 +204,8 @@ void Structur()
 	cout << "Expand your guest list with " << guest.name << " and " << pal.name << ".\n";
 	cout << "You can have both for $" << guest.price + pal.price << "!\n";
 	cout << "pal.name[0]:" << pal.name[0] << endl;//A
+
+	position.x = 10;
+	position.y = 20;
+	cout << "Position:" << position.x << "," << position.y << endl;
 }
