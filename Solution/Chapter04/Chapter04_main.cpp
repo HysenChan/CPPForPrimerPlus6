@@ -13,7 +13,8 @@ int main()
 	//StrType3();
 	//StrType4();
 	//StrType5();
-	Structur();
+	//Structur();
+	Arrstructur();
 	return 0;
 }
 
@@ -208,4 +209,17 @@ void Structur()
 	position.x = 10;
 	position.y = 20;
 	cout << "Position:" << position.x << "," << position.y << endl;
+}
+
+void Arrstructur()
+{
+	inflatable guests[2] =
+	{
+		{"Bambi",0.5,21.99},
+		{"Godzilla",2000,565.99},
+	};
+
+	cout << "guests[0].name:" << guests[0].name << ends << "guests[1].name:" << guests[1].name << endl;
+	cout << "guests[0[.volume:" << guests[0].volume << ends << "guests[1].volume:" << guests[1].volume << endl;
+	cout << "guests[0[.price:" << guests[0].price << ends << "guests[1].price:" << guests[1].price << endl;
 }

@@ -15,3 +15,4 @@ void StrType5();
 
 //4.4
 void Structur();
+void Arrstructur();
