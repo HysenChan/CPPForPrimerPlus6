@@ -16,3 +16,6 @@ void StrType5();
 //4.4
 void Structur();
 void Arrstructur();
+
+//4.5
+void Union();

@@ -14,7 +14,8 @@ int main()
 	//StrType4();
 	//StrType5();
 	//Structur();
-	Arrstructur();
+	//Arrstructur();
+	Union();
 	return 0;
 }
 
@@ -237,4 +238,20 @@ void Arrstructur()
 	{
 		cout << "goodIn:" << tr.goodIn << endl;
 	}
+}
+
+union one4all
+{
+	int int_val;
+	long long_val;
+	double double_val;
+};
+void Union()
+{
+	one4all pail;
+	pail.int_val = 10;
+	cout << pail.int_val << endl;
+	pail.double_val = 12.123;
+	cout << pail.double_val << endl;
+	cout << pail.int_val << endl;//double.val被赋值了，int_val会被丢弃
 }
