@@ -19,3 +19,4 @@ void Arrstructur();
 
 //4.5
 void Union();
+void smallStore();

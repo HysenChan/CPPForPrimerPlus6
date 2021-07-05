@@ -15,7 +15,8 @@ int main()
 	//StrType5();
 	//Structur();
 	//Arrstructur();
-	Union();
+	//Union();
+	smallStore();
 	return 0;
 }
 
@@ -254,4 +255,32 @@ void Union()
 	pail.double_val = 12.123;
 	cout << pail.double_val << endl;
 	cout << pail.int_val << endl;//double.val被赋值了，int_val会被丢弃
+}
+
+struct widget
+{
+	char brand[20];
+	int type;
+	union
+	{
+		long id_num;
+		char id_char[20];
+	}id_val;
+};
+void smallStore()
+{
+	widget price;
+	cout << "Pls enter price's type:";
+	cin >> price.type;
+	cout << "Pls enter price's id:";
+	if (price.type == 1)
+	{
+		cin >> price.id_val.id_num;
+		cout << "price.id_val.id_num:" << price.id_val.id_num;
+	}
+	else
+	{
+		cin >> price.id_val.id_char;
+		cout << "price.id_val.id_char:" << price.id_val.id_char;
+	}
 }
