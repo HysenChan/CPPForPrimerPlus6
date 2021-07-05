@@ -211,6 +211,14 @@ void Structur()
 	cout << "Position:" << position.x << "," << position.y << endl;
 }
 
+struct torgle_register
+{
+	unsigned int SN : 4;
+	unsigned int : 4;
+	bool goodIn : 1;
+	bool goodTorgle : 1;
+};
+
 void Arrstructur()
 {
 	inflatable guests[2] =
@@ -222,4 +230,11 @@ void Arrstructur()
 	cout << "guests[0].name:" << guests[0].name << ends << "guests[1].name:" << guests[1].name << endl;
 	cout << "guests[0[.volume:" << guests[0].volume << ends << "guests[1].volume:" << guests[1].volume << endl;
 	cout << "guests[0[.price:" << guests[0].price << ends << "guests[1].price:" << guests[1].price << endl;
+
+	torgle_register tr = { 14,true,false };
+
+	if (tr.goodIn)
+	{
+		cout << "goodIn:" << tr.goodIn << endl;
+	}
 }
