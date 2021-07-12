@@ -16,7 +16,8 @@ int main()
 	//Structur();
 	//Arrstructur();
 	//Union();
-	smallStore();
+	//smallStore();
+	Enumerate();
 	return 0;
 }
 
@@ -283,4 +284,23 @@ void smallStore()
 		cin >> price.id_val.id_char;
 		cout << "price.id_val.id_char:" << price.id_val.id_char;
 	}
+}
+
+enum spectrum
+{
+	red, orange, yellow, green, blue, voilet, indigo, ultraviolet
+};
+void Enumerate()
+{
+	spectrum band;
+
+	band = blue;
+
+	band = orange;
+	cout << "band:" << band << endl;
+
+	int color = blue;
+	cout << "color1:" << color << endl;
+	color = 3 + red;
+	cout << "color2:" << color << endl;
 }

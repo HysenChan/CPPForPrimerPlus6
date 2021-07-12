@@ -20,3 +20,6 @@ void Arrstructur();
 //4.5
 void Union();
 void smallStore();
+
+//4.6
+void Enumerate();
