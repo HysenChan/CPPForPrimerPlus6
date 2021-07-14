@@ -26,3 +26,4 @@ void Enumerate();
 
 //4.7
 void Address();
+void Pointer();

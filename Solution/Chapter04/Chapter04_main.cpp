@@ -18,7 +18,8 @@ int main()
 	//Union();
 	//smallStore();
 	//Enumerate();
-	Address();
+	//Address();
+	Pointer();
 	return 0;
 }
 
@@ -308,9 +309,29 @@ void Enumerate()
 
 void Address()
 {
-	int donuts = 6;
-	double cups = 4.5;
+	int donuts = 1;
+	double cups = 1.2;
 
 	cout << "donuts value:" << donuts << " and address is:" << &donuts << endl;
 	cout << "cups value:" << cups << " and address is:" << &cups << endl;
+}
+
+void Pointer()
+{
+	int updates = 6;
+	int* p_updates;
+	p_updates = &updates;
+
+	//Two Value
+	cout << "Values: updates = " << updates << endl;
+	cout << "*p_updates = " << *p_updates << endl;
+
+	//Two Address
+	cout << "Addresses: updates = " << &updates << endl;
+	cout << "p_updates = " << p_updates << endl;
+
+	//Use pointer to change value
+	*p_updates = *p_updates + 1;
+	cout << "Now *p_updates = " << *p_updates << endl;
+	cout << "updates = " << updates << endl;
 }
