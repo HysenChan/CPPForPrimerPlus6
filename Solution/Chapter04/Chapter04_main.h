@@ -28,3 +28,4 @@ void Enumerate();
 void Address();
 void Pointer();
 void InitPtr();
+void UseNew();
