@@ -22,7 +22,8 @@ int main()
 	//Pointer();
 	//InitPtr();
 	//UseNew();
-	InitPtrArray();
+	//InitPtrArray();
+	ArrayNew();
 	return 0;
 }
 
@@ -372,4 +373,18 @@ void InitPtrArray()
 {
 	int* psome = new int[10];//create array by ptr;
 	delete[] psome;//release ptr;
+}
+
+void ArrayNew()
+{
+	double* p3 = new double[3];
+	p3[0] = 0.2;
+	p3[1] = 0.5;
+	p3[2] = 0.8;
+	cout << "p3[1] is " << p3[1] << endl;//0.5
+	p3 = p3 + 1;//p3指针默认是从0开始，+1之后变成指向了p3[1]
+	cout << "Now p3[0] is " << p3[0] << endl;//0.5
+	cout << "p3[1] is " << p3[1] << endl;//0.8
+	p3 = p3 - 1;//还原指向p3[0]
+	delete[] p3;
 }
