@@ -363,4 +363,6 @@ void UseNew()
 	cout << "location of pointer pd:" << &pd << endl;
 	cout << "size of pt = " << sizeof(pt) << ":size of *pt = " << sizeof(*pt) << endl;//64bits->address:8 value:4
 	cout << "size of pd = " << sizeof(pd) << ":size of *pd = " << sizeof(*pd) << endl;//64bits->address:8 value:4
+	delete pt;
+	delete pd;
 }
