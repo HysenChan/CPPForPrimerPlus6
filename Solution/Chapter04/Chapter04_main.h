@@ -23,3 +23,6 @@ void smallStore();
 
 //4.6
 void Enumerate();
+
+//4.7
+void Address();

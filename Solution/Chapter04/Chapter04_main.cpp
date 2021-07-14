@@ -17,7 +17,8 @@ int main()
 	//Arrstructur();
 	//Union();
 	//smallStore();
-	Enumerate();
+	//Enumerate();
+	Address();
 	return 0;
 }
 
@@ -303,4 +304,13 @@ void Enumerate()
 	cout << "color1:" << color << endl;
 	color = 3 + red;
 	cout << "color2:" << color << endl;
+}
+
+void Address()
+{
+	int donuts = 6;
+	double cups = 4.5;
+
+	cout << "donuts value:" << donuts << " and address is:" << &donuts << endl;
+	cout << "cups value:" << cups << " and address is:" << &cups << endl;
 }
