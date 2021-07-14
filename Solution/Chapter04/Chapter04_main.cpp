@@ -19,7 +19,8 @@ int main()
 	//smallStore();
 	//Enumerate();
 	//Address();
-	Pointer();
+	//Pointer();
+	InitPtr();
 	return 0;
 }
 
@@ -334,4 +335,13 @@ void Pointer()
 	*p_updates = *p_updates + 1;
 	cout << "Now *p_updates = " << *p_updates << endl;
 	cout << "updates = " << updates << endl;
+}
+
+void InitPtr()
+{
+	int higgens = 5;
+	int* pt = &higgens;
+
+	cout << "Value of higgens = " << higgens << "; Address of higgens = " << &higgens << endl;
+	cout << "Value of *pt = " << *pt << ";Value of pt = " << pt << endl;
 }
