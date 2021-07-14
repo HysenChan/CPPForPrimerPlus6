@@ -21,7 +21,8 @@ int main()
 	//Address();
 	//Pointer();
 	//InitPtr();
-	UseNew();
+	//UseNew();
+	InitPtrArray();
 	return 0;
 }
 
@@ -365,4 +366,10 @@ void UseNew()
 	cout << "size of pd = " << sizeof(pd) << ":size of *pd = " << sizeof(*pd) << endl;//64bits->address:8 value:4
 	delete pt;
 	delete pd;
+}
+
+void InitPtrArray()
+{
+	int* psome = new int[10];//create array by ptr;
+	delete[] psome;//release ptr;
 }

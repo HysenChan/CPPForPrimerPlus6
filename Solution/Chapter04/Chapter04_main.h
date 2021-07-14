@@ -29,3 +29,4 @@ void Address();
 void Pointer();
 void InitPtr();
 void UseNew();
+void InitPtrArray();
