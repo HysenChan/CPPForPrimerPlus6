@@ -472,8 +472,10 @@ void PointerAndString()
 
 	ps = new char[strlen(animal) + 1];
 	strcpy(ps, animal);
+	//strncpy(ps, animal,strlen(animal)+1);
 	cout << "After using strcpy():\n";
 	cout << animal << " at " << (int*)animal << endl;
 	cout << ps << " at " << (int*)ps << endl;
+	cout << "strlen(ps):" << strlen(ps) << endl;
 	delete[] ps;
 }
