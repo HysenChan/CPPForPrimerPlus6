@@ -1,3 +1,5 @@
+#pragma warning(disable:4996)
+//#define _CRT_SECURE_NO_WARNINGS
 #include"Chapter04_main.h"
 
 using namespace std;
@@ -24,7 +26,8 @@ int main()
 	//UseNew();
 	//InitPtrArray();
 	//ArrayNew();
-	PointerSummary();
+	//PointerSummary();
+	PointerAndString();
 	return 0;
 }
 
@@ -445,4 +448,32 @@ void PointerSummary()
 	int coats[10];
 	*(coats + 4) = 12;
 	cout << "coats[4]:" << coats[4];
+}
+
+void PointerAndString()
+{
+	char flower[10] = "rose";
+	cout << flower << "s are red\n";
+
+	char animal[20] = "bear";
+	const char* bird = "wren";
+	char* ps;
+
+	cout << animal << " and " << bird << "\n";
+
+	cout << "Enter a kind of animal:";
+	cin >> animal;
+
+	ps = animal;
+	cout << ps << "!\n";
+	cout << "Before using strcpy():\n";
+	cout << animal << " at " << (int*)animal << endl;
+	cout << ps << " at " << (int*)ps << endl;
+
+	ps = new char[strlen(animal) + 1];
+	strcpy(ps, animal);
+	cout << "After using strcpy():\n";
+	cout << animal << " at " << (int*)animal << endl;
+	cout << ps << " at " << (int*)ps << endl;
+	delete[] ps;
 }

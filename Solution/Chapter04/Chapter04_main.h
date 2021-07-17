@@ -32,3 +32,4 @@ void UseNew();
 void InitPtrArray();
 void ArrayNew();
 void PointerSummary();
+void PointerAndString();
