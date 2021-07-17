@@ -27,7 +27,8 @@ int main()
 	//InitPtrArray();
 	//ArrayNew();
 	//PointerSummary();
-	PointerAndString();
+	//PointerAndString();
+	CreateDynamicStruct();
 	return 0;
 }
 
@@ -478,4 +479,19 @@ void PointerAndString()
 	cout << ps << " at " << (int*)ps << endl;
 	cout << "strlen(ps):" << strlen(ps) << endl;
 	delete[] ps;
+}
+
+void CreateDynamicStruct()
+{
+	inflatable* ps = new inflatable;
+	cout << "Enter name of inflatable item:";
+	cin.get(ps->name, 20);
+	cout << "Enter volume in cubic feet:";
+	cin >> (*ps).volume;
+	cout << "Enter price:$";
+	cin >> ps->price;
+	cout << "Name:" << (*ps).name << endl;
+	cout << "Volume:" << ps->volume << "cubic feet.\n" << endl;
+	cout << "Price:$" << ps->price << endl;
+	delete ps;
 }

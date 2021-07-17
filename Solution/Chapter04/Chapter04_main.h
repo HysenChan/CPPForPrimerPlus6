@@ -33,3 +33,6 @@ void InitPtrArray();
 void ArrayNew();
 void PointerSummary();
 void PointerAndString();
+
+//4.8
+void CreateDynamicStruct();
