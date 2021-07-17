@@ -31,3 +31,4 @@ void InitPtr();
 void UseNew();
 void InitPtrArray();
 void ArrayNew();
+void PointerSummary();

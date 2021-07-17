@@ -23,7 +23,8 @@ int main()
 	//InitPtr();
 	//UseNew();
 	//InitPtrArray();
-	ArrayNew();
+	//ArrayNew();
+	PointerSummary();
 	return 0;
 }
 
@@ -387,4 +388,61 @@ void ArrayNew()
 	cout << "p3[1] is " << p3[1] << endl;//0.8
 	p3 = p3 - 1;//还原指向p3[0]
 	delete[] p3;
+}
+
+void PointerSummary()
+{
+	short tell[10];
+	cout << tell << endl;
+	cout << &tell << endl;
+
+	double* pn;
+	double* pa;
+	char* pc;
+	double bubble = 3.2;
+	pn = &bubble;
+	pc = new char;
+	pa = new double[30];
+
+	cout << "*pn:" << *pn << ",address:" << pn << endl;
+	*pc = 'S';
+	cout << "*pc:" << *pc << ",address:" << pc << endl;
+
+	//区分指针和指针所指向的值
+	int* pt = new int;
+	*pt = 5;
+	cout << "*pt:" << *pt << ",address:" << pt << endl;
+
+	//指针算术
+	int tacos[10] = { 5,2,8,4,1,2,2,4,6,8 };
+	int* pb = tacos;
+	pb = pb + 1;
+	int* pe = &tacos[9];
+	pe = pe - 1;
+	int diff = pe - pb;//tacos[8]-tacos[1] = 7（相差7)
+	cout << "*pb:" << *pb << "\t" << "*pe:" << *pe << endl;
+	cout << "pe:" << pe << "\t" << "pb:" << pb << endl;
+	cout << "diff:" << diff << endl;
+
+	//数组的动态联编和静态联编
+	int staticSize[10];//静态联编
+
+	int size = 10;
+	//cin >> size;
+	int* pz = new int[size];//动态联编
+
+	delete[] pz;
+
+	//数组表示法和指针表示法
+	int* ph = new int[10];
+	*ph = 5;
+	cout << "*ph:" << *ph << endl;
+	ph[0] = 6;
+	cout << "ph[0]:" << ph[0] << endl;
+	cout << "ph[2]" << ph[2] << endl;
+	ph[9] = 44;
+	cout << "ph[9]:" << ph[9] << endl;
+	int coats[10];
+	*(coats + 4) = 12;
+	cout << "coats[4]:" << coats[4];
 }
