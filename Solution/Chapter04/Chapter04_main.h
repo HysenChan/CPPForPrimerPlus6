@@ -36,3 +36,4 @@ void PointerAndString();
 
 //4.8
 void CreateDynamicStruct();
+void DeleteDynamicStruct();
