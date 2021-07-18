@@ -56,3 +56,4 @@ void Test03And04();
 void Test05();
 void Test06And07();
 void Test08And09();
+void Test10();

@@ -37,7 +37,8 @@ int main()
 	//Test03And04();
 	//Test05();
 	//Test06And07();
-	Test08And09();
+	//Test08And09();
+	Test10();
 	return 0;
 }
 
@@ -647,7 +648,7 @@ void Test06And07()
 	c2 = c1;
 	cout << c1 << endl;
 	cout << c2 << endl;
-	
+
 	string s1 = "Waldorf Salad";//Test07
 	cout << s1 << endl;
 }
@@ -662,4 +663,17 @@ void Test08And09()
 {
 	Fish fish = { "trout",3,12.5 };
 	cout << "fish's kind:" << fish.kind << "\t" << "fish's weight:" << fish.weight << "\t" << "fish's length:" << fish.length << endl;
+}
+
+enum Response
+{
+	Yes = 1,
+	No = 0,
+	Maybe = 2,
+};
+void Test10()
+{
+	cout << "Yes:" << Response::Yes << endl;
+	cout << "No:" << No << endl;
+	cout << "Maybe:" << Maybe << endl;
 }
