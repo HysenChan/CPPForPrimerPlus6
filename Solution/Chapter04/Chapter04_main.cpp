@@ -41,7 +41,8 @@ int main()
 	//Test10();
 	//Test11();
 	//Test12();
-	Test13();
+	//Test13();
+	Test14();
 	return 0;
 }
 
@@ -710,4 +711,9 @@ void Test13()
 	cin >> size;
 	int* dyn = new int[size];
 	vector<int> dv(size);
+}
+
+void Test14()
+{
+	cout << (int*)"Home of the jolly bytes.";//打印的是地址
 }
