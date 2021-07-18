@@ -33,7 +33,8 @@ int main()
 	//MixTypes();
 	//CreateVector();
 	//CreateArray();
-	Choices();
+	//Choices();
+	Test03();
 	return 0;
 }
 
@@ -590,4 +591,37 @@ void Choices()
 	cout << "a1[-2]:" << a1[-2] << " at " << &a1[-2] << endl;
 	cout << "a3[2]:" << a3[2] << " at " << &a3[2] << endl;
 	cout << "a4[2]:" << a4[2] << " at " << &a4[2] << endl;
+}
+
+void Test01()
+{
+	char actor[30];
+	short betsie[100];
+	float chuck[13];
+	long double dipsea[64];
+}
+
+void Test02()
+{
+	array<char, 30> actor;
+	array<short, 100> betsie;
+	array<float, 13> chuck;
+	array<long double, 30> dipsea;
+}
+
+void DisplayArray(int arr[], string str)
+{
+	int length = sizeof(arr) - sizeof(arr[0]);
+	for (int i = 0; i <= length; i++)
+	{
+		cout << "str[" << i << "]:" << arr[i] << endl;
+	}
+}
+
+void Test03()
+{
+	int positiveOdd[5] = { 1,3,5,7,9 };
+	DisplayArray(positiveOdd, "positiveOdd");
+	array<int, 5> positiveOdd1 = { 1,3,5,7,9 };
+	DisplayArray(positiveOdd1.data(), "positiveOdd1");
 }
