@@ -36,7 +36,7 @@ int main()
 	//Choices();
 	//Test03And04();
 	//Test05();
-	Test06();
+	Test06And07();
 	return 0;
 }
 
@@ -639,11 +639,14 @@ void Test05()
 	cout << "*(ideasPtr+1):" << *(ideasPtr + 1) << endl;
 }
 
-void Test06()
+void Test06And07()
 {
 	char c1[] = "cheeseburger";
 	char* c2 = new char[strlen(c1) + 1];
 	c2 = c1;
 	cout << c1 << endl;
 	cout << c2 << endl;
+	
+	string s1 = "Waldorf Salad";//Test07
+	cout << s1 << endl;
 }
