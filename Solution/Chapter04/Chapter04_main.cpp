@@ -37,12 +37,12 @@ int main()
 	//Test03And04();
 	//Test05();
 	//Test06And07();
-	//Test08And09();
+	Test08And09And15();
 	//Test10();
 	//Test11();
 	//Test12();
 	//Test13();
-	Test14();
+	//Test14();
 	return 0;
 }
 
@@ -663,10 +663,12 @@ struct Fish
 	int weight;
 	float length;
 };
-void Test08And09()
+void Test08And09And15()
 {
 	Fish fish = { "trout",3,12.5 };
 	cout << "fish's kind:" << fish.kind << "\t" << "fish's weight:" << fish.weight << "\t" << "fish's length:" << fish.length << endl;
+	Fish* fishPtr = &fish;//Test15
+	cout << "fish's kind:" << fishPtr->kind << "\t" << "fish's weight:" << fishPtr->weight << "\t" << "fish's length:" << fishPtr->length << endl;
 }
 
 enum Response
