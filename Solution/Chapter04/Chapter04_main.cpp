@@ -720,3 +720,10 @@ void Test14()
 {
 	cout << (int*)"Home of the jolly bytes.";//打印的是地址
 }
+
+void Test17()
+{
+	const unsigned int size = 10;
+	std::vector<std::string> vs(size);
+	std::array <std::string, size >;
+}
