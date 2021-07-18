@@ -40,7 +40,8 @@ int main()
 	//Test08And09();
 	//Test10();
 	//Test11();
-	Test12();
+	//Test12();
+	Test13();
 	return 0;
 }
 
@@ -700,4 +701,13 @@ void Test12()
 	float* firstPtr = treacle;
 	cout << "*firstPtr:" << *firstPtr << endl;
 	cout << "*(firstPtr+arrLength-1):" << *(firstPtr + arrLength - 1) << endl;
+}
+
+void Test13()
+{
+	unsigned int size;
+	cout << "Please enter size:";
+	cin >> size;
+	int* dyn = new int[size];
+	vector<int> dv(size);
 }
