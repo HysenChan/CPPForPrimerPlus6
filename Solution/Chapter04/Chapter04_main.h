@@ -2,9 +2,11 @@
 
 #include<iostream>
 #include<string>
+#include<vector>
+#include<array>
 
 void ArrayOne();
-void StringBase	();
+void StringBase();
 void InStr1Cpp();
 void NumStr();
 void StrType();
@@ -40,3 +42,8 @@ void DeleteDynamicStruct();
 
 //4.9
 void MixTypes();
+
+//4.10
+void CreateVector();
+void CreateArray();
+void Choices();
