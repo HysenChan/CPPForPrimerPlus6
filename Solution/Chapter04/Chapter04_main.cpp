@@ -624,4 +624,7 @@ void Test03()
 	DisplayArray(positiveOdd, "positiveOdd");
 	array<int, 5> positiveOdd1 = { 1,3,5,7,9 };
 	DisplayArray(positiveOdd1.data(), "positiveOdd1");
+
+	int even = positiveOdd1.front() + positiveOdd1.back();//Test04
+	cout << "even:" << even << endl;
 }
