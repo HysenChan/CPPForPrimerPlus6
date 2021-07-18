@@ -34,8 +34,9 @@ int main()
 	//CreateVector();
 	//CreateArray();
 	//Choices();
-	Test03And04();
-	Test05();
+	//Test03And04();
+	//Test05();
+	Test06();
 	return 0;
 }
 
@@ -636,4 +637,13 @@ void Test05()
 	cout << "ideas[1]:" << ideas[1] << endl;
 	float* ideasPtr = ideas;
 	cout << "*(ideasPtr+1):" << *(ideasPtr + 1) << endl;
+}
+
+void Test06()
+{
+	char c1[] = "cheeseburger";
+	char* c2 = new char[strlen(c1) + 1];
+	c2 = c1;
+	cout << c1 << endl;
+	cout << c2 << endl;
 }
