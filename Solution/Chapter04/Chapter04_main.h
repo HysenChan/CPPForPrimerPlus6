@@ -53,3 +53,4 @@ void Choices();
 void Test01();
 void Test02();
 void Test03And04();
+void Test05();

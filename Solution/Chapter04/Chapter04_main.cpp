@@ -34,7 +34,8 @@ int main()
 	//CreateVector();
 	//CreateArray();
 	//Choices();
-	Test03();
+	Test03And04();
+	Test05();
 	return 0;
 }
 
@@ -627,4 +628,12 @@ void Test03And04()
 
 	int even = positiveOdd1.front() + positiveOdd1.back();//Test04
 	cout << "even:" << even << endl;
+}
+
+void Test05()
+{
+	float ideas[2] = { 1.2,2.4 };
+	cout << "ideas[1]:" << ideas[1] << endl;
+	float* ideasPtr = ideas;
+	cout << "*(ideasPtr+1):" << *(ideasPtr + 1) << endl;
 }
