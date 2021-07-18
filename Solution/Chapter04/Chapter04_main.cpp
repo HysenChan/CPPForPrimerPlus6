@@ -36,7 +36,8 @@ int main()
 	//Choices();
 	//Test03And04();
 	//Test05();
-	Test06And07();
+	//Test06And07();
+	Test08And09();
 	return 0;
 }
 
@@ -649,4 +650,16 @@ void Test06And07()
 	
 	string s1 = "Waldorf Salad";//Test07
 	cout << s1 << endl;
+}
+
+struct Fish
+{
+	char kind[20];
+	int weight;
+	float length;
+};
+void Test08And09()
+{
+	Fish fish = { "trout",3,12.5 };
+	cout << "fish's kind:" << fish.kind << "\t" << "fish's weight:" << fish.weight << "\t" << "fish's length:" << fish.length << endl;
 }
