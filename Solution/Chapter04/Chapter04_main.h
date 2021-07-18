@@ -37,3 +37,6 @@ void PointerAndString();
 //4.8
 void CreateDynamicStruct();
 void DeleteDynamicStruct();
+
+//4.9
+void MixTypes();
