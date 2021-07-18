@@ -667,7 +667,8 @@ void Test08And09And15()
 {
 	Fish fish = { "trout",3,12.5 };
 	cout << "fish's kind:" << fish.kind << "\t" << "fish's weight:" << fish.weight << "\t" << "fish's length:" << fish.length << endl;
-	Fish* fishPtr = &fish;//Test15
+	Fish* fishPtr = new Fish;//Test15
+	*fishPtr = { "grass",2,5.4 };
 	cout << "fish's kind:" << fishPtr->kind << "\t" << "fish's weight:" << fishPtr->weight << "\t" << "fish's length:" << fishPtr->length << endl;
 }
 
