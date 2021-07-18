@@ -618,7 +618,7 @@ void DisplayArray(int arr[], string str)
 	}
 }
 
-void Test03()
+void Test03And04()
 {
 	int positiveOdd[5] = { 1,3,5,7,9 };
 	DisplayArray(positiveOdd, "positiveOdd");
