@@ -39,7 +39,8 @@ int main()
 	//Test06And07();
 	//Test08And09();
 	//Test10();
-	Test11();
+	//Test11();
+	Test12();
 	return 0;
 }
 
@@ -684,4 +685,19 @@ void Test11()
 	double ted = 2.233;
 	double* tedPtr = &ted;
 	cout << "*tedPtr:" << *tedPtr << " at " << tedPtr << endl;
+}
+
+template <typename T>
+int getArraySize(T& arr)
+{
+	return sizeof(arr) / sizeof(arr[0]);
+}
+
+void Test12()
+{
+	float treacle[10] = { 0.01,1.1,2.2,3.3,4.4,5.5,6.6,7.7,8.8,9.9 };
+	int arrLength = getArraySize(treacle);
+	float* firstPtr = treacle;
+	cout << "*firstPtr:" << *firstPtr << endl;
+	cout << "*(firstPtr+arrLength-1):" << *(firstPtr + arrLength - 1) << endl;
 }
