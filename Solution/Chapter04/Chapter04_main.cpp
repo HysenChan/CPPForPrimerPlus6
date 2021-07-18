@@ -38,7 +38,8 @@ int main()
 	//Test05();
 	//Test06And07();
 	//Test08And09();
-	Test10();
+	//Test10();
+	Test11();
 	return 0;
 }
 
@@ -676,4 +677,11 @@ void Test10()
 	cout << "Yes:" << Response::Yes << endl;
 	cout << "No:" << No << endl;
 	cout << "Maybe:" << Maybe << endl;
+}
+
+void Test11()
+{
+	double ted = 2.233;
+	double* tedPtr = &ted;
+	cout << "*tedPtr:" << *tedPtr << " at " << tedPtr << endl;
 }
