@@ -43,7 +43,8 @@ int main()
 	//Test12();
 	//Test13();
 	//Test14();
-	practice01();
+	//Practice01();
+	Practice02();
 	return 0;
 }
 
@@ -729,7 +730,7 @@ void Test17()
 	std::array <std::string, size >;
 }
 
-void practice01()
+void Practice01()
 {
 	const unsigned int nameLength = 80;
 	cout << "What is your first name?";
@@ -751,4 +752,16 @@ void practice01()
 	cout << "Name:" << lastName << "," << firstName << endl;
 	cout << "Grade:" << char(grade + 1) << endl;
 	cout << "Age:" << age << endl;
+}
+
+void Practice02()
+{
+	string name;
+	string dessert;
+
+	cout << "Enter your name:";
+	cin >> name;
+	cout << "Enter your favorite dessert:";
+	cin >> dessert;
+	cout << "I have some delicious " << dessert << " for you," << name << ".\n";
 }

@@ -64,4 +64,5 @@ void Test14();
 void Test17();
 
 //4.13
-void practice01();
+void Practice01();
+void Practice02();
