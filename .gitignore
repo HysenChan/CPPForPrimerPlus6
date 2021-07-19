@@ -40,3 +40,6 @@
 *.pdb
 *.log
 *.idb
+/Solution/Chapter04/x64/Debug
+/Solution/Chapter03/x64/Debug
+/Solution/Chapter02/x64/Debug
