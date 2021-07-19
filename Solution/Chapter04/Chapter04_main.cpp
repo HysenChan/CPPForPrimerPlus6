@@ -37,12 +37,13 @@ int main()
 	//Test03And04();
 	//Test05();
 	//Test06And07();
-	Test08And09And15();
+	//Test08And09And15();
 	//Test10();
 	//Test11();
 	//Test12();
 	//Test13();
 	//Test14();
+	practice01();
 	return 0;
 }
 
@@ -726,4 +727,28 @@ void Test17()
 	const unsigned int size = 10;
 	std::vector<std::string> vs(size);
 	std::array <std::string, size >;
+}
+
+void practice01()
+{
+	const unsigned int nameLength = 80;
+	cout << "What is your first name?";
+	char firstName[nameLength];
+	cin.getline(firstName, nameLength);
+
+	cout << "What is your last name?";
+	char lastName[nameLength];
+	cin.getline(lastName, nameLength);
+
+	char grade;
+	cout << "What letter grade do you deserve?";
+	cin >> grade;
+
+	unsigned int age;
+	cout << "What is your age?";
+	cin >> age;
+
+	cout << "Name:" << lastName << "," << firstName << endl;
+	cout << "Grade:" << char(grade + 1) << endl;
+	cout << "Age:" << age << endl;
 }

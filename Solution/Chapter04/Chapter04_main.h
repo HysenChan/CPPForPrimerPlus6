@@ -62,3 +62,6 @@ void Test12();
 void Test13();
 void Test14();
 void Test17();
+
+//4.13
+void practice01();
