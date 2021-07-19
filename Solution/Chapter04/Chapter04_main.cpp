@@ -44,7 +44,8 @@ int main()
 	//Test13();
 	//Test14();
 	//Practice01();
-	Practice02();
+	//Practice02();
+	Practice03();
 	return 0;
 }
 
@@ -764,4 +765,16 @@ void Practice02()
 	cout << "Enter your favorite dessert:";
 	cin >> dessert;
 	cout << "I have some delicious " << dessert << " for you," << name << ".\n";
+}
+
+void Practice03()
+{
+	const int nameLength = 80;
+	char firstName[nameLength];
+	char lastName[nameLength];
+	cout << "Enter your first name:";
+	cin >> firstName;
+	cout << "Enter your last name:";
+	cin >> lastName;
+	cout << "Here's the information in a single stirng:" << lastName << "," << firstName;
 }
