@@ -46,7 +46,8 @@ int main()
 	//Practice01();
 	//Practice02();
 	//Practice03();
-	Practice04();
+	//Practice04();
+	Practice05();
 	return 0;
 }
 
@@ -792,4 +793,16 @@ void Practice04()
 	getline(cin, lastName);
 	lastName = lastName + "," + firstName;
 	cout << "Here's the information in a single stirng:" << lastName;
+}
+
+struct CandyBar
+{
+	char brand[30];
+	float weight;
+	int calories;
+};
+void Practice05()
+{
+	CandyBar snack = { "Mocha Munch",2.3,350 };
+	cout << "snack's brand:" << snack.brand << "\t" << "snack's weight:" << snack.weight << "\t" << "snack's calories:" << snack.calories << endl;
 }
