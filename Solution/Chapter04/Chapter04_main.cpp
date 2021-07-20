@@ -48,7 +48,8 @@ int main()
 	//Practice03();
 	//Practice04();
 	//Practice05();
-	Practice06();
+	//Practice06();
+	Practice07();
 	return 0;
 }
 
@@ -828,4 +829,22 @@ void Practice06()
 		cout << "snack.calories:" << snack[i].calories << endl;
 		cout << endl;
 	}
+}
+
+struct Pizza
+{
+	char companyName[30];
+	float diameter;
+	int weight;
+};
+void Practice07()
+{
+	Pizza pizza;
+	cout << "Please enter pizza's company name:";
+	cin.getline(pizza.companyName, 30);
+	cout << "Please enter pizza's diameter:";
+	cin >> pizza.diameter;
+	cout << "Please enter pizza's weight:";
+	cin >> pizza.weight;
+	cout << "Pizza information:" << pizza.companyName << "\t" << pizza.diameter << "\t" << pizza.weight << endl;
 }
