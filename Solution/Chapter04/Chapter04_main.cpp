@@ -51,7 +51,8 @@ int main()
 	//Practice06();
 	//Practice07();
 	//Practice08();
-	Practice09();
+	//Practice09();
+	Practice10();
 	return 0;
 }
 
@@ -876,4 +877,24 @@ void Practice09()
 	cout << "Please enter candy calories:";
 	cin >> candyBar->calories;
 	delete candyBar;
+}
+
+void Practice10()
+{
+	const unsigned int scoreSize = 3;
+	array<float, scoreSize> arr;
+	float totalScore = 0;
+	for (int i = 0; i < scoreSize; i++)
+	{
+		cout << "Please enter score " << i + 1 << ":";
+		cin >> arr[i];
+		totalScore += arr[i];
+	}
+	cout << "Your score times is:" << scoreSize << endl;
+	float average = totalScore / scoreSize;
+	cout << "Your average is:" << average << endl;
+	for (int i = 0; i < scoreSize; i++)
+	{
+		cout << "Your " << i + 1 << " score is :" << arr[i] << endl;
+	}
 }
