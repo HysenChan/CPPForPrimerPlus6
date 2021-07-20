@@ -50,7 +50,8 @@ int main()
 	//Practice05();
 	//Practice06();
 	//Practice07();
-	Practice08();
+	//Practice08();
+	Practice09();
 	return 0;
 }
 
@@ -863,4 +864,16 @@ void Practice08()
 	cin >> pizza->weight;
 	cout << "Pizza information:" << pizza->companyName << "\t" << pizza->diameter << "\t" << pizza->weight << endl;
 	delete pizza;
+}
+
+void Practice09()
+{
+	CandyBar* candyBar = new CandyBar;
+	cout << "Please enter brand:";
+	cin.getline(candyBar->brand, 30);
+	cout << "Please enter candy weight:";
+	cin >> candyBar->weight;
+	cout << "Please enter candy calories:";
+	cin >> candyBar->calories;
+	delete candyBar;
 }
