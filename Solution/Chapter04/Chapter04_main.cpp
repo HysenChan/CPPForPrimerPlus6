@@ -47,7 +47,8 @@ int main()
 	//Practice02();
 	//Practice03();
 	//Practice04();
-	Practice05();
+	//Practice05();
+	Practice06();
 	return 0;
 }
 
@@ -805,4 +806,26 @@ void Practice05()
 {
 	CandyBar snack = { "Mocha Munch",2.3,350 };
 	cout << "snack's brand:" << snack.brand << "\t" << "snack's weight:" << snack.weight << "\t" << "snack's calories:" << snack.calories << endl;
+}
+
+void Practice06()
+{
+	const int candyBarSize = 3;
+	CandyBar* snack = new CandyBar[candyBarSize];
+	//方法1
+	/*snack[0] = { "Mocha Munch",2.3,350 };
+	snack[1] = { "Mocha Munch1",2.3,350 };
+	snack[2] = { "Mocha Munch2",2.3,350 };*/
+	//方法2
+	*snack = { "Mocha Munch",2.3,350 };
+	*(snack + 1) = { "Mocha Munch1",2.3,350 };
+	*(snack + 2) = { "Mocha Munch2",2.3,350 };
+	for (int i = 0; i < candyBarSize; i++)
+	{
+		cout << "snack[" << i << "]:";
+		cout << "snack.brand:" << snack[i].brand << endl;
+		cout << "snack.weight:" << snack[i].weight << endl;
+		cout << "snack.calories:" << snack[i].calories << endl;
+		cout << endl;
+	}
 }
