@@ -2,7 +2,8 @@
 
 int main()
 {
-	Express();
+	Formore();
+	//Express();
 	//NumTest();
 	//ForLoop();
 	return 0;
@@ -46,4 +47,21 @@ void Express()
 	cout.setf(ios_base::boolalpha);
 	cout << "The expression x < 3 has the value " << (x < 3) << endl;
 	cout << "The expression x > 3 has the value " << (x > 3) << endl;
+}
+
+void Formore()
+{
+	using namespace std;
+	const int ArSize = 16;
+
+	long long factorials[ArSize];
+	factorials[1] = factorials[0] = 1LL;
+	for (int i = 2; i < ArSize; i++)
+	{
+		factorials[i] = i * factorials[i - 1];
+	}
+	for (int i = 0; i < ArSize; i++)
+	{
+		cout << i << "! = " << factorials[i] << endl;
+	}
 }
