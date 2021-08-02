@@ -2,7 +2,9 @@
 
 int main()
 {
-	PlusOne();
+	ExternalAndInnernalValue();
+	//PointerPlus();
+	//PlusOne();
 	//ForStr1();
 	//BigStep();
 	//Formore();
@@ -104,4 +106,28 @@ void PlusOne()
 	cout << "a = " << a << ": b = " << b << "\n";
 	cout << "a++ = " << a++ << ": ++b = " << ++b << "\n";
 	cout << "a = " << a << ": b = " << b << "\n";
+}
+
+void PointerPlus()
+{
+	using namespace std;
+	double arr[5] = { 21.1,32.8,23.4,45.2,37.4 };
+	double* pt = arr;
+	cout << "*pt:" << *pt << endl;//21.1
+	cout << "*pt++:" << *pt++ << endl;//21.1
+	cout << "*pt:" << *pt << endl;//32.8
+	cout << "*++pt:" << *++pt << endl;//23.4
+	cout << "++*pt" << ++ * pt << endl;//24.4
+}
+
+void ExternalAndInnernalValue()
+{
+	using namespace std;
+	int x = 20;
+	{
+		cout << x << endl;
+		int x = 200;
+		cout << x << endl;
+	}
+	cout << x << endl;
 }

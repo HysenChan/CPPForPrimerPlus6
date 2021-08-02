@@ -8,3 +8,5 @@ void Formore();
 void BigStep();
 void ForStr1();
 void PlusOne();
+void PointerPlus();
+void ExternalAndInnernalValue();
