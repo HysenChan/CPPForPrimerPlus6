@@ -2,7 +2,8 @@
 
 int main()
 {
-	Formore();
+	BigStep();
+	//Formore();
 	//Express();
 	//NumTest();
 	//ForLoop();
@@ -63,5 +64,18 @@ void Formore()
 	for (int i = 0; i < ArSize; i++)
 	{
 		cout << i << "! = " << factorials[i] << endl;
+	}
+}
+
+void BigStep()
+{
+	using namespace std;
+	cout << "Enter an integer:";
+	int by;
+	cin >> by;
+	cout << "Counting by " << by << endl;
+	for (int i = 0; i < 100; i += by)
+	{
+		cout << "i:" << i << endl;
 	}
 }
