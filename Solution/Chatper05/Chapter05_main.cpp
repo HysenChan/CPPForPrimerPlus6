@@ -2,7 +2,8 @@
 
 int main()
 {
-	ForStr1();
+	PlusOne();
+	//ForStr1();
 	//BigStep();
 	//Formore();
 	//Express();
@@ -93,4 +94,14 @@ void ForStr1()
 		cout << word[i];
 	}
 	cout << "\nBye.\n";
+}
+
+void PlusOne()
+{
+	using namespace std;
+	int a = 20;
+	int b = 20;
+	cout << "a = " << a << ": b = " << b << "\n";
+	cout << "a++ = " << a++ << ": ++b = " << ++b << "\n";
+	cout << "a = " << a << ": b = " << b << "\n";
 }
