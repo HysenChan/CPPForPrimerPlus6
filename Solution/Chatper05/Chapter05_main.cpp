@@ -2,7 +2,8 @@
 
 int main()
 {
-	ForStr2();
+	CommaPriority();
+	//ForStr2();
 	//ExternalAndInnernalValue();
 	//PointerPlus();
 	//PlusOne();
@@ -151,4 +152,11 @@ void ForStr2()
 		word[j] = temp;
 	}
 	cout << word << "\nDone\n";
+}
+
+void CommaPriority()
+{
+	using namespace std;
+	int cat = (17, 240);
+	cout << "cat:" << cat << endl;//240	括号优先级最高，逗号运算符优先级最低；
 }
