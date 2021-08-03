@@ -2,7 +2,8 @@
 
 int main()
 {
-	CompStr1();
+	CompStr2();
+	//CompStr1();
 	//ForStr3();
 	//Equal();
 	//CommaPriority();
@@ -190,6 +191,19 @@ void CompStr1()
 	using namespace std;
 	char word[5] = "?ate";
 	for (char ch = 'a'; strcmp(word, "mate"); ch++)
+	{
+		cout << word << endl;
+		word[0] = ch;
+	}
+	cout << "After loop ends, word is " << word << endl;
+}
+
+void CompStr2()
+{
+	using namespace std;
+	string word = "?ate";
+
+	for (char ch = 'a'; word != "mate"; ch++)
 	{
 		cout << word << endl;
 		word[0] = ch;
