@@ -10,3 +10,4 @@ void ForStr1();
 void PlusOne();
 void PointerPlus();
 void ExternalAndInnernalValue();
+void ForStr2();

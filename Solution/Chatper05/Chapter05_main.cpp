@@ -2,7 +2,8 @@
 
 int main()
 {
-	ExternalAndInnernalValue();
+	ForStr2();
+	//ExternalAndInnernalValue();
 	//PointerPlus();
 	//PlusOne();
 	//ForStr1();
@@ -130,4 +131,24 @@ void ExternalAndInnernalValue()
 		cout << x << endl;
 	}
 	cout << x << endl;
+}
+
+void ForStr2()
+{
+	using namespace std;
+	cout << "Enter a word:";
+	string word;
+	cin >> word;
+
+	char temp;
+	int i, j;
+	for (j = 0, i = word.size() - 1; j < i; --i, ++j)
+	{
+		temp = word[i];
+		cout << "i:" << i;
+		cout << "temp:" << temp;
+		word[i] = word[j];
+		word[j] = temp;
+	}
+	cout << word << "\nDone\n";
 }
