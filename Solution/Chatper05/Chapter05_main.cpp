@@ -2,7 +2,8 @@
 
 int main()
 {
-	CompStr2();
+	WhileLoop();
+	//CompStr2();
 	//CompStr1();
 	//ForStr3();
 	//Equal();
@@ -209,4 +210,22 @@ void CompStr2()
 		word[0] = ch;
 	}
 	cout << "After loop ends, word is " << word << endl;
+}
+
+void WhileLoop()
+{
+	using namespace std;
+	const int ArSize = 20;
+	char name[ArSize];
+	//string name;
+
+	cout << "Your first name, please:";
+	cin >> name;
+	cout << "Here is your name, verticalized and ASCIIized:\n";
+	int i = 0;
+	while (name[i] != '\0')
+	{
+		cout << name[i] << ": " << int(name[i]) << endl;
+		i++;
+	}
 }
