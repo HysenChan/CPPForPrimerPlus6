@@ -2,7 +2,8 @@
 
 int main()
 {
-	ForStr3();
+	CompStr1();
+	//ForStr3();
 	//Equal();
 	//CommaPriority();
 	//ForStr2();
@@ -182,4 +183,16 @@ void ForStr3()
 	char ch;
 	for (ch = 'a'; ch <= 'z'; ch++)
 		cout << ch;
+}
+
+void CompStr1()
+{
+	using namespace std;
+	char word[5] = "?ate";
+	for (char ch = 'a'; strcmp(word, "mate"); ch++)
+	{
+		cout << word << endl;
+		word[0] = ch;
+	}
+	cout << "After loop ends, word is " << word << endl;
 }

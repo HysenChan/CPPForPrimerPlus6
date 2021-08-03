@@ -14,3 +14,4 @@ void ForStr2();
 void CommaPriority();
 void Equal();
 void ForStr3();
+void CompStr1();
