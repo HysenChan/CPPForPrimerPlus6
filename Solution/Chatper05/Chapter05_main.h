@@ -12,3 +12,5 @@ void PointerPlus();
 void ExternalAndInnernalValue();
 void ForStr2();
 void CommaPriority();
+void Equal();
+void ForStr3();

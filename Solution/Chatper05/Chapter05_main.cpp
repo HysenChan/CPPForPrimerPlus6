@@ -2,7 +2,9 @@
 
 int main()
 {
-	CommaPriority();
+	ForStr3();
+	//Equal();
+	//CommaPriority();
 	//ForStr2();
 	//ExternalAndInnernalValue();
 	//PointerPlus();
@@ -159,4 +161,25 @@ void CommaPriority()
 	using namespace std;
 	int cat = (17, 240);
 	cout << "cat:" << cat << endl;//240	括号优先级最高，逗号运算符优先级最低；
+}
+
+void Equal()
+{
+	using namespace std;
+	int quizscores[10] = { 20,20,20,20,20,19,20,18,20,20 };
+	cout << "Doing it right:\n";
+	int i;
+	for (i = 0; quizscores[i] == 20; i++)
+	{
+		cout << "-- 1 quiz " << i << " is a 20\n";
+	}
+	cout << "Doing it dangerously wrong:\n";
+}
+
+void ForStr3()
+{
+	using namespace std;
+	char ch;
+	for (ch = 'a'; ch <= 'z'; ch++)
+		cout << ch;
 }
