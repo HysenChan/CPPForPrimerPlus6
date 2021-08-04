@@ -1,5 +1,6 @@
 #pragma once
 #include<iostream>
+#include<ctime>
 
 void ForLoop();
 void NumTest();
@@ -17,3 +18,4 @@ void ForStr3();
 void CompStr1();
 void CompStr2();
 void WhileLoop();
+void Waiting();

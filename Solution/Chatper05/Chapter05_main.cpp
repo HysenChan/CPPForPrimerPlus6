@@ -2,7 +2,8 @@
 
 int main()
 {
-	WhileLoop();
+	Waiting();
+	//WhileLoop();
 	//CompStr2();
 	//CompStr1();
 	//ForStr3();
@@ -228,4 +229,17 @@ void WhileLoop()
 		cout << name[i] << ": " << int(name[i]) << endl;
 		i++;
 	}
+}
+
+void Waiting()
+{
+	using namespace std;
+	cout << "Enter the delay time, in second:";
+	float secs;
+	cin >> secs;
+	clock_t delay = secs * CLOCKS_PER_SEC;
+	cout << "starting\a\n";
+	clock_t start = clock();
+	while (clock() - start < delay);
+	cout << "done \a\n";
 }
