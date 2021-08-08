@@ -22,3 +22,4 @@ void Waiting();
 void Block();
 void DoWhile();
 void ForLoopInCpp11();
+void Textin1();

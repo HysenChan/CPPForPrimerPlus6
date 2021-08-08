@@ -2,7 +2,8 @@
 
 int main()
 {
-	ForLoopInCpp11();
+	Textin1();
+	//ForLoopInCpp11();
 	//DoWhile();
 	//Block();
 	//Waiting();
@@ -275,7 +276,7 @@ void DoWhile()
 	do
 	{
 		cin >> num;
-	} while (num!=8);
+	} while (num != 8);
 	cout << "Yes," << num << " is my favorite.\n";
 }
 
@@ -292,4 +293,20 @@ void ForLoopInCpp11()
 	}
 	for (int x : {3, 5, 6, 8, 9})
 		cout << x << " ";
+}
+
+void Textin1()
+{
+	using namespace std;
+	char ch;
+	int count = 0;
+	cout << "Enter characters; enter # to quit:\n";
+	cin.get(ch);
+	while (ch != '#')
+	{
+		cout << ch;
+		++count;
+		cin.get(ch);
+	}
+	cout << endl << count << " characters read\n";
 }
