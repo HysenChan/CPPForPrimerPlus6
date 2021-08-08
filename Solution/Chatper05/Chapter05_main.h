@@ -19,3 +19,5 @@ void CompStr1();
 void CompStr2();
 void WhileLoop();
 void Waiting();
+void Block();
+void DoWhile();

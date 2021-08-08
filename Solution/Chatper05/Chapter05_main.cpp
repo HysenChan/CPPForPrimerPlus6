@@ -2,7 +2,9 @@
 
 int main()
 {
-	Waiting();
+	DoWhile();
+	//Block();
+	//Waiting();
 	//WhileLoop();
 	//CompStr2();
 	//CompStr1();
@@ -242,4 +244,36 @@ void Waiting()
 	clock_t start = clock();
 	while (clock() - start < delay);
 	cout << "done \a\n";
+}
+
+void Block()
+{
+	using namespace std;
+	cout << "The amazing accounto will sum and average five number for you.\n";
+	cout << "Please enter five values:\n";
+	double number;
+	double sum = 0.0;
+	for (int i = 1; i <= 5; i++)
+	{
+		cout << "Value " << i << ":";
+		cin >> number;
+		sum += number;
+	}
+	cout << "Five exquisite choices indeed!";
+	cout << "They sum to " << sum << endl;
+	cout << "and average to " << sum / 5 << endl;
+	cout << "The amazing accounto bids you adieu!\n";
+}
+
+void DoWhile()
+{
+	using namespace std;
+	int num;
+	cout << "Enter numbers in the range 1-10 to find ";
+	cout << "my favorite number\n";
+	do
+	{
+		cin >> num;
+	} while (num!=8);
+	cout << "Yes," << num << " is my favorite.\n";
 }
