@@ -2,7 +2,8 @@
 
 int main()
 {
-	DoWhile();
+	ForLoopInCpp11();
+	//DoWhile();
 	//Block();
 	//Waiting();
 	//WhileLoop();
@@ -276,4 +277,19 @@ void DoWhile()
 		cin >> num;
 	} while (num!=8);
 	cout << "Yes," << num << " is my favorite.\n";
+}
+
+void ForLoopInCpp11()
+{
+	using namespace std;
+	double prices[5] = { 4.99,10.99,6.89,7.23,9.11 };
+	for (double x : prices)//display values
+		cout << x << endl;
+	for (double& x : prices)//change values
+	{
+		x = x * 0.80;
+		cout << x << endl;
+	}
+	for (int x : {3, 5, 6, 8, 9})
+		cout << x << " ";
 }

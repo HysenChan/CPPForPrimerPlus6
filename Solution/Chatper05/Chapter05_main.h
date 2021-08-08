@@ -21,3 +21,4 @@ void WhileLoop();
 void Waiting();
 void Block();
 void DoWhile();
+void ForLoopInCpp11();
