@@ -28,4 +28,4 @@ void Textin4();
 //5.6嵌套循环和二维数组
 void TwoDimentionalArray();
 //Test
-void MultiDoubleForLoop();
+void MultiDoubleForLoop();//Test06
