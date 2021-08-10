@@ -2,7 +2,8 @@
 
 int main()
 {
-	TwoDimentionalArray();
+	MultiDoubleForLoop();
+	//TwoDimentionalArray();
 	//Textin4();
 	//Textin3();
 	//Textin1();
@@ -349,6 +350,8 @@ void TwoDimentionalArray()
 	const int Cities = 5;
 	const int Years = 4;
 
+	//char citites[Citites][25] char 可以存储24个字符串（'\0'结束符)
+	//string citites[Citites]	string 自动调节字符串长度
 	const char* citites[Cities] =
 	{
 		"Gribble City",
@@ -370,8 +373,15 @@ void TwoDimentionalArray()
 	for (int city = 0; city < Cities; city++)
 	{
 		cout << citites[city] << ":\t";
-			for (int year = 0; year < Years; year++)
-				cout << maxtemps[year][city] << "\t";
+		for (int year = 0; year < Years; year++)
+			cout << maxtemps[year][city] << "\t";
 		cout << endl;
 	}
+}
+
+void MultiDoubleForLoop()
+{
+	using namespace std;
+	for (int i = 1; i <= 64; i *= 2)
+		cout << "i:" << i << '\t';
 }
