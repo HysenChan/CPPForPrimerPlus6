@@ -23,3 +23,4 @@ void Block();
 void DoWhile();
 void ForLoopInCpp11();
 void Textin1();
+void Textin3();

@@ -2,7 +2,8 @@
 
 int main()
 {
-	Textin1();
+	Textin3();
+	//Textin1();
 	//ForLoopInCpp11();
 	//DoWhile();
 	//Block();
@@ -303,6 +304,21 @@ void Textin1()
 	cout << "Enter characters; enter # to quit:\n";
 	cin.get(ch);
 	while (ch != '#')
+	{
+		cout << ch;
+		++count;
+		cin.get(ch);
+	}
+	cout << endl << count << " characters read\n";
+}
+
+void Textin3()
+{
+	using namespace std;
+	char ch;
+	int count = 0;
+	cin.get(ch);
+	while (!cin.fail())
 	{
 		cout << ch;
 		++count;
