@@ -390,8 +390,8 @@ void MultiDoubleForLoop()
 void Test07()
 {
 	using namespace std;
-	//int x = { 1,024 };//{}是代码快
-	//cout << "x:" << x << endl;
+	int x = (1, 024);//{}是代码块
+	cout << "x:" << x << endl;//x=20(八进制)
 	int y;
 	y = 1, 024;
 	cout << "y:" << y << endl;//y=1;024无用代码
