@@ -2,7 +2,9 @@
 
 int main()
 {
-	Textin3();
+	TwoDimentionalArray();
+	//Textin4();
+	//Textin3();
 	//Textin1();
 	//ForLoopInCpp11();
 	//DoWhile();
@@ -325,4 +327,36 @@ void Textin3()
 		cin.get(ch);
 	}
 	cout << endl << count << " characters read\n";
+}
+
+void Textin4()
+{
+	using namespace std;
+	int ch;
+	int count = 0;
+
+	while ((ch = cin.get()) != EOF)
+	{
+		cout.put(char(ch));
+		++count;
+	}
+	cout << endl << count << " character read\n";
+}
+
+void TwoDimentionalArray()
+{
+	using namespace std;
+	int maxtemps[4][5] =
+	{
+		{96,100,87,101,105},
+		{96,98,91,107,104},
+		{97,101,03,108,107},
+		{98,103,95,109,108},
+	};
+	for (int row = 0; row < 4; row++)
+	{
+		for (int col = 0; col < 5; col++)
+			cout << maxtemps[row][col] << "\t";
+		cout << endl;
+	}
 }

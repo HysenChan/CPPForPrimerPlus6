@@ -24,3 +24,6 @@ void DoWhile();
 void ForLoopInCpp11();
 void Textin1();
 void Textin3();
+void Textin4();
+//5.6嵌套循环和二维数组
+void TwoDimentionalArray();
