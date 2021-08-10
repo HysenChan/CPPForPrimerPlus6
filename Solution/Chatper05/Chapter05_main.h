@@ -29,3 +29,4 @@ void Textin4();
 void TwoDimentionalArray();
 //Test
 void MultiDoubleForLoop();//Test06
+void Test07();

@@ -2,7 +2,8 @@
 
 int main()
 {
-	MultiDoubleForLoop();
+	Test07();
+	//MultiDoubleForLoop();
 	//TwoDimentionalArray();
 	//Textin4();
 	//Textin3();
@@ -384,4 +385,14 @@ void MultiDoubleForLoop()
 	using namespace std;
 	for (int i = 1; i <= 64; i *= 2)
 		cout << "i:" << i << '\t';
+}
+
+void Test07()
+{
+	using namespace std;
+	//int x = { 1,024 };//{}是代码快
+	//cout << "x:" << x << endl;
+	int y;
+	y = 1, 024;
+	cout << "y:" << y << endl;//y=1;024无用代码
 }
