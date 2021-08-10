@@ -349,6 +349,8 @@ void TwoDimentionalArray()
 	const int Cities = 5;
 	const int Years = 4;
 
+	//char citites[Citites][25] char 可以存储24个字符串（'\0'结束符)
+	//string citites[Citites]	string 自动调节字符串长度
 	const char* citites[Cities] =
 	{
 		"Gribble City",
