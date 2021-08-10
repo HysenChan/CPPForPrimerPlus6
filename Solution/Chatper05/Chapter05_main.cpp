@@ -346,17 +346,32 @@ void Textin4()
 void TwoDimentionalArray()
 {
 	using namespace std;
-	int maxtemps[4][5] =
+	const int Cities = 5;
+	const int Years = 4;
+
+	const char* citites[Cities] =
+	{
+		"Gribble City",
+		"Gribble town",
+		"New Gribble",
+		"San Gribble",
+		"Gribble Vista",
+	};
+
+	int maxtemps[Years][Cities] =
 	{
 		{96,100,87,101,105},
 		{96,98,91,107,104},
 		{97,101,03,108,107},
 		{98,103,95,109,108},
 	};
-	for (int row = 0; row < 4; row++)
+
+	cout << "Maximum temperatures for 2008 - 2011\n\n";
+	for (int city = 0; city < Cities; city++)
 	{
-		for (int col = 0; col < 5; col++)
-			cout << maxtemps[row][col] << "\t";
+		cout << citites[city] << ":\t";
+			for (int year = 0; year < Years; year++)
+				cout << maxtemps[year][city] << "\t";
 		cout << endl;
 	}
 }
