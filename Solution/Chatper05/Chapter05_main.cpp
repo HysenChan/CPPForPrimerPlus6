@@ -2,7 +2,8 @@
 
 int main()
 {
-	Practice05And06();
+	Practice07();
+	//Practice05And06();
 	//Practice04();
 	//Practice03();
 	//Practice02();
@@ -543,4 +544,31 @@ void Practice05And06()
 		threeYearTotal += oneYearTotal;
 	}
 	cout << "Three year sell total:" << threeYearTotal << endl;
+}
+
+void Practice07()
+{
+	using namespace std;
+	struct Car
+	{
+		string maker;
+		int year;
+	};
+
+	int carNum;
+	cout << "How many cars do you wish to catalog?";
+	cin >> carNum;
+	Car* car = new Car[carNum];
+	for (int i = 0; i < carNum; i++)
+	{
+		cout << "Car #" << i + 1 << endl;
+		cout << "Please enter the make:";
+		cin.get();
+		getline(cin, car[i].maker);
+		cout << "Please enter the made year:";
+		cin >> car[i].year;
+	}
+	cout << "Here is your collection:" << endl;
+	for (int i = 0; i < carNum; i++)
+		cout << (*(car + i)).year << " " << (*(car + i)).maker << endl;
 }
