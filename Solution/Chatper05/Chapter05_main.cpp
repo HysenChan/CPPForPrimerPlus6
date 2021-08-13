@@ -2,7 +2,8 @@
 
 int main()
 {
-	Practice03();
+	Practice04();
+	//Practice03();
 	//Practice02();
 	//Practice01();
 	//Test07();
@@ -452,13 +453,47 @@ void Practice03()
 		cin >> num;
 	}
 	cout << "Sum:" << sum << endl;*/
-	
+
 	//for loop
-	for (;num!=0; cin>>num)
+	for (; num != 0; cin >> num)
 	{
 		sum += num;
 		cout << "Sum:" << sum << endl;
 		cout << "Please enter num:";
 	}
 	cout << "Sum:" << sum << endl;
+}
+
+void Practice04()
+{
+	using namespace std;
+	int year;
+	//double money[2] = { 100,100 };
+	/*for (year = 0; money[0] >= money[1]; year++)
+	{
+		money[0] += (100 * 0.1);
+		money[1] += (money[1] * 0.05);
+		cout << "Year:" << year << endl;
+		cout << "Daphne[0],Cleo[0]:" << money[1] << "\t" << money[0] << endl;
+	}*/
+
+	double Daphne[1] = { 100 };
+	double Cleo[1] = { 100 };
+	for (year = 0; Daphne[0] >= Cleo[0]; year++)
+	{
+		Daphne[0] += (100 * 0.1);
+		Cleo[0] += (Cleo[0] * 0.05);
+		cout << "Year:" << year << endl;
+		cout << "Daphne[0],Cleo[0]:" << Daphne[0] << "\t" << Cleo[0] << endl;
+	}
+
+	/*array<double, 1> Daphne = { 100 };
+	array<double, 1> Cleo = { 100 };
+	for (year = 0; Daphne.front() >= Cleo.front(); year++)
+	{
+		Daphne.front() += (100 * 0.1);
+		Cleo.front() += (Cleo.front() * 0.05);
+		cout << "Year:" << year << endl;
+		cout << "Daphne[0],Cleo[0]:" << Daphne.front() << "\t" << Cleo.front() << endl;
+	}*/
 }
