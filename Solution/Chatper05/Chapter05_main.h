@@ -1,6 +1,7 @@
 #pragma once
 #include<iostream>
 #include<ctime>
+#include<array>
 
 void ForLoop();
 void NumTest();
@@ -32,3 +33,4 @@ void MultiDoubleForLoop();//Test06
 void Test07();
 //Practice
 void Practice01();
+void Practice02();

@@ -2,7 +2,8 @@
 
 int main()
 {
-	Practice01();
+	Practice02();
+	//Practice01();
 	//Test07();
 	//MultiDoubleForLoop();
 	//TwoDimentionalArray();
@@ -415,4 +416,21 @@ void Practice01()
 	for (int i = num1; i <= num2; i++)
 		sum += i;
 	cout << "sum:" << sum << endl;
+}
+
+void Practice02()
+{
+	using namespace std;
+	const int ArSize = 101;
+
+	array<long double, ArSize> factorials;
+	factorials[1] = factorials[0] = 1;
+	for (int i = 2; i < ArSize; i++)
+	{
+		factorials[i] = i * factorials[(double)i - 1];
+	}
+	for (int i = 0; i < ArSize; i++)
+	{
+		cout << i << "! = " << factorials[i] << endl;
+	}
 }
