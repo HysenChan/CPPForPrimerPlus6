@@ -2,7 +2,8 @@
 
 int main()
 {
-	Practice04();
+	Practice05();
+	//Practice04();
 	//Practice03();
 	//Practice02();
 	//Practice01();
@@ -496,4 +497,35 @@ void Practice04()
 		cout << "Year:" << year << endl;
 		cout << "Daphne[0],Cleo[0]:" << Daphne.front() << "\t" << Cleo.front() << endl;
 	}*/
+}
+
+void Practice05()
+{
+	using namespace std;
+	const int monthForYear = 12;
+	int sell[monthForYear];
+	const char* monthName[monthForYear] =
+	{
+		"January",
+		"February",
+		"March",
+		"April",
+		"May",
+		"June",
+		"July",
+		"August",
+		"September",
+		"October",
+		"November",
+		"December",
+	};
+
+	int total = 0;
+	for (int i = 0; i < monthForYear; i++)
+	{
+		cout << monthName[i] << ":";
+		cin >> sell[i];
+		total += sell[i];
+	}
+	cout << "Total:" << total << endl;
 }
