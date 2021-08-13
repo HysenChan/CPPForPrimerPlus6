@@ -2,7 +2,8 @@
 
 int main()
 {
-	Test07();
+	Practice01();
+	//Test07();
 	//MultiDoubleForLoop();
 	//TwoDimentionalArray();
 	//Textin4();
@@ -395,4 +396,23 @@ void Test07()
 	int y;
 	y = 1, 024;
 	cout << "y:" << y << endl;//y=1;024ÎÞÓÃ´úÂë
+}
+
+void Practice01()
+{
+	using namespace std;
+	int num1, num2, sum = 0;
+	cout << "Please enter start num:";
+	cin >> num1;
+	cout << "Please enter end num:";
+	cin >> num2;
+	if (num1 > num2)
+	{
+		int temp = num1;
+		num1 = num2;
+		num2 = temp;
+	}
+	for (int i = num1; i <= num2; i++)
+		sum += i;
+	cout << "sum:" << sum << endl;
 }

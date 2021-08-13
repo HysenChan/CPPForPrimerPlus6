@@ -30,3 +30,5 @@ void TwoDimentionalArray();
 //Test
 void MultiDoubleForLoop();//Test06
 void Test07();
+//Practice
+void Practice01();
