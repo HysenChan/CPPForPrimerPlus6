@@ -2,7 +2,7 @@
 
 int main()
 {
-	Practice05();
+	Practice05And06();
 	//Practice04();
 	//Practice03();
 	//Practice02();
