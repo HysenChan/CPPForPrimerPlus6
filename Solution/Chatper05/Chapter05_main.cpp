@@ -443,12 +443,22 @@ void Practice03()
 	int sum = 0;
 	cout << "Please enter num:";
 	cin >> num;
-	while (num != 0)
+	//while loop
+	/*while (num != 0)
 	{
 		sum += num;
 		cout << "Sum:" << sum << endl;
 		cout << "Please enter num:";
 		cin >> num;
+	}
+	cout << "Sum:" << sum << endl;*/
+	
+	//for loop
+	for (;num!=0; cin>>num)
+	{
+		sum += num;
+		cout << "Sum:" << sum << endl;
+		cout << "Please enter num:";
 	}
 	cout << "Sum:" << sum << endl;
 }
