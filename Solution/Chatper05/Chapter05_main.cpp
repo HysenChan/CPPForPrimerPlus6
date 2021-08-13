@@ -499,11 +499,20 @@ void Practice04()
 	}*/
 }
 
-void Practice05()
+void Practice05And06()
 {
 	using namespace std;
+	const int totalYear = 3;
 	const int monthForYear = 12;
-	int sell[monthForYear];
+	int sell[3][monthForYear];
+
+	const char* yearsName[totalYear] =
+	{
+		"First year",
+		"Second year",
+		"Three year",
+	};
+
 	const char* monthName[monthForYear] =
 	{
 		"January",
@@ -520,12 +529,18 @@ void Practice05()
 		"December",
 	};
 
-	int total = 0;
-	for (int i = 0; i < monthForYear; i++)
+	int threeYearTotal = 0;
+	for (int year = 0; year < totalYear; year++)
 	{
-		cout << monthName[i] << ":";
-		cin >> sell[i];
-		total += sell[i];
+		int oneYearTotal = 0;
+		for (int month = 0; month < monthForYear; month++)
+		{
+			cout << yearsName[year] << "'s " << monthName[month] << ":";
+			cin >> sell[year][month];
+			oneYearTotal += sell[year][month];
+		}
+		cout << "One year sell total:" << oneYearTotal << endl;
+		threeYearTotal += oneYearTotal;
 	}
-	cout << "Total:" << total << endl;
+	cout << "Three year sell total:" << threeYearTotal << endl;
 }
