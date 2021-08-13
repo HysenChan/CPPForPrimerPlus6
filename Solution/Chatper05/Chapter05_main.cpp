@@ -2,7 +2,8 @@
 
 int main()
 {
-	Practice02();
+	Practice03();
+	//Practice02();
 	//Practice01();
 	//Test07();
 	//MultiDoubleForLoop();
@@ -433,4 +434,21 @@ void Practice02()
 	{
 		cout << i << "! = " << factorials[i] << endl;
 	}
+}
+
+void Practice03()
+{
+	using namespace std;
+	int num;
+	int sum = 0;
+	cout << "Please enter num:";
+	cin >> num;
+	while (num != 0)
+	{
+		sum += num;
+		cout << "Sum:" << sum << endl;
+		cout << "Please enter num:";
+		cin >> num;
+	}
+	cout << "Sum:" << sum << endl;
 }
