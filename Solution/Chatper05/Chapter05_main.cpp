@@ -2,7 +2,8 @@
 
 int main()
 {
-	Practice08And09();
+	Practice10();
+	//Practice08And09();
 	//Practice07();
 	//Practice05And06();
 	//Practice04();
@@ -590,4 +591,20 @@ void Practice08And09()
 		}
 	}
 	cout << endl << "You entered a total of " << count << " words.\n";
+}
+
+void Practice10()
+{
+	using namespace std;
+	int rowNums;
+	cout << "Enter number of rowNums:";
+	cin >> rowNums;
+	for (int row = 1; row <= rowNums; row++)
+	{
+		for (int dot = 1; dot <= rowNums - row; dot++)//ÖðÐÐµÝ¼õ
+			cout << ".";
+		for (int star = 1; star <= row; star++)//ÖðÐÐµÝÔö
+			cout << "*";
+		cout << endl;
+	}
 }
