@@ -2,7 +2,8 @@
 
 int main()
 {
-	Practice07();
+	Practice08();
+	//Practice07();
 	//Practice05And06();
 	//Practice04();
 	//Practice03();
@@ -571,4 +572,21 @@ void Practice07()
 	cout << "Here is your collection:" << endl;
 	for (int i = 0; i < carNum; i++)
 		cout << (*(car + i)).year << " " << (*(car + i)).maker << endl;
+}
+
+void Practice08()
+{
+	using namespace std;
+	char words[30];
+	int count = 0;
+	cout << "Please enter your words:";
+	cin >> words;
+	while (strcmp(words, "done") != 0)
+	{
+		if (bool(cin>>words)==true)
+		{
+			count++;
+		}
+	}
+	cout << endl << "You entered a total of " << count << " words.\n";
 }
