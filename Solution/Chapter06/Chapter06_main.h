@@ -6,3 +6,4 @@ void IfElseBase();
 void IfElseifElseBase();
 void OrBase();
 void AndBase();
+void MoreAndBase();

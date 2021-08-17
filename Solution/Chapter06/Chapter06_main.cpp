@@ -2,7 +2,8 @@
 
 int main()
 {
-	AndBase();
+	MoreAndBase();
+	//AndBase();
 	//OrBase();
 	//IfElseifElseBase();
 	//IfElseBase();
@@ -129,4 +130,33 @@ void AndBase()
 		cout << count;
 		cout << " biger than you have totals.\n";
 	}
+}
+
+void MoreAndBase()
+{
+	using namespace std;
+
+	const char* qualify[4] =
+	{
+		"One",
+		"Two",
+		"Three",
+		"Four",
+	};
+
+	int age;
+	cout << "Enter your age in years:";
+	cin >> age;
+	int index;
+
+	if (age > 17 && age < 35)
+		index = 0;
+	else if (age > 35 && age < 50)
+		index = 1;
+	else if (age >= 50 && age < 65)
+		index = 2;
+	else
+		index = 3;
+
+	cout << "Your qualify for the " << qualify[index];
 }
