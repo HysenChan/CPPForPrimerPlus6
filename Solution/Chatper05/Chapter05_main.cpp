@@ -2,7 +2,9 @@
 
 int main()
 {
-	Practice07();
+	Practice10();
+	//Practice08And09();
+	//Practice07();
 	//Practice05And06();
 	//Practice04();
 	//Practice03();
@@ -571,4 +573,38 @@ void Practice07()
 	cout << "Here is your collection:" << endl;
 	for (int i = 0; i < carNum; i++)
 		cout << (*(car + i)).year << " " << (*(car + i)).maker << endl;
+}
+
+void Practice08And09()
+{
+	using namespace std;
+	//char words[30];
+	string words;
+	int count = 0;
+	cout << "Please enter your words:";
+	cin >> words;
+	while (words != "done")
+	{
+		if (bool(cin >> words) == true)
+		{
+			count++;
+		}
+	}
+	cout << endl << "You entered a total of " << count << " words.\n";
+}
+
+void Practice10()
+{
+	using namespace std;
+	int rowNums;
+	cout << "Enter number of rowNums:";
+	cin >> rowNums;
+	for (int row = 1; row <= rowNums; row++)
+	{
+		for (int dot = 1; dot <= rowNums - row; dot++)//ÖðÐÐµÝ¼õ
+			cout << ".";
+		for (int star = 1; star <= row; star++)//ÖðÐÐµÝÔö
+			cout << "*";
+		cout << endl;
+	}
 }

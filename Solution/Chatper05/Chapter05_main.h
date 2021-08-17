@@ -4,6 +4,7 @@
 #include<array>
 #include<vector>
 #include <string>
+#include<cstring>
 
 void ForLoop();
 void NumTest();
@@ -40,3 +41,5 @@ void Practice03();
 void Practice04();
 void Practice05And06();
 void Practice07();
+void Practice08And09();
+void Practice10();
