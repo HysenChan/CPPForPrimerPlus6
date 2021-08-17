@@ -21,10 +21,9 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{f718536d-6dfd-4a64-bd72-e349a503d37f}</ProjectGuid>
-    <RootNamespace>Chatper05</RootNamespace>
+    <ProjectGuid>{23b94385-98f5-4f21-9a5e-4e351fc3fe5e}</ProjectGuid>
+    <RootNamespace>Chapter06</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
-    <ProjectName>Chapter05</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -140,10 +139,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="Chapter05_main.h" />
+    <ClCompile Include="Chapter06_main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Chapter05_main.cpp" />
+    <ClInclude Include="Chpater06_main.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
