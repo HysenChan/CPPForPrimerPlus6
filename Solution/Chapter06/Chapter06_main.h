@@ -4,3 +4,4 @@
 void IfBase();
 void IfElseBase();
 void IfElseifElseBase();
+void OrBase();

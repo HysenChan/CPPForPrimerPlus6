@@ -2,7 +2,8 @@
 
 int main()
 {
-	IfElseifElseBase();
+	OrBase();
+	//IfElseifElseBase();
 	//IfElseBase();
 	//IfBase();
 	return 0;
@@ -68,4 +69,20 @@ void IfElseifElseBase()
 		else
 			cout << Fave << " is right!\n";
 	} while (n != Fave);
+}
+
+void OrBase()
+{
+	using namespace std;
+	cout << "This program may reformat your hard disk\n"
+		"and destroy all your data.\n"
+		"Do you wish to continue?<y/n>";
+	char ch;
+	cin >> ch;
+	if (ch == 'y' || ch == 'Y')
+		cout << "You were warned!\a\a\n";
+	else if (ch == 'n' || ch == 'N')
+		cout << "A wise choice ... buy\n";
+	else
+		cout << "That wasn't a y or n!";
 }
