@@ -142,7 +142,7 @@
     <ClCompile Include="Chapter06_main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Chpater06_main.h" />
+    <ClInclude Include="Chapter06_main.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
