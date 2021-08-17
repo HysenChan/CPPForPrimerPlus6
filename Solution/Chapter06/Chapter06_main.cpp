@@ -103,13 +103,13 @@ void AndBase()
 	{
 		naaq[i] = temp;
 		++i;
-		if (i<ArSize)
+		if (i < ArSize)
 		{
 			cout << "Next value:";
 			cin >> temp;
 		}
 	}
-	if (i==0)
+	if (i == 0)
 	{
 		cout << "No data--by\n";
 	}
@@ -121,12 +121,12 @@ void AndBase()
 		int count = 0;
 		for (int j = 0; j < i; j++)
 		{
-			if (naaq[j]>you)
+			if (naaq[j] > you)
 			{
 				++count;
 			}
-			cout << count;
-			cout << " biger than you have totals.\n";
 		}
+		cout << count;
+		cout << " biger than you have totals.\n";
 	}
 }
