@@ -2,7 +2,8 @@
 
 int main()
 {
-	IfElseBase();
+	IfElseifElseBase();
+	//IfElseBase();
 	//IfBase();
 	return 0;
 }
@@ -33,9 +34,9 @@ void IfElseBase()
 	char ch;
 	cout << "Type, and I shall repeat.\n";
 	cin.get(ch);
-	while (ch!='.')
+	while (ch != '.')
 	{
-		if (ch=='\n')
+		if (ch == '\n')
 		{
 			cout << ch;
 		}
@@ -46,4 +47,25 @@ void IfElseBase()
 		cin.get(ch);
 	}
 	cout << "\nPlease excuse the slight confusion.\n";
+}
+
+void IfElseifElseBase()
+{
+	using namespace std;
+	int Fave = rand() % 100;
+	cout << "Fave:" << Fave << endl;
+	int n;
+
+	cout << "Enter a number in the range 1-100 to find";
+	cout << "my favorite number:";
+	do
+	{
+		cin >> n;
+		if (n < Fave)
+			cout << "Too low -- guess again:";
+		else if (n > Fave)
+			cout << "Too high -- guess again:";
+		else
+			cout << Fave << " is right!\n";
+	} while (n != Fave);
 }
