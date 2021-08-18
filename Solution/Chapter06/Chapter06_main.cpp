@@ -2,7 +2,9 @@
 
 int main()
 {
-	NotBase();
+	Condit();
+	//CCTypes();
+	//NotBase();
 	//MoreAndBase();
 	//AndBase();
 	//OrBase();
@@ -186,4 +188,39 @@ bool is_int(double x)
 		return true;
 	else
 		return false;
+}
+
+void CCTypes()
+{
+	using namespace std;
+	cout << "Enter text for analysis,and type@"
+		" to terminate input.\n";
+	char ch;
+	int whitespace = 0, digits = 0, chars = 0, punct = 0, others = 0;
+
+	cin.get(ch);
+	while (ch != '@')
+	{
+		if (isalpha(ch))
+			chars++;
+		else if (isspace(ch))
+			whitespace++;
+		else if (isdigit(ch))
+			digits++;
+		else
+			others++;
+		cin.get(ch);
+	}
+	cout << chars << " letters, " << whitespace << " whitespace, " << digits << " digits, " << others << " others.\n";
+}
+
+void Condit()
+{
+	using namespace std;
+	int a, b;
+	cout << "Enter two integers:";
+	cin >> a >> b;
+	cout << "The larger of " << a << " and " << b;
+	int c = a > b ? a : b;
+	cout << " is " << c << endl;
 }

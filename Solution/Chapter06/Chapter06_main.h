@@ -1,5 +1,6 @@
 #pragma once
 #include<iostream>
+#include<cctype>
 
 void IfBase();
 void IfElseBase();
@@ -9,3 +10,5 @@ void AndBase();
 void MoreAndBase();
 void NotBase();
 bool is_int(double);
+void CCTypes();
+void Condit();
