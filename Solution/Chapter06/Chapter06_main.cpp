@@ -2,7 +2,8 @@
 
 int main()
 {
-	MoreAndBase();
+	NotBase();
+	//MoreAndBase();
 	//AndBase();
 	//OrBase();
 	//IfElseifElseBase();
@@ -159,4 +160,30 @@ void MoreAndBase()
 		index = 3;
 
 	cout << "Your qualify for the " << qualify[index];
+}
+
+void NotBase()
+{
+	using namespace std;
+
+	double num;
+
+	cout << "Yo,dude!Enter an integer value:";
+	cin >> num;
+	while (!is_int(num))
+	{
+		cout << "Out of range -- please try again:";
+		cin >> num;
+	}
+
+	int val = int(num);
+	cout << "You've entered the integer " << val << "\nBye\n";
+}
+
+bool is_int(double x)
+{
+	if (x <= INT_MAX && x >= static_cast<int>(INT_MIN))
+		return true;
+	else
+		return false;
 }

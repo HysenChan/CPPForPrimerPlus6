@@ -7,3 +7,5 @@ void IfElseifElseBase();
 void OrBase();
 void AndBase();
 void MoreAndBase();
+void NotBase();
+bool is_int(double);
