@@ -2,7 +2,8 @@
 
 int main()
 {
-	SwitchBase();
+	EnumBase();
+	//SwitchBase();
 	//Condit();
 	//CCTypes();
 	//NotBase();
@@ -278,4 +279,29 @@ void comfort()
 	std::cout << "Your employees think ou are the finest CEO\n"
 		"in the industry.The board of directors think\n"
 		"you are the finest CEO in the industry.\n";
+}
+
+void EnumBase()
+{
+	enum { red, orange, yellow, green, blue, violet, indigo };
+	using namespace std;
+	cout << "Enter color code (0-6):";
+	int code;
+	cin >> code;
+	while (!isdigit(code) && code >= red && code <= indigo)
+	{
+		switch (code)
+		{
+		case red:cout << "Red!\n"; break;
+		case orange:cout << "Orange!\n"; break;
+		case yellow:cout << "Yellow!\n"; break;
+		case green:cout << "Green!\n"; break;
+		case blue:cout << "Blue!\n"; break;
+		case violet:cout << "Violet!\n"; break;
+		case indigo:cout << "Indigo!\n"; break;
+		}
+		cout << "Enter color code(0-6):";
+		cin >> code;
+	}
+	cout << "Bye\n";
 }
