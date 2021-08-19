@@ -324,8 +324,11 @@ void Jump()
 			break;
 		if (line[i] != ' ')
 			continue;
+		if (line[i] == 'H' || line[i] == 'h')
+			goto catchChar;
 		spaces++;
 	}
+catchChar:cout << "\nCatch a H\n";
 	cout << "\n" << spaces << " spaces\n";
 	cout << "Done.\n";
 }
