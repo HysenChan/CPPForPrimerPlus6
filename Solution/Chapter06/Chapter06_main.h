@@ -12,3 +12,4 @@ void NotBase();
 bool is_int(double);
 void CCTypes();
 void Condit();
+void SwitchBase();
