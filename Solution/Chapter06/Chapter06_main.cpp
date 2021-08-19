@@ -233,22 +233,25 @@ void SwitchBase()
 {
 	using namespace std;
 	showmenu();
-	int choice;
+	char choice;
 	cin >> choice;
-	while (choice != 5)
+	while (choice != 'q' && choice != 'Q')
 	{
 		switch (choice)
 		{
-		case 1:	cout << "\a\n";
+		case 'a':
+		case 'A':	cout << "\a\n";
 			break;
-		case 2:	report();
+		case 'r':
+		case 'R':	report();
 			break;
-		case 3:	cout << "The boss was in all day.\n";
+		case 'l':
+		case 'L':	cout << "The boss was in all day.\n";
 			break;
-		case 4:	comfort();
+		case 'c':
+		case 'C':	comfort();
 			break;
 		default:cout << "That's not a choice.\n";
-			break;
 		}
 		showmenu();
 		cin >> choice;
@@ -258,10 +261,10 @@ void SwitchBase()
 
 void showmenu()
 {
-	std::cout << "Please enter 1,2,3,4,or 5:\n"
-		"1) alarm		2)report\n"
-		"3) alibi		4)comfort\n"
-		"5) quit\n";
+	std::cout << "Please enter a,r,l,c,or q:\n"
+		"a) alarm		r)report\n"
+		"l) alibi		c)comfort\n"
+		"q) quit\n";
 }
 
 void report()
