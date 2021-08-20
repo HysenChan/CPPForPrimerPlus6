@@ -15,3 +15,4 @@ void Condit();
 void SwitchBase();
 void EnumBase();
 void Jump();
+void CinFish();
