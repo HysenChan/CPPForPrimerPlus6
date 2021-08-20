@@ -16,3 +16,4 @@ void SwitchBase();
 void EnumBase();
 void Jump();
 void CinFish();
+void CinGolf();
