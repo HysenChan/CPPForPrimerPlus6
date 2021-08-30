@@ -2,7 +2,8 @@
 
 int main()
 {
-	CinGolf();
+	CinCoutFile();
+	//CinGolf();
 	//CinFish();
 	//Jump();
 	//EnumBase();
@@ -382,4 +383,22 @@ void CinGolf()
 		total += golf[i];
 
 	cout << total / Max << " = average score " << Max << " rounds\n";
+}
+
+void CinCoutFile()
+{
+	using namespace std;
+	ofstream outFile;
+	ofstream fout;
+
+	outFile.open("fish.txt");
+	double wt = 125.8;
+	int it = 10;
+	outFile << wt;
+	outFile << it;
+
+	char fileName[50] = "Hello.txt";
+	fout.open(fileName);
+	char line[81] = "This is Objects are closer than they appear.";
+	fout << line << endl;
 }

@@ -1,6 +1,7 @@
 #pragma once
 #include<iostream>
 #include<cctype>
+#include<fstream>
 
 void IfBase();
 void IfElseBase();
@@ -17,3 +18,4 @@ void EnumBase();
 void Jump();
 void CinFish();
 void CinGolf();
+void CinCoutFile();
