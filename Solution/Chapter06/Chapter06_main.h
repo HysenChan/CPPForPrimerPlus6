@@ -19,3 +19,4 @@ void Jump();
 void CinFish();
 void CinGolf();
 void CinCoutFile();
+void OutFile();
