@@ -2,7 +2,8 @@
 
 int main()
 {
-	OutFile();
+	InFile();
+	//OutFile();
 	//CinCoutFile();
 	//CinGolf();
 	//CinFish();
@@ -440,4 +441,25 @@ void OutFile()
 	outFile << "Now asking $" << d_price << endl;
 
 	outFile.close();
+}
+
+void InFile()
+{
+	using namespace std;
+	ifstream inFile;
+	ifstream fin;
+
+	inFile.open("bowling.txt");
+	if (!inFile.is_open())
+	{
+		exit(EXIT_FAILURE);
+	}
+	char fileName[50];
+	cin >> fileName;
+	fin.open(fileName);
+
+	double wt;
+	inFile >> wt;
+	char line[81];
+	fin.getline(line, 81);
 }

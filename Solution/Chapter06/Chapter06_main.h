@@ -20,3 +20,4 @@ void CinFish();
 void CinGolf();
 void CinCoutFile();
 void OutFile();
+void InFile();
