@@ -2,7 +2,8 @@
 
 int main()
 {
-	InFile();
+	SumaFile();
+	//InFile();
 	//OutFile();
 	//CinCoutFile();
 	//CinGolf();
@@ -462,4 +463,48 @@ void InFile()
 	inFile >> wt;
 	char line[81];
 	fin.getline(line, 81);
+}
+
+void SumaFile()
+{
+	using namespace std;
+
+	const int SIZE = 60;
+	char fileName[SIZE] = "scores.txt";
+	ifstream inFile;
+	cout << "Enter name of data file:\n";
+	//cin.getline(fileName, SIZE);
+	inFile.open(fileName);
+	if (!inFile.is_open())
+	{
+		cout << "Could not open the file " << fileName << endl;
+		cout << "Program terminating.\n";
+		exit(EXIT_FAILURE);
+	}
+	double value;
+	double sum = 0.0;
+	int count = 0;
+
+	inFile >> value;
+	while (inFile.good())
+	{
+		++count;
+		sum += value;
+		inFile >> value;
+	}
+	if (inFile.eof())//最后一次读取数据时遇到EOF,返回true
+		cout << "End of file reached.\n";
+	else if (inFile.fail())//最后一次读取操作中发生类型不匹配，fail()返回true；例如scores.txt中的name和其他类型不匹配
+		cout << "Input terminated by data mismatch.\n";
+	else
+		cout << "Input terminated for unknown reason.\n";
+	if (count == 0)//指定文件里没有数据
+		cout << "No data processed.\n";
+	else
+	{
+		cout << "Items read:" << count << endl;
+		cout << "Sum:" << sum << endl;
+		cout << "Average:" << sum / count << endl;
+	}
+	inFile.close();
 }

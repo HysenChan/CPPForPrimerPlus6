@@ -21,3 +21,4 @@ void CinGolf();
 void CinCoutFile();
 void OutFile();
 void InFile();
+void SumaFile();
