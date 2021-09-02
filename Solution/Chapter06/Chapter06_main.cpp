@@ -485,12 +485,10 @@ void SumaFile()
 	double sum = 0.0;
 	int count = 0;
 
-	inFile >> value;
-	while (inFile.good())
+	while (inFile >> value)
 	{
 		++count;
 		sum += value;
-		inFile >> value;
 	}
 	if (inFile.eof())//最后一次读取数据时遇到EOF,返回true
 		cout << "End of file reached.\n";
