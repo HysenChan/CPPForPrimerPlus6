@@ -2,7 +2,8 @@
 
 int main()
 {
-	Review04();
+	Review05();
+	//Review04();
 	//Review03();
 	//SumaFile();
 	//InFile();
@@ -549,4 +550,14 @@ void Review04()
 		cout << "ch is uppper.\n";
 	else if (islower(ch))//(ch>='a'&&ch<='z')
 		cout << "ch is lower.\n";
+}
+
+void Review05()
+{
+	using namespace std;
+	int x = 10;
+	cout << "x:" << x << ",!x:" << !x << ",!!x:" << !!x << endl;
+	bool y = true;
+	cout.setf(ios_base::boolalpha);
+	cout << "y:" << y << ",!y:" << !y << ",!!y:" << !!y << endl;
 }
