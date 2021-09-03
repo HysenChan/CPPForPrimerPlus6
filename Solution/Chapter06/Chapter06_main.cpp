@@ -2,7 +2,8 @@
 
 int main()
 {
-	Review05();
+	Review06();
+	//Review05();
 	//Review04();
 	//Review03();
 	//SumaFile();
@@ -560,4 +561,13 @@ void Review05()
 	bool y = true;
 	cout.setf(ios_base::boolalpha);
 	cout << "y:" << y << ",!y:" << !y << ",!!y:" << !!y << endl;
+}
+
+void Review06()
+{
+	using namespace std;
+	int x;
+	cin >> x;
+	x = (x >= 0) ? x : -x;
+	cout << x;
 }
