@@ -2,7 +2,8 @@
 
 int main()
 {
-	Review06();
+	Review07();
+	//Review06();
 	//Review05();
 	//Review04();
 	//Review03();
@@ -570,4 +571,34 @@ void Review06()
 	cin >> x;
 	x = (x >= 0) ? x : -x;
 	cout << x;
+}
+
+void Review07()
+{
+	using namespace std;
+	char ch;
+	int a_grade = 0, b_grade = 0, c_grade = 0, d_grade = 0, f_grade = 0;
+	switch (ch)
+	{
+	case 'A':
+		a_grade++;
+		break;
+	case 'B':
+		b_grade++;
+		break;
+	case 'C':
+		c_grade++;
+		break;
+	case 'D':
+		d_grade++;
+		break;
+	default:
+		f_grade++;
+		break;
+	}
+	cout << "a_grade:" << a_grade << endl;
+	cout << "b_grade:" << b_grade << endl;
+	cout << "c_grade:" << c_grade << endl;
+	cout << "d_grade:" << d_grade << endl;
+	cout << "f_grade:" << f_grade << endl;
 }
