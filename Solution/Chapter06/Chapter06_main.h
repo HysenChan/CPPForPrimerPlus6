@@ -25,3 +25,4 @@ void SumaFile();
 
 //Chapter06 ReviewTest
 void Review03();
+void Review04();

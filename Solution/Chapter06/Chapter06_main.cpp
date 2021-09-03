@@ -2,7 +2,8 @@
 
 int main()
 {
-	Review03();
+	Review04();
+	//Review03();
 	//SumaFile();
 	//InFile();
 	//OutFile();
@@ -515,7 +516,7 @@ void Review03()
 	int ct1, ct2;
 
 	ct1 = ct2 = 0;
-	while ((ch=cin.get()!='$'))
+	while ((ch = cin.get() != '$'))
 	{
 		cout << ch;
 		ct1++;
@@ -524,4 +525,28 @@ void Review03()
 		cout << ch;
 	}
 	cout << "ct1=" << ct1 << ",ct2=" << ct2 << endl;
+}
+
+void Review04()
+{
+	using namespace std;
+	int weight = 120;
+	if (weight >= 115 && weight < 125)
+		cout << "weight:" << weight << endl;
+	char ch = 'q';
+	if (ch == 'q' || ch == 'Q')
+		cout << "ch:" << ch << endl;
+	int x = 30;
+	if (x != 26 && x % 2 == 0)
+		cout << "x:" << x << endl;
+	if (!(x % 26 == 0) && x % 2 == 0)
+		cout << "x:" << x << endl;
+	int donation = 999;
+	int guest = 1;
+	if ((donation > 1000 && donation < 2000) || guest == 1)
+		cout << "donation:" << donation << ",guest:" << guest << endl;
+	if (isupper(ch))//(ch>='A'&&ch<='Z')
+		cout << "ch is uppper.\n";
+	else if (islower(ch))//(ch>='a'&&ch<='z')
+		cout << "ch is lower.\n";
 }
