@@ -2,7 +2,8 @@
 
 int main()
 {
-	Review09();
+	Practice01();
+	//Review09();
 	//Review07();
 	//Review06();
 	//Review05();
@@ -616,4 +617,20 @@ void Review09()
 			line++;
 	}
 	cout << "line:" << line << endl;
+}
+
+void Practice01()
+{
+	using namespace std;
+	char ch;
+	while (cin.get(ch) && ch != '@')
+	{
+		if (isdigit(ch) or isspace(ch))//ÅÅ³ýÊý×ÖºÍ¿Õ¸ñ
+			cout << ch;
+		else
+		{
+			ch = isupper(ch) ? tolower(ch) : toupper(ch);
+			cout << ch;
+		}
+	}
 }

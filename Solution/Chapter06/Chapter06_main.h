@@ -30,3 +30,6 @@ void Review05();
 void Review06();
 void Review07();
 void Review09();
+
+//Chapter06 Practice
+void Practice01();
