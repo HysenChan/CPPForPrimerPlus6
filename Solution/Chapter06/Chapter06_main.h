@@ -22,3 +22,6 @@ void CinCoutFile();
 void OutFile();
 void InFile();
 void SumaFile();
+
+//Chapter06 ReviewTest
+void Review03();
