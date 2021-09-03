@@ -2,7 +2,8 @@
 
 int main()
 {
-	Review07();
+	Review09();
+	//Review07();
 	//Review06();
 	//Review05();
 	//Review04();
@@ -578,6 +579,7 @@ void Review07()
 	using namespace std;
 	char ch;
 	int a_grade = 0, b_grade = 0, c_grade = 0, d_grade = 0, f_grade = 0;
+	cin >> ch;
 	switch (ch)
 	{
 	case 'A':
@@ -601,4 +603,17 @@ void Review07()
 	cout << "c_grade:" << c_grade << endl;
 	cout << "d_grade:" << d_grade << endl;
 	cout << "f_grade:" << f_grade << endl;
+}
+
+void Review09()
+{
+	using namespace std;
+	int line = 0;
+	char ch;
+	while (cin.get(ch) && ch != 'Q')
+	{
+		if (ch != '\n')
+			line++;
+	}
+	cout << "line:" << line << endl;
 }
