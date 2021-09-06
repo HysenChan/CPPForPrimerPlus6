@@ -2,7 +2,8 @@
 
 int main()
 {
-	Practice05();
+	Practice06();
+	//Practice05();
 	//Practice04();
 	//Practice03();
 	//Practice02();
@@ -798,5 +799,65 @@ void Practice05()
 		}
 		cout << "tax:" << tax << endl;
 		cout << "Please enter num:";
+	}
+}
+
+struct Union
+{
+	std::string name;
+	double money;
+};
+void displayNameAndMoney(int i, Union* unionArr)
+{
+	std::cout << i + 1 << ". Name:" << unionArr[i].name << std::endl;
+	std::cout << i + 1 << ". Money:" << unionArr[i].money << std::endl;
+}
+void Practice06()
+{
+	int bigger = 0;
+	int smaller = 0;
+	using namespace std;
+	cout << "Please enter the union of member:";
+	int unionSize;
+	cin >> unionSize;
+	Union* unionArr = new Union[unionSize];
+	for (int i = 0; i < unionSize; i++)
+	{
+		cout << "Please enter the " << i + 1 << ". member name:";
+		cin >> unionArr[i].name;
+		cout << "Please enter the " << i + 1 << ". member money:";
+		cin >> unionArr[i].money;
+	}
+
+	for (int i = 0; i < unionSize; i++)
+	{
+		if (unionArr[i].money > 10000)
+		{
+			bigger++;
+			if (bigger == 1)
+				cout << "Grand Patrons:\n";
+			displayNameAndMoney(i, unionArr);
+		}
+	}
+	if (bigger == 0)
+	{
+		cout << "Grand Patrons:\n";
+		cout << "None.\n";
+	}
+
+	for (int i = 0; i < unionSize; i++)
+	{
+		if (unionArr[i].money <= 10000)
+		{
+			smaller++;
+			if (smaller == 1)
+				cout << "Patrons:\n";
+			displayNameAndMoney(i, unionArr);
+		}
+	}
+	if (smaller == 0)
+	{
+		cout << "Patrons:\n";
+		cout << "None.\n";
 	}
 }

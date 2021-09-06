@@ -2,6 +2,7 @@
 #include<iostream>
 #include<cctype>
 #include<fstream>
+#include<string>
 
 void IfBase();
 void IfElseBase();
@@ -37,3 +38,4 @@ void Practice02();
 void Practice03();
 void Practice04();
 void Practice05();
+void Practice06();
