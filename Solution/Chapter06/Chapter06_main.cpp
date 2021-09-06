@@ -2,7 +2,8 @@
 
 int main()
 {
-	Practice03();
+	Practice04();
+	//Practice03();
 	//Practice02();
 	//Practice01();
 	//Review09();
@@ -687,5 +688,84 @@ void Practice03()
 		}
 		cin.ignore();
 		cin.clear();
+	}
+}
+
+const int strSize = 20;
+struct bop
+{
+	char fullname[strSize];
+	char title[strSize];
+	char bopname[strSize];
+	int preference;
+};
+
+void displayFullname(const int& bopArraySize, bop  bopArr[5])
+{
+	for (int i = 0; i < bopArraySize; i++)
+		std::cout << bopArr[i].fullname << std::endl;
+}
+
+void displayTitle(const int& bopArraySize, bop  bopArr[5])
+{
+	for (int i = 0; i < bopArraySize; i++)
+		std::cout << bopArr[i].title << std::endl;
+}
+
+void displayBopname(const int& bopArraySize, bop  bopArr[5])
+{
+	for (int i = 0; i < bopArraySize; i++)
+		std::cout << bopArr[i].bopname << std::endl;
+}
+
+void displayMenu()
+{
+	std::cout << "Benevolent Order of Programmers Report\n";
+	std::cout << "a. display by name\t b. display by title\n";
+	std::cout << "c. display by bopname\t d.display by preference\n";
+	std::cout << "q. quit\n";
+}
+
+void Practice04()
+{
+	using namespace std;
+	const int bopArraySize = 5;
+	bop bopArr[bopArraySize];
+	bopArr[0] = { "Wimp Macho", "A","Anonymous A" };
+	bopArr[1] = { "Raki Rhodes", "B","Anonymous B" };
+	bopArr[2] = { "Celia Laiter", "C","Anonymous C" };
+	bopArr[3] = { "Hoppy Hipman", "D","Anonymous D" };
+	bopArr[4] = { "Pat Hand", "E","Anonymous E" };
+
+	displayMenu();
+
+	char ch;
+	while (cin.get(ch) && ch != 'q')
+	{
+		switch (ch)
+		{
+		case 'a':
+			displayFullname(bopArraySize, bopArr);
+			break;
+		case 'b':
+			displayTitle(bopArraySize, bopArr);
+			break;
+		case 'c':
+			displayBopname(bopArraySize, bopArr);
+			break;
+		case 'd':
+			cout << "Please enter 'num'(0-2) to display perfence:\n";
+			cout << "0. fullname\t 1. title\t 2.bopname\n";
+			int choice;
+			cin >> choice;
+			if (choice == 0)
+				displayFullname(bopArraySize, bopArr);
+			else if (choice == 1)
+				displayTitle(bopArraySize, bopArr);
+			else
+				displayBopname(bopArraySize, bopArr);
+			displayMenu();
+			break;
+		}
 	}
 }
