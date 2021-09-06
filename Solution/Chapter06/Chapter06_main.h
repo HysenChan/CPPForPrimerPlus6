@@ -36,3 +36,4 @@ void Practice01();
 void Practice02();
 void Practice03();
 void Practice04();
+void Practice05();
