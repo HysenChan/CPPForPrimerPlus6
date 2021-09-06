@@ -2,7 +2,8 @@
 
 int main()
 {
-	Practice01();
+	Practice02();
+	//Practice01();
 	//Review09();
 	//Review07();
 	//Review06();
@@ -633,4 +634,27 @@ void Practice01()
 			cout << ch;
 		}
 	}
+}
+
+void Practice02()
+{
+	using namespace std;
+	const int ArraySize = 10;
+	double donation[ArraySize];
+	int length = 0;
+	double sum = 0;
+	int overAverageNum = 0;
+	cout << "Please enter double type num:\n";
+	while (cin >> donation[length] && length < ArraySize - 1)
+	{
+		sum += donation[length];
+		length++;
+	}
+	for (int i = 0; i < length; i++)
+	{
+		if (donation[i] > sum / length)
+			overAverageNum++;
+	}
+	cout << "sum:" << sum << ",average:" << sum / length << endl;
+	cout << "overAverageNum:" << overAverageNum << endl;
 }
