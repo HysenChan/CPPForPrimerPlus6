@@ -2,7 +2,8 @@
 
 int main()
 {
-	Practice02();
+	Practice03();
+	//Practice02();
 	//Practice01();
 	//Review09();
 	//Review07();
@@ -657,4 +658,34 @@ void Practice02()
 	}
 	cout << "sum:" << sum << ",average:" << sum / length << endl;
 	cout << "overAverageNum:" << overAverageNum << endl;
+}
+
+void Practice03()
+{
+	using namespace std;
+	char ch;
+	cout << "Please enter one of the floowing choices:\n";
+	while (cin.get(ch))
+	{
+		switch (ch)
+		{
+		case 'c':
+			cout << "carnivore.";
+			break;
+		case 'p':
+			cout << "pianist.";
+			break;
+		case 't':
+			cout << "tree.";
+			break;
+		case 'g':
+			cout << "game.";
+			break;
+		default:
+			cout << "\nPlease enter one of the floowing choices:\n";
+			break;
+		}
+		cin.ignore();
+		cin.clear();
+	}
 }
