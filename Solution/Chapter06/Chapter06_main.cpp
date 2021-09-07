@@ -2,7 +2,8 @@
 
 int main()
 {
-	Practice06();
+	Practice07();
+	//Practice06();
 	//Practice05();
 	//Practice04();
 	//Practice03();
@@ -860,4 +861,30 @@ void Practice06()
 		cout << "Patrons:\n";
 		cout << "None.\n";
 	}
+}
+
+void Practice07()
+{
+	using namespace std;
+
+	string str;
+	int vowels = 0;
+	int consonants = 0;
+	int others = 0;
+	cout << "Enter words (q to quit):\n";
+	while (cin >> str && str != "q")
+	{
+		if (isalpha(str[0]))
+		{
+			if (str[0] == 'a' || str[0] == 'e' || str[0] == 'i' || str[0] == 'o' || str[0] == 'u')
+				vowels++;
+			else
+				consonants++;
+		}
+		else
+			others++;
+	}
+	cout << vowels << " words beginning with vowels.\n";
+	cout << consonants << " words beginning with consonants.\n";
+	cout << others << " others.\n";
 }
