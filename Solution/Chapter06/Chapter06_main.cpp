@@ -2,9 +2,10 @@
 
 int main()
 {
+	Practice09();
 	//Practice08();
 	//Practice07();
-	Practice06();
+	//Practice06();
 	//Practice05();
 	//Practice04();
 	//Practice03();
@@ -814,6 +815,42 @@ void displayNameAndMoney(int i, Union* unionArr)
 	std::cout << i + 1 << ". Name:" << unionArr[i].name << std::endl;
 	std::cout << i + 1 << ". Money:" << unionArr[i].money << std::endl;
 }
+
+void displayPractice06And09(int unionSize, Union* unionArr, int& bigger, int& smaller)
+{
+	for (int i = 0; i < unionSize; i++)
+	{
+		if (unionArr[i].money > 10000)
+		{
+			bigger++;
+			if (bigger == 1)
+				std::cout << "Grand Patrons:\n";
+			displayNameAndMoney(i, unionArr);
+		}
+	}
+	if (bigger == 0)
+	{
+		std::cout << "Grand Patrons:\n";
+		std::cout << "None.\n";
+	}
+
+	for (int i = 0; i < unionSize; i++)
+	{
+		if (unionArr[i].money <= 10000)
+		{
+			smaller++;
+			if (smaller == 1)
+				std::cout << "Patrons:\n";
+			displayNameAndMoney(i, unionArr);
+		}
+	}
+	if (smaller == 0)
+	{
+		std::cout << "Patrons:\n";
+		std::cout << "None.\n";
+	}
+}
+
 void Practice06()
 {
 	using namespace std;
@@ -839,37 +876,7 @@ void Practice06()
 		outFile << unionArr[i].money << endl;
 	}
 
-	for (int i = 0; i < unionSize; i++)
-	{
-		if (unionArr[i].money > 10000)
-		{
-			bigger++;
-			if (bigger == 1)
-				cout << "Grand Patrons:\n";
-			displayNameAndMoney(i, unionArr);
-		}
-	}
-	if (bigger == 0)
-	{
-		cout << "Grand Patrons:\n";
-		cout << "None.\n";
-	}
-
-	for (int i = 0; i < unionSize; i++)
-	{
-		if (unionArr[i].money <= 10000)
-		{
-			smaller++;
-			if (smaller == 1)
-				cout << "Patrons:\n";
-			displayNameAndMoney(i, unionArr);
-		}
-	}
-	if (smaller == 0)
-	{
-		cout << "Patrons:\n";
-		cout << "None.\n";
-	}
+	displayPractice06And09(unionSize, unionArr, bigger, smaller);
 }
 
 void Practice07()
@@ -918,4 +925,32 @@ void Practice08()
 		cout << "End of file reached.\n";
 	fin.close();
 	cout << "The total num is:" << count << endl;
+}
+
+void Practice09()
+{
+	using namespace std;
+	ifstream fin;
+	fin.open("practice06.txt");
+	if (!fin.is_open())
+		exit(EXIT_FAILURE);
+	int unionSize;
+	fin >> unionSize;
+	int bigger = 0;
+	int smaller = 0;
+	Union* unionArr = new Union[unionSize];
+	int i = 0;
+	while (i < unionSize)
+	{
+		fin.get();
+		getline(fin, unionArr[i].name);
+		cout << unionArr[i].name << endl;
+		fin >> unionArr[i].money;
+		cout << unionArr[i].money<<endl;
+		i++;
+	}
+
+	displayPractice06And09(unionSize, unionArr, bigger, smaller);
+
+	fin.close();
 }
