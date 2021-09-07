@@ -2,7 +2,8 @@
 
 int main()
 {
-	Practice07();
+	Practice08();
+	//Practice07();
 	//Practice06();
 	//Practice05();
 	//Practice04();
@@ -887,4 +888,26 @@ void Practice07()
 	cout << vowels << " words beginning with vowels.\n";
 	cout << consonants << " words beginning with consonants.\n";
 	cout << others << " others.\n";
+}
+
+void Practice08()
+{
+	using namespace std;
+	ifstream fin;
+	fin.open("practice08.txt");
+	if (!fin.is_open())
+	{
+		exit(EXIT_FAILURE);
+	}
+	int count = 0;
+	char str;
+	while (fin >> str && fin.good())
+	{
+		count++;
+	}
+
+	if (fin.eof())
+		cout << "End of file reached.\n";
+	fin.close();
+	cout << "The total num is:" << count << endl;
 }
