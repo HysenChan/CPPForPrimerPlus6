@@ -816,8 +816,10 @@ void displayNameAndMoney(int i, Union* unionArr)
 	std::cout << i + 1 << ". Money:" << unionArr[i].money << std::endl;
 }
 
-void displayPractice06And09(int unionSize, Union* unionArr, int& bigger, int& smaller)
+void displayPractice06And09(int unionSize, Union* unionArr)
 {
+	int bigger = 0;
+	int smaller = 0;
 	for (int i = 0; i < unionSize; i++)
 	{
 		if (unionArr[i].money > 10000)
@@ -855,8 +857,6 @@ void Practice06()
 {
 	using namespace std;
 	ofstream outFile;
-	int bigger = 0;
-	int smaller = 0;
 	cout << "Please enter the union of member:";
 	int unionSize;
 	cin >> unionSize;
@@ -876,7 +876,7 @@ void Practice06()
 		outFile << unionArr[i].money << endl;
 	}
 
-	displayPractice06And09(unionSize, unionArr, bigger, smaller);
+	displayPractice06And09(unionSize, unionArr);
 }
 
 void Practice07()
@@ -936,8 +936,6 @@ void Practice09()
 		exit(EXIT_FAILURE);
 	int unionSize;
 	fin >> unionSize;
-	int bigger = 0;
-	int smaller = 0;
 	Union* unionArr = new Union[unionSize];
 	int i = 0;
 	while (i < unionSize)
@@ -950,7 +948,7 @@ void Practice09()
 		i++;
 	}
 
-	displayPractice06And09(unionSize, unionArr, bigger, smaller);
+	displayPractice06And09(unionSize, unionArr);
 
 	fin.close();
 }
