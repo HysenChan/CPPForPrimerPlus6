@@ -2,9 +2,9 @@
 
 int main()
 {
-	Practice08();
+	//Practice08();
 	//Practice07();
-	//Practice06();
+	Practice06();
 	//Practice05();
 	//Practice04();
 	//Practice03();
@@ -816,19 +816,27 @@ void displayNameAndMoney(int i, Union* unionArr)
 }
 void Practice06()
 {
+	using namespace std;
+	ofstream outFile;
 	int bigger = 0;
 	int smaller = 0;
-	using namespace std;
 	cout << "Please enter the union of member:";
 	int unionSize;
 	cin >> unionSize;
+	outFile.open("practice06.txt");
+	if (!outFile.is_open())
+		exit(EXIT_FAILURE);
+	outFile << unionSize << endl;
 	Union* unionArr = new Union[unionSize];
 	for (int i = 0; i < unionSize; i++)
 	{
 		cout << "Please enter the " << i + 1 << ". member name:";
-		cin >> unionArr[i].name;
+		cin.ignore();
+		getline(cin, unionArr[i].name);
+		outFile << unionArr[i].name << endl;
 		cout << "Please enter the " << i + 1 << ". member money:";
 		cin >> unionArr[i].money;
+		outFile << unionArr[i].money << endl;
 	}
 
 	for (int i = 0; i < unionSize; i++)
