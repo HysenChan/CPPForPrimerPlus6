@@ -13,3 +13,6 @@ void protos();
 
 void n_chars(char, int);
 void twoArg();
+
+long double probability(unsigned numbers, unsigned picks);
+void lotto();

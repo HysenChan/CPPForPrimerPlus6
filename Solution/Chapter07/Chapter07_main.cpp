@@ -2,7 +2,8 @@
 
 int main()
 {
-	twoArg();
+	lotto();
+	//twoArg();
 	//protos();
 	//Calling();
 	return 0;
@@ -71,4 +72,29 @@ void twoArg()
 	}
 	cout << "The value of times is " << times << ".\n";
 	cout << "Bye\n";
+}
+
+long double probability(unsigned numbers, unsigned picks)
+{
+	long double result = 1.0;
+	long double n;
+	unsigned p;
+	for (n = numbers, p = picks; p > 0; n--, p--)
+		result = result * n / p;
+	return result;
+}
+
+void lotto()
+{
+	using namespace std;
+	double total, choices;
+	cout << "Enter the total number of choices on the game card and the number of picks allowed:\n";
+	while ((cin >> total >> choices) && choices <= total)
+	{
+		cout << "You have one chance in ";
+		cout << probability(total, choices);
+		cout << " of winning.\n";
+		cout << "Next two numbers (q to quit):";
+	}
+	cout << "bye\n";
 }
