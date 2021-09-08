@@ -17,5 +17,7 @@ void twoArg();
 long double probability(unsigned numbers, unsigned picks);
 void lotto();
 
-int sum_arr(int arr[], int n);
+int sum_arr(int* arr, int n);
 void arrFun1();
+
+void arrFun2();

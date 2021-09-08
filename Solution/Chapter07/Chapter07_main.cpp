@@ -2,7 +2,8 @@
 
 int main()
 {
-	arrFun1();
+	arrFun2();
+	//arrFun1();
 	//lotto();
 	//twoArg();
 	//protos();
@@ -100,20 +101,36 @@ void lotto()
 	cout << "bye\n";
 }
 
-int sum_arr(int arr[], int n)
+int sum_arr(int *arr, int n)// int *arr = int arr[]
 {
 	int total = 0;
+	std::cout << arr << " = arr, "<<sizeof arr<<" = sizeOf arr\n";
 	for (int i = 0; i < n; i++)
 		total += arr[i];
 	return total;
 }
 
+const int ArSize = 8;
 void arrFun1()
 {
-	const int ArSize = 8;
 	using namespace std;
 	int cookies[ArSize] = { 1,2,4,8,16,32,64,128 };
 
 	int sum = sum_arr(cookies, ArSize);
 	cout << "Total cookies eaten:" << sum << "\n";
+}
+
+void arrFun2()
+{
+	using namespace std;
+	int cookies[ArSize] = { 1,2,4,8,16,32,64,128 };
+	cout << cookies << " = array address, "<<sizeof cookies<<" = sizeof cookies\n";
+	int sum = sum_arr(cookies, ArSize);
+	cout << "Total cookies eaten:" << sum << endl;
+	sum = sum_arr(cookies, 3);
+	cout << "First three eaters ate " << sum << " cookies.\n";
+	sum = sum_arr(cookies + 4, 4);
+	cout << "Last four eater ate " << sum << " cookies.\n";
+	sum = sum_arr(&cookies[6], 2);
+	cout << "Last two eater ate " << sum << " cookies.\n";
 }
