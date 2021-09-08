@@ -10,3 +10,6 @@ void Calling();
 void cheers(int);
 double cube(double x);
 void protos();
+
+void n_chars(char, int);
+void twoArg();

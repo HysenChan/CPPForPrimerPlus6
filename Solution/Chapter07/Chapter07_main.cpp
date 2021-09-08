@@ -2,7 +2,8 @@
 
 int main()
 {
-	protos();
+	twoArg();
+	//protos();
 	//Calling();
 	return 0;
 }
@@ -44,4 +45,30 @@ void protos()
 	double volume = cube(side);
 	cout << "A " << side << "-foot cube has a volume of " << volume << " cubic feet.\n";
 	cheers(cube(2));
+}
+
+void n_chars(char c, int n)
+{
+	while (n-- > 0)
+		std::cout << c;
+}
+
+void twoArg()
+{
+	using namespace std;
+	int times;
+	char ch;
+
+	cout << "Enter a character:";
+	cin >> ch;
+	while (ch != 'q')
+	{
+		cout << "Enter an integer:";
+		cin >> times;
+		n_chars(ch, times);
+		cout << "\nEnter another character or press the q-key to quit:";
+		cin >> ch;
+	}
+	cout << "The value of times is " << times << ".\n";
+	cout << "Bye\n";
 }
