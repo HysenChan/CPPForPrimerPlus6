@@ -2,7 +2,8 @@
 
 int main()
 {
-	arrFun3();
+	arrFun4();
+	//arrFun3();
 	//arrFun2();
 	//arrFun1();
 	//lotto();
@@ -184,11 +185,11 @@ void arrFun3()
 
 	int size = fill_array(properties, Max);
 	show_array(properties, size);
-	if (size>0)
+	if (size > 0)
 	{
 		cout << "Enter revaluation factor:";
 		double factor;
-		while (!(cin>>factor))
+		while (!(cin >> factor))
 		{
 			cin.clear();
 			while (cin.get() != '\n')
@@ -199,4 +200,27 @@ void arrFun3()
 		show_array(properties, size);
 	}
 	cout << "Done.\n";
+}
+
+int sum_arr(const int* begin, const int* end)
+{
+	const int* pt;
+	int total = 0;
+	for (pt = begin; pt != end; pt++)
+		total += *pt;
+	return total;
+}
+
+void arrFun4()
+{
+	using namespace std;
+	const int ArSize = 8;
+	int cookies[ArSize] = { 1,2,4,8,16,32,64,128 };
+
+	int sum = sum_arr(cookies, cookies + ArSize);
+	cout << "Total cookies eaten:" << sum << " cookies.\n";
+	sum = sum_arr(cookies, cookies + 3);
+	cout << "First cookies eaten:" << sum << " cookies.\n";
+	sum = sum_arr(cookies + 4, cookies + 8);
+	cout << "Last four eater ate " << sum << " cookies.\n";
 }
