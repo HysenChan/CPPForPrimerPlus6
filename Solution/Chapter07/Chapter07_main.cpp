@@ -2,7 +2,10 @@
 
 int main()
 {
-	arrFun4();
+	strgFun();
+	//PointerAndStr();
+	//PointerAndConst();
+	//arrFun4();
 	//arrFun3();
 	//arrFun2();
 	//arrFun1();
@@ -223,4 +226,74 @@ void arrFun4()
 	cout << "First cookies eaten:" << sum << " cookies.\n";
 	sum = sum_arr(cookies + 4, cookies + 8);
 	cout << "Last four eater ate " << sum << " cookies.\n";
+}
+
+void PointerAndConst()
+{
+	using namespace std;
+	//valid
+	int age = 39;
+	const int* pt = &age;
+	//*pt+=1; invalid
+	age = 20;
+
+	//valid
+	const float g_earth = 9.80;
+	const float* pe = &g_earth;
+
+	const float g_moon = 1.63;
+	//float* pm = &g_moon; invalid
+
+	//valid
+	int* pd = &age;
+	const int* pt1 = pd;
+
+	//valid
+	int gorp = 16;
+	int chips = 12;
+	const int* p_snack = &gorp;
+
+	p_snack = &chips;
+
+	int* const p_snack1 = &gorp;
+	*p_snack1 = 20;
+}
+
+void PointerAndStr()
+{
+	using namespace std;
+	char ghost[15] = "galloping";
+	const char* str = "galumphing";
+	int n1 = strlen(ghost);
+	int n2 = strlen(str);
+	int n3 = strlen("gamboling");
+	cout << "n1:" << n1 << endl;
+	cout << "n2:" << n2 << endl;
+	cout << "n3:" << n3 << endl;
+}
+
+unsigned int c_in_str(const char* str, char ch)
+{
+	unsigned int count = 0;
+	while (*str)
+	{
+		if (*str == ch)
+			count++;
+		str++;
+	}
+	return count;
+}
+
+void strgFun()
+{
+	using namespace std;
+	char mmm[15] = "minimum maxmum";
+
+	const char* wail = "ululate";
+
+	unsigned int ms = c_in_str(mmm, 'm');
+	unsigned int us = c_in_str(wail, 'u');
+
+	cout << "ms:" << ms << endl;
+	cout << "us:" << us << endl;
 }

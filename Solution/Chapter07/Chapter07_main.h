@@ -29,3 +29,9 @@ void arrFun3();
 
 int sum_arr(const int* begin, const int* end);
 void arrFun4();
+
+void PointerAndConst();
+void PointerAndStr();
+
+unsigned int c_in_str(const char* str, char ch);
+void strgFun();
