@@ -35,3 +35,6 @@ void PointerAndStr();
 
 unsigned int c_in_str(const char* str, char ch);
 void strgFun();
+
+char* buildstr(char c, int n);
+void strgback();
