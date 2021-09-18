@@ -38,3 +38,12 @@ void strgFun();
 
 char* buildstr(char c, int n);
 void strgback();
+
+struct travel_time
+{
+	int hours;
+	int mins;
+};
+travel_time sum(travel_time t1, travel_time t2);
+void show_time(travel_time t);
+void travel();
