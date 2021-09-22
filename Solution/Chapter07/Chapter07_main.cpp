@@ -360,23 +360,21 @@ void travel()
 	show_time(sum(trip, day3));
 }
 
-polar rect_to_polar(rect xyPos)
+void rect_to_polar(const rect* xyPos, polar *pda)
 {
 	using namespace std;
-	polar answer;
 
-	answer.distance = sqrt(xyPos.x * xyPos.x + xyPos.y * xyPos.y);
-	answer.angle = atan2(xyPos.y, xyPos.x);
-	return answer;
+	pda->distance = sqrt(xyPos->x * xyPos->x + xyPos->y * xyPos->y);
+	pda->angle = atan2(xyPos->y, xyPos->x);
 }
 
-void show_polar(polar daPos)
+void show_polar(const polar* daPos)
 {
 	using namespace std;
 	const double Rad_to_deg = 57.29577951;
 
-	cout << "distance = " << daPos.distance << endl;
-	cout << "angle = " << daPos.angle * Rad_to_deg << " degress.\n";
+	cout << "distance = " << daPos->distance << endl;
+	cout << "angle = " << daPos->angle * Rad_to_deg << " degress.\n";
 }
 
 void atrctFun()
@@ -386,10 +384,10 @@ void atrctFun()
 	polar pPlace;
 
 	cout << "Enter the x and y values:";
-	while (cin>>rPlace.x>>rPlace.y)
+	while (cin >> rPlace.x >> rPlace.y)
 	{
-		pPlace = rect_to_polar(rPlace);
-		show_polar(pPlace);
+		rect_to_polar(&rPlace, &pPlace);
+		show_polar(&pPlace);
 		cout << "Next two numbers (any character to quit):";
 	}
 	cout << "Done.\n";
