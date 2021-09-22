@@ -1,6 +1,7 @@
 #pragma once
 
 #include<iostream>
+#include<cmath>
 
 //Calling
 void Simple();
@@ -47,3 +48,17 @@ struct travel_time
 travel_time sum(travel_time t1, travel_time t2);
 void show_time(travel_time t);
 void travel();
+
+struct polar
+{
+	double distance;
+	double angle;
+};
+struct rect
+{
+	double x;
+	double y;
+};
+polar rect_to_polar(rect xyPos);
+void show_polar(polar daPos);
+void atrctFun();
