@@ -2,6 +2,7 @@
 
 #include<iostream>
 #include<cmath>
+#include<string>
 
 //Calling
 void Simple();
@@ -62,3 +63,6 @@ struct rect
 void rect_to_polar(const rect* xyPos, polar* pda);
 void show_polar(const polar* daPos);
 void atrctFun();
+
+void display(const std::string sa[], int n);
+void topFive();

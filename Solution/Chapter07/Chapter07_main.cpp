@@ -2,7 +2,8 @@
 
 int main()
 {
-	atrctFun();
+	topFive();
+	//atrctFun();
 	//travel();
 	//strgback();
 	//strgFun();
@@ -360,7 +361,7 @@ void travel()
 	show_time(sum(trip, day3));
 }
 
-void rect_to_polar(const rect* xyPos, polar *pda)
+void rect_to_polar(const rect* xyPos, polar* pda)
 {
 	using namespace std;
 
@@ -391,4 +392,26 @@ void atrctFun()
 		cout << "Next two numbers (any character to quit):";
 	}
 	cout << "Done.\n";
+}
+
+void display(const std::string sa[], int n)
+{
+	for (int i = 0; i < n; i++)
+		std::cout << i + 1 << ":" << sa[i] << std::endl;
+}
+
+void topFive()
+{
+	using namespace std;
+	const int SIZE = 5;
+	string list[SIZE];
+	cout << "Enter your " << SIZE << " favorite astronomical sights:\n";
+	for (int i = 0; i < SIZE; i++)
+	{
+		cout << i + 1 << ":";
+		getline(cin, list[i]);
+	}
+
+	cout << "Your list:\n";
+	display(list, SIZE);
 }
