@@ -59,6 +59,6 @@ struct rect
 	double x;
 	double y;
 };
-void rect_to_polar(rect xyPos);
-void show_polar(polar daPos);
+void rect_to_polar(const rect* xyPos, polar* pda);
+void show_polar(const polar* daPos);
 void atrctFun();
