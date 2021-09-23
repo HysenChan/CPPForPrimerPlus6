@@ -3,6 +3,7 @@
 #include<iostream>
 #include<cmath>
 #include<string>
+#include<array>
 
 //Calling
 void Simple();
@@ -66,3 +67,9 @@ void atrctFun();
 
 void display(const std::string sa[], int n);
 void topFive();
+
+const int Seasons = 4;
+const std::array<std::string, Seasons> Snames = { "Spring","Summer","Fall","Winter" };
+void fill(std::array<double, Seasons>* pa);
+void show(std::array<double, Seasons> da);
+void arrobj();

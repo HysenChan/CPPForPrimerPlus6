@@ -2,7 +2,8 @@
 
 int main()
 {
-	topFive();
+	arrobj();
+	//topFive();
 	//atrctFun();
 	//travel();
 	//strgback();
@@ -414,4 +415,34 @@ void topFive()
 
 	cout << "Your list:\n";
 	display(list, SIZE);
+}
+
+void fill(std::array<double, Seasons>* pa)
+{
+	using namespace std;
+	for (int i = 0; i < Seasons; i++)
+	{
+		cout << "Enter " << Snames[i] << " expenses:";
+		cin >> (*pa)[i];
+	}
+}
+
+void show(std::array<double, Seasons> da)
+{
+	using namespace std;
+	double total = 0.0;
+	cout << "\nEXPENSES\n";
+	for (int i = 0; i < Seasons; i++)
+	{
+		cout << Snames[i] << ":$" << da[i] << endl;
+		total += da[i];
+	}
+	cout << "Total expenses:$" << total << endl;
+}
+
+void arrobj()
+{
+	std::array<double, Seasons> expenses;
+	fill(&expenses);
+	show(expenses);
 }
