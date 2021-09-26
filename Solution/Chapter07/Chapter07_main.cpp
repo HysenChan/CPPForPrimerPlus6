@@ -2,7 +2,8 @@
 
 int main()
 {
-	arrobj();
+	recur();
+	//arrobj();
 	//topFive();
 	//atrctFun();
 	//travel();
@@ -445,4 +446,18 @@ void arrobj()
 	std::array<double, Seasons> expenses;
 	fill(&expenses);
 	show(expenses);
+}
+
+void countdown(int n)
+{
+	using namespace std;
+	cout << "Counting down ... " << n << endl;
+	if (n > 0)
+		countdown(n - 1);
+	cout << n << ": Kaboom!\n";
+}
+
+void recur()
+{
+	countdown(4);
 }

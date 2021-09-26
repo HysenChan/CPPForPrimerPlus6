@@ -73,3 +73,6 @@ const std::array<std::string, Seasons> Snames = { "Spring","Summer","Fall","Wint
 void fill(std::array<double, Seasons>* pa);
 void show(std::array<double, Seasons> da);
 void arrobj();
+
+void countdown(int n);
+void recur();
