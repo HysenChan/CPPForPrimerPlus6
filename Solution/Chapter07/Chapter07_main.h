@@ -76,3 +76,6 @@ void arrobj();
 
 void countdown(int n);
 void recur();
+
+void subdivide(char ar[], int low, int high, int level);
+void ruler();
