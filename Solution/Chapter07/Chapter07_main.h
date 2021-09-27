@@ -130,3 +130,6 @@ struct glitz
 };
 
 void review10(const glitz *g);
+
+//Review11
+int review11(int (*pf)(const char*));
