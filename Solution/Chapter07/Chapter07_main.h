@@ -121,3 +121,12 @@ int replace(char* str, char c1, char c2);
 
 //Review09
 void review09();
+
+//Review10
+struct glitz
+{
+	int age;
+	std::string name;
+};
+
+void review10(const glitz *g);

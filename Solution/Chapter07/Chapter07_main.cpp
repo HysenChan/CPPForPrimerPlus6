@@ -3,7 +3,9 @@
 int main()
 {
 	const int ArrSize = 30;
-	review09();
+	glitz gz = { 1,"g" };
+	review10(&gz);
+	//review09();
 	//char arr[ArrSize] = "HelloWorldHysenChan";
 	//replace(arr, 'H', 'o');
 	//std::cout << "arr:" << arr << std::endl;
@@ -649,4 +651,11 @@ void review09()
 	using namespace std;
 	cout << *"pizza" << endl;
 	cout << "taco"[2] << endl;
+}
+
+void review10(const glitz* g)
+{
+	using namespace std;
+	cout << "g.age:" << g->age << endl;
+	cout << "g.name:" << g->name << endl;
 }
