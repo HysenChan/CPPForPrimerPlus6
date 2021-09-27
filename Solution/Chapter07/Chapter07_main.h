@@ -112,3 +112,6 @@ void review03(int[], int len, int);
 
 //Review04
 void review04(int* begin, int* end, int value);
+
+//Review05
+double review05(const double*, int len);

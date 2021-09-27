@@ -3,8 +3,9 @@
 int main()
 {
 	const int ArrSize = 3;
-	int arr[ArrSize];
-	review04(&arr[0], &arr[ArrSize], 1);//review04(arr,&arr[ArrSize],1);
+	double arr[ArrSize] = { 1.11,2.32,3.21 };
+	review05(arr, ArrSize);
+	//review04(&arr[0], &arr[ArrSize], 1);//review04(arr,&arr[ArrSize],1);
 	//review03(arr, ArrSize, 1);
 	//arfupt();
 	//fun_ptr();
@@ -607,4 +608,17 @@ void review04(int* begin, int* end, int value)
 		*pt = value;
 	for (int* pt = begin; pt != end; pt++)
 		cout << pt << ":" << *pt << endl;
+}
+
+double review05(const double* ar, int len)
+{
+	using namespace std;
+	double max = ar[0];
+	for (int i = 1; i < len; i++)
+	{
+		if (ar[i] > max)
+			max = ar[i];
+	}
+	cout << "Max:" << max << endl;
+	return max;
 }
