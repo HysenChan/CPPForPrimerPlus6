@@ -2,7 +2,8 @@
 
 int main()
 {
-	ruler();
+	fun_ptr();
+	//ruler();
 	//recur();
 	//arrobj();
 	//topFive();
@@ -487,11 +488,40 @@ void ruler()
 	int min = 0;
 	ruler[min] = ruler[max] = '|';
 	std::cout << ruler << std::endl;
-	for (int i = 1; i <=Divs; i++)
+	for (int i = 1; i <= Divs; i++)
 	{
 		subdivide(ruler, min, max, i);
 		std::cout << ruler << std::endl;
 		for (int j = 1; j < Len - 2; j++)
 			ruler[j] = ' ';
 	}
+}
+
+double betsy(int lns)
+{
+	return 0.05 * lns;
+}
+
+double pam(int lns)
+{
+	return 0.03 * lns + 0.004 * lns * lns;
+}
+
+void estimat(int lines, double(*pf)(int))
+{
+	using namespace std;
+	cout << lines << " lines will take ";
+	cout << (*pf)(lines) << " hour(s)\n";
+}
+
+void fun_ptr()
+{
+	using namespace std;
+	int code;
+	cout << "How many lines of code do you need?";
+	cin >> code;
+	cout << "Here's Besty's estimate:\n";
+	estimat(code, betsy);
+	cout << "Here's Pam's estimate:\n";
+	estimat(code, pam);
 }

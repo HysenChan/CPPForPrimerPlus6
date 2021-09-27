@@ -79,3 +79,8 @@ void recur();
 
 void subdivide(char ar[], int low, int high, int level);
 void ruler();
+
+double betsy(int);
+double pam(int);
+void estimat(int lines, double (*pf)(int));
+void fun_ptr();
