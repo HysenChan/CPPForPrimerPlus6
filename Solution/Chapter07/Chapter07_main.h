@@ -84,3 +84,8 @@ double betsy(int);
 double pam(int);
 void estimat(int lines, double (*pf)(int));
 void fun_ptr();
+
+const double* f1(const double ar[], int n);
+const double* f2(const double[], int);
+const double* f3(const double*, int);
+void arfupt();
