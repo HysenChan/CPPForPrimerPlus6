@@ -150,3 +150,7 @@ void review12();
 void f11(applicant* a);
 const char* f12(const applicant* a1, const applicant* a2);
 void review13();
+
+//Practice01
+double calcHarmonic(int x, int y);
+void Practice01();

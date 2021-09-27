@@ -2,8 +2,9 @@
 
 int main()
 {
+	Practice01();
 	const int ArrSize = 30;
-	review12();
+	//review12();
 	//glitz gz = { 1,"g" };
 	//review10(&gz);
 	//review09();
@@ -698,21 +699,49 @@ void review12()
 	displayByReference(a1);
 }
 
+void f11(applicant* a)
+{
+}
+
+const char* f12(const applicant* a1, const applicant* a2)
+{
+	return nullptr;
+}
+
 void review13()
 {
 	//method1
-	void* p1 = f11;
-	const char* (*p2)(const applicant*, const applicant*) = f12;
+	void* p1m1 = f11;
+	const char* (*p2m1)(const applicant*, const applicant*) = f12;
 
-	void* (*ap[5])(applicant *);
-	const char* (*pa[10])(const applicant*, const applicant*);
+	void* (*ap11m1[5])(applicant*);
+	const char* (*pa12m1[10])(const applicant*, const applicant*);
 
 	//method2
-	typedef void (*p_f1)(applicant*);
-	p_f1 p1 = f11;
-	typedef const char* (*p_f2)(const applicant*, const applicant*);
-	p_f2 p2 = f12;
+	typedef void (*p_f11)(applicant*);
+	p_f11 p11 = f11;
+	typedef const char* (*p_f12)(const applicant*, const applicant*);
+	p_f12 p12 = f12;
 
-	p_f1 ap[5];
-	p_f2(*pa)[10];
+	p_f11 ap11m2[5];
+	p_f12(*pa12m2)[10];
+}
+
+double calcHarmonic(int x, int y)
+{
+	return 2.0 * x * y / (x + y);
+}
+
+void Practice01()
+{
+	using namespace std;
+	int x, y;
+	cout << "Please enter two number:";
+	cin >> x >> y;
+	while (x != 0 && y != 0)
+	{
+		cout << "Harmonic:" << calcHarmonic(x, y) << endl;
+		cout << "Please enter two number:";
+		cin >> x >> y;
+	}
 }
