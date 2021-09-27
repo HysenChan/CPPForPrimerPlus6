@@ -129,7 +129,19 @@ struct glitz
 	std::string name;
 };
 
-void review10(const glitz *g);
+void review10(const glitz* g);
 
 //Review11
 int review11(int (*pf)(const char*));
+
+//Review12
+struct applicant
+{
+	char name[30];
+	int credit_ratings[3];
+};
+
+void displayByValue(applicant app);
+void displayByPointer(applicant* app);
+void displayByReference(applicant& app);
+void review12();

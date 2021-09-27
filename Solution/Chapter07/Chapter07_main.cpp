@@ -3,8 +3,9 @@
 int main()
 {
 	const int ArrSize = 30;
-	glitz gz = { 1,"g" };
-	review10(&gz);
+	review12();
+	//glitz gz = { 1,"g" };
+	//review10(&gz);
 	//review09();
 	//char arr[ArrSize] = "HelloWorldHysenChan";
 	//replace(arr, 'H', 'o');
@@ -658,4 +659,41 @@ void review10(const glitz* g)
 	using namespace std;
 	cout << "g.age:" << g->age << endl;
 	cout << "g.name:" << g->name << endl;
+}
+
+void displayByValue(applicant app)
+{
+	using namespace std;
+	cout << "name:" << app.name << endl;
+	for (int i = 0; i < 3; i++)
+		cout << "credit_ratings" << i << ":" << app.credit_ratings[i] << endl;
+}
+
+void displayByPointer(applicant* app)
+{
+	using namespace std;
+	cout << "name:" << app->name << endl;
+	for (int i = 0; i < 3; i++)
+		cout << "credit_ratings" << i << ":" << app->credit_ratings[i] << endl;
+}
+
+void displayByReference(applicant& app)
+{
+	using namespace std;
+	strcpy_s(app.name, "android");//不用数组而用：char *name可以通过app.name = "xxxxxx"赋值
+	for (int i = 0; i < 3; i++)
+		app.credit_ratings[i] += 1;
+	cout << "name:" << app.name << endl;
+	for (int i = 0; i < 3; i++)
+		cout << "credit_ratings" << i << ":" << app.credit_ratings[i] << endl;
+}
+
+void review12()
+{
+	applicant a1 = { "a1",{1,2,3} };
+	displayByValue(a1);
+	std::cout << "-------------------\n";
+	displayByPointer(&a1);
+	std::cout << "-------------------\n";
+	displayByReference(a1);
 }
