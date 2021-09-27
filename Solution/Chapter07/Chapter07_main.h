@@ -118,3 +118,6 @@ double review05(const double*, int len);
 
 //Review08
 int replace(char* str, char c1, char c2);
+
+//Review09
+void review09();

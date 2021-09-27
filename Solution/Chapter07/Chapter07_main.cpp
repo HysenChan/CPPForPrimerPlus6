@@ -3,9 +3,10 @@
 int main()
 {
 	const int ArrSize = 30;
-	char arr[ArrSize] = "HelloWorldHysenChan";
-	replace(arr, 'H', 'o');
-	std::cout << "arr:" << arr << std::endl;
+	review09();
+	//char arr[ArrSize] = "HelloWorldHysenChan";
+	//replace(arr, 'H', 'o');
+	//std::cout << "arr:" << arr << std::endl;
 	/*double arr[ArrSize] = { 1.11,2.32,3.21 };
 	review05(arr, ArrSize);*/
 	//review04(&arr[0], &arr[ArrSize], 1);//review04(arr,&arr[ArrSize],1);
@@ -641,4 +642,11 @@ int replace(char* str, char c1, char c2)
 	}
 	cout << "Replace times:" << replaceTimes << endl;
 	return replaceTimes;
+}
+
+void review09()
+{
+	using namespace std;
+	cout << *"pizza" << endl;
+	cout << "taco"[2] << endl;
 }
