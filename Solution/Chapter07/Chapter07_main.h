@@ -4,6 +4,8 @@
 #include<cmath>
 #include<string>
 #include<array>
+#include<map>
+#include<vector>
 
 //Calling
 void Simple();
@@ -89,3 +91,18 @@ const double* f1(const double ar[], int n);
 const double* f2(const double[], int);
 const double* f3(const double*, int);
 void arfupt();
+
+//Chapter07 ReviewTest
+//Review01
+struct boss
+{
+	char name;
+	char age;
+};
+void igor();
+float tofu(int);
+double mpg(double, double);
+long summation(long[], int length);
+double doctor(const char*);
+void ofcourse(boss);
+char plot(std::map<std::string, std::vector<int>>);
