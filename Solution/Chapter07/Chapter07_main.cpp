@@ -2,7 +2,10 @@
 
 int main()
 {
-	arfupt();
+	const int ArrSize = 3;
+	int arr[ArrSize];
+	//review03(arr, ArrSize, 1);
+	//arfupt();
 	//fun_ptr();
 	//ruler();
 	//recur();
@@ -537,7 +540,7 @@ const double* f2(const double ar[], int)
 	return ar + 1;
 }
 
-const double* f3(const double *ar, int)
+const double* f3(const double* ar, int)
 {
 	return ar + 2;
 }
@@ -585,4 +588,13 @@ void arfupt()
 	const double* pdb = (*pd)[1](av, 3);
 	cout << pdb << ":" << *pdb << endl;
 	cout << (*(*pd)[2])(av, 3) << ":" << *(*(*pd)[2])(av, 3) << endl;
+}
+
+void review03(int ar[], int len, int value)
+{
+	using namespace std;
+	for (int i = 0; i < len; i++)
+		ar[i] = value;
+	for (int i = 0; i < len; i++)
+		cout << i << ":" << ar[i] << endl;
 }

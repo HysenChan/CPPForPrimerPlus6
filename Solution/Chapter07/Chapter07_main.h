@@ -107,3 +107,5 @@ double doctor(const char*);
 void ofcourse(boss);
 char plot(std::map<std::string, std::vector<int>>);
 
+//Review03
+void review03(int[], int len, int);
