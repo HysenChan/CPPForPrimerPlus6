@@ -109,3 +109,6 @@ char plot(std::map<std::string, std::vector<int>>);
 
 //Review03
 void review03(int[], int len, int);
+
+//Review04
+void review04(int* begin, int* end, int value);

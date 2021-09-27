@@ -4,6 +4,7 @@ int main()
 {
 	const int ArrSize = 3;
 	int arr[ArrSize];
+	review04(&arr[0], &arr[ArrSize], 1);//review04(arr,&arr[ArrSize],1);
 	//review03(arr, ArrSize, 1);
 	//arfupt();
 	//fun_ptr();
@@ -597,4 +598,13 @@ void review03(int ar[], int len, int value)
 		ar[i] = value;
 	for (int i = 0; i < len; i++)
 		cout << i << ":" << ar[i] << endl;
+}
+
+void review04(int* begin, int* end, int value)
+{
+	using namespace std;
+	for (int* pt = begin; pt != end; pt++)
+		*pt = value;
+	for (int* pt = begin; pt != end; pt++)
+		cout << pt << ":" << *pt << endl;
 }
