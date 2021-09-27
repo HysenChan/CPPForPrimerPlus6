@@ -93,7 +93,7 @@ const double* f3(const double*, int);
 void arfupt();
 
 //Chapter07 ReviewTest
-//Review01
+//Review02
 struct boss
 {
 	char name;
@@ -106,3 +106,4 @@ long summation(long[], int length);
 double doctor(const char*);
 void ofcourse(boss);
 char plot(std::map<std::string, std::vector<int>>);
+
