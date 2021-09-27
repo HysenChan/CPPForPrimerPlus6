@@ -145,3 +145,8 @@ void displayByValue(applicant app);
 void displayByPointer(applicant* app);
 void displayByReference(applicant& app);
 void review12();
+
+//Review13
+void f11(applicant* a);
+const char* f12(const applicant* a1, const applicant* a2);
+void review13();

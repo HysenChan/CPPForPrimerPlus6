@@ -697,3 +697,22 @@ void review12()
 	std::cout << "-------------------\n";
 	displayByReference(a1);
 }
+
+void review13()
+{
+	//method1
+	void* p1 = f11;
+	const char* (*p2)(const applicant*, const applicant*) = f12;
+
+	void* (*ap[5])(applicant *);
+	const char* (*pa[10])(const applicant*, const applicant*);
+
+	//method2
+	typedef void (*p_f1)(applicant*);
+	p_f1 p1 = f11;
+	typedef const char* (*p_f2)(const applicant*, const applicant*);
+	p_f2 p2 = f12;
+
+	p_f1 ap[5];
+	p_f2(*pa)[10];
+}
