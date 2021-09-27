@@ -2,9 +2,12 @@
 
 int main()
 {
-	const int ArrSize = 3;
-	double arr[ArrSize] = { 1.11,2.32,3.21 };
-	review05(arr, ArrSize);
+	const int ArrSize = 30;
+	char arr[ArrSize] = "HelloWorldHysenChan";
+	replace(arr, 'H', 'o');
+	std::cout << "arr:" << arr << std::endl;
+	/*double arr[ArrSize] = { 1.11,2.32,3.21 };
+	review05(arr, ArrSize);*/
 	//review04(&arr[0], &arr[ArrSize], 1);//review04(arr,&arr[ArrSize],1);
 	//review03(arr, ArrSize, 1);
 	//arfupt();
@@ -621,4 +624,21 @@ double review05(const double* ar, int len)
 	}
 	cout << "Max:" << max << endl;
 	return max;
+}
+
+int replace(char* str, char c1, char c2)
+{
+	using namespace std;
+	int replaceTimes = 0;
+	while (*str)//*str != '\0'
+	{
+		if (*str == c1)
+		{
+			*str = c2;
+			replaceTimes++;
+		}
+		str++;
+	}
+	cout << "Replace times:" << replaceTimes << endl;
+	return replaceTimes;
 }
