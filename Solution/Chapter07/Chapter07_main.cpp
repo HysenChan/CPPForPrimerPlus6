@@ -2,7 +2,8 @@
 
 int main()
 {
-	Practice08();
+	Practice09();
+	//Practice08();
 	//arrFun3();
 	//Practice06();
 	//Practice05();
@@ -946,7 +947,7 @@ void showPractice08(double season[])
 	cout << "Total expenses:$" << total << endl;
 }
 
-void fillByStructPractice08(Cost *c)
+void fillByStructPractice08(Cost* c)
 {
 	using namespace std;
 	for (int i = 0; i < Seasons; i++)
@@ -956,7 +957,7 @@ void fillByStructPractice08(Cost *c)
 	}
 }
 
-void showByStructPractice08(Cost *c)
+void showByStructPractice08(Cost* c)
 {
 	using namespace std;
 	double total = 0.0;
@@ -976,4 +977,81 @@ void Practice08()
 	showPractice08(expenses);*/
 	fillByStructPractice08(&expenses);
 	showByStructPractice08(&expenses);
+}
+
+int getinfo(student pa[], int n)
+{
+	using namespace std;
+	int i;
+	char name[SLEN];
+	char hobby[SLEN];
+	int tempLevel;
+	for (i = 0; i < n; i++)
+	{
+		cout << "Enter fullname[" << i << "]:";
+		cin.getline(name, SLEN);
+		strcpy_s(pa[i].fullname, name);
+
+		cout << "Enter hobby[" << i << "]:";
+		cin.getline(hobby, SLEN);
+		strcpy_s(pa[i].hobby, hobby);
+
+		cout << "Enter tempLevel[" << i << "]:";
+		cin >> tempLevel;
+		pa[i].ooplevel = tempLevel;
+		cin.get();
+	}
+	return i;
+}
+
+void display1(student st)
+{
+	using namespace std;
+	cout << "fullname:" << st.fullname << endl;
+	cout << "hobby:" << st.hobby << endl;
+	cout << "ooplevel:" << st.ooplevel << endl;
+	cout << "------------------\n";
+}
+
+void display2(const student* ps)
+{
+	using namespace std;
+	cout << "fullname:" << ps->fullname << endl;
+	cout << "hobby:" << ps->hobby << endl;
+	cout << "ooplevel:" << ps->ooplevel << endl;
+	cout << "------------------\n";
+}
+
+void display3(const student pa[], int n)
+{
+	using namespace std;
+	for (int i = 0; i < n; i++)
+	{
+		cout << "fullname:" << pa[i].fullname << endl;
+		cout << "hobby:" << pa[i].hobby << endl;
+		cout << "ooplevel:" << pa[i].ooplevel << endl;
+		cout << "------------------\n";
+	}
+}
+
+void Practice09()
+{
+	using namespace std;
+	cout << "Enter class size:";
+	int class_size;
+	cin >> class_size;
+	while (cin.get() != '\n')
+		continue;
+
+	student* ptr_stu = new student[class_size];
+	int entered = getinfo(ptr_stu, class_size);
+	cout << "entered:" << entered << endl;
+	for (int i = 0; i < entered; i++)
+	{
+		display1(ptr_stu[i]);
+		display2(&ptr_stu[i]);
+	}
+	display3(ptr_stu, entered);
+	delete[] ptr_stu;
+	cout << "Done.\n";
 }
