@@ -2,7 +2,8 @@
 
 int main()
 {
-	Practice01();
+	Practice02();
+	//Practice01();
 	const int ArrSize = 30;
 	//review12();
 	//glitz gz = { 1,"g" };
@@ -744,4 +745,50 @@ void Practice01()
 		cout << "Please enter two number:";
 		cin >> x >> y;
 	}
+}
+
+int inputScore(double arr[], int limit)
+{
+	using namespace std;
+	int idx = 0;
+	double score;
+	cout << "Please enter the scores,'q' to quit.\n";
+	for (idx = 0; idx < limit; idx++)
+	{
+		cout << "Enter the score #" << (idx + 1) << ":";
+		cin >> score;
+		if (!cin)
+		{
+			cin.clear();
+			while (cin.get() != '\n')
+				continue;
+			cout << "Input process terminated.\n";
+			break;
+		}
+		arr[idx] = score;
+	}
+	return idx;
+}
+
+void displayScore(const double arr[], int n)
+{
+	for (int i = 0; i < n; i++)
+		std::cout << "arr[" << i << "]:" << arr[i] << std::endl;
+}
+
+double calcAverage(double arr[], int n)
+{
+	double total = 0;
+	for (int i = 0; i < n; i++)
+		total += arr[i];
+	return total / n;
+}
+
+void Practice02()
+{
+	using namespace std;
+	double scores[Max];
+	int size = inputScore(scores, Max);
+	displayScore(scores, size);
+	cout << "Average:" << calcAverage(scores, size) << endl;
 }
