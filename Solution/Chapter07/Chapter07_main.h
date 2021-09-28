@@ -174,3 +174,11 @@ struct box
 void showBoxByValue(box);
 void calcVolumeByReference(box&);
 void Practice03();
+
+//Practice04
+const int areaRange1 = 47;
+const int areaRange2 = 27;
+const int chooiceRange1 = 5;
+const int chooiceRange2 = 1;
+double calcLotteryTicket(int area1,int area2,int chooice1,int chooice2);
+void Practice04();

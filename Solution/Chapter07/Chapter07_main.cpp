@@ -2,7 +2,8 @@
 
 int main()
 {
-	Practice03();
+	Practice04();
+	//Practice03();
 	//Practice02();
 	//Practice01();
 	const int ArrSize = 30;
@@ -816,4 +817,19 @@ void Practice03()
 	showBoxByValue(b);
 	calcVolumeByReference(b);
 	showBoxByValue(b);
+}
+
+double calcLotteryTicket(int area1, int area2, int chooice1, int chooice2)
+{
+	double lotteryRate = 0.0;
+	double rate1 = (double)chooice1 / (double)area1;
+	double rate2 = (double)chooice2 / (double)area2;
+	lotteryRate = rate1 * rate2;
+	return lotteryRate;
+}
+
+void Practice04()
+{
+	std::cout.setf(std::ios_base::fixed, std::ios_base::showpoint);
+	std::cout << "Rate:" << calcLotteryTicket(areaRange1, areaRange2, chooiceRange1, chooiceRange2) << std::endl;
 }
