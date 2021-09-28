@@ -221,5 +221,6 @@ void Practice09();
 
 //Practice10
 double calculate(double a, double b, double (*func)(double x, double y));
+double calculate1(double a, double b, double (*pf[3])(double x, double y));
 double add(double, double);
 void Practcie10();

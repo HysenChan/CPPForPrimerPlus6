@@ -1064,6 +1064,14 @@ double calculate(double a, double b, double (*func)(double x, double y))
 	return result;
 }
 
+double calculate1(double a, double b, double (*func[])(double x, double y))
+{
+	double result = 0;
+	for (int i = 0; i < 3; i++)
+		result += func[i](a, b);
+	return result;
+}
+
 double add(double x, double y)
 {
 	return x + y;
@@ -1083,7 +1091,14 @@ void Practcie10()
 			cout << "Bad Input.\n";
 			break;
 		}
-		double p = calculate(x, y, add);
-		cout << "x add y:" << p << endl;
+		//double p = calculate(x, y, add);
+		//cout << "x add y:" << p << endl;
+		typedef double (*pf_fun)(double x, double y);
+		pf_fun  pf[3] = { add,add,add };
+		for (int i = 0; i < 3; i++)
+		{
+			double p1 = calculate1(x, y, pf);
+			cout << "(x add y)*3:" << p1 << endl;
+		}
 	}
 }
