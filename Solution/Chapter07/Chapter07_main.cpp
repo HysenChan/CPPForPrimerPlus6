@@ -899,9 +899,12 @@ void Reverse_arr(double* arr, int len)
 	int temp;
 	for (int i = 1; i < len / 2; i++)
 	{
-		temp = arr[i];
-		arr[i] = arr[len - i - 1];
-		arr[len - i - 1] = temp;
+		if (i != len / 2)
+		{
+			temp = arr[i];
+			arr[i] = arr[len - i - 1];
+			arr[len - i - 1] = temp;
+		}
 	}
 }
 
