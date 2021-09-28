@@ -218,3 +218,8 @@ void display1(student st);
 void display2(const student* ps);
 void display3(const student pa[], int n);
 void Practice09();
+
+//Practice10
+double calculate(double, double, double*);
+double add(double, double);
+void Practcie10();

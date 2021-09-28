@@ -2,7 +2,8 @@
 
 int main()
 {
-	Practice09();
+	Practcie10();
+	//Practice09();
 	//Practice08();
 	//arrFun3();
 	//Practice06();
@@ -1054,4 +1055,35 @@ void Practice09()
 	display3(ptr_stu, entered);
 	delete[] ptr_stu;
 	cout << "Done.\n";
+}
+
+double calculate(double a, double b, double (*func)(double x, double y))
+{
+	double result;
+	result = func(a, b);//(*func(a,b))
+	return result;
+}
+
+double add(double x, double y)
+{
+	return x + y;
+}
+
+void Practcie10()
+{
+	using namespace std;
+	while (true)
+	{
+		cout << "Enter two numbers,any character to quit:";
+		double x, y;
+		double result;
+		cin >> x >> y;
+		if (!cin)
+		{
+			cout << "Bad Input.\n";
+			break;
+		}
+		double p = calculate(x, y, add);
+		cout << "x add y:" << p << endl;
+	}
 }
