@@ -2,7 +2,8 @@
 
 int main()
 {
-	Practice04();
+	Practice05();
+	//Practice04();
 	//Practice03();
 	//Practice02();
 	//Practice01();
@@ -832,4 +833,31 @@ void Practice04()
 {
 	std::cout.setf(std::ios_base::fixed, std::ios_base::showpoint);
 	std::cout << "Rate:" << calcLotteryTicket(areaRange1, areaRange2, chooiceRange1, chooiceRange2) << std::endl;
+}
+
+int factorial(int num)
+{
+	int total = 0;
+	if (num == 0)
+		total = 1;
+	else
+		total = num * factorial(num - 1);
+	return total;
+}
+
+void Practice05()
+{
+	using namespace std;
+	int num;
+	cout << "enter the num:";
+	cin >> num;
+	while (cin)
+	{
+		if (num < 0)
+			cout << "Please enter value bigger than 0.\n";
+		else
+			cout << "Factorial:" << factorial(num) << endl;
+		cout << "enter the num:";
+		cin >> num;
+	}
 }
