@@ -180,9 +180,15 @@ const int areaRange1 = 47;
 const int areaRange2 = 27;
 const int chooiceRange1 = 5;
 const int chooiceRange2 = 1;
-double calcLotteryTicket(int area1,int area2,int chooice1,int chooice2);
+double calcLotteryTicket(int area1, int area2, int chooice1, int chooice2);
 void Practice04();
 
 //Practice05
 int factorial(int num);
 void Practice05();
+
+//Practice06
+int Fill_array(double[], int len);
+void Show_array(const double*, int len);
+void Reverse_arr(double*, int len);
+void Practice06();

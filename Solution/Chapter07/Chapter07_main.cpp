@@ -2,12 +2,13 @@
 
 int main()
 {
-	Practice05();
+	Practice06();
+	//Practice05();
 	//Practice04();
 	//Practice03();
 	//Practice02();
 	//Practice01();
-	const int ArrSize = 30;
+	//const int ArrSize = 30;
 	//review12();
 	//glitz gz = { 1,"g" };
 	//review10(&gz);
@@ -860,4 +861,57 @@ void Practice05()
 		cout << "enter the num:";
 		cin >> num;
 	}
+}
+
+int Fill_array(double arr[], int len)
+{
+	using namespace std;
+	int i;
+	double temp;
+	for (i = 0; i < len; i++)
+	{
+		cout << "Enter value #" << (i + 1) << ":";
+		cin >> temp;
+		if (!cin)
+		{
+			cin.clear();
+			while (cin.get() != '\n')
+				continue;
+			cout << "Bad input;input process terminated.\n";
+			break;
+		}
+		else if (temp < 0)
+			break;
+		arr[i] = temp;
+	}
+	return i;
+}
+
+void Show_array(const double* arr, int len)
+{
+	std::cout << "----------------\n";
+	for (int i = 0; i < len; i++)
+		std::cout << "arr[" << i << "]:" << arr[i] << std::endl;
+}
+
+void Reverse_arr(double* arr, int len)
+{
+	int temp;
+	for (int i = 1; i < len / 2; i++)
+	{
+		temp = arr[i];
+		arr[i] = arr[len - i - 1];
+		arr[len - i - 1] = temp;
+	}
+}
+
+void Practice06()
+{
+	using namespace std;
+	const int ArrSize = 10;
+	double arr[ArrSize];
+	cout << "Size:" << Fill_array(arr, ArrSize) << endl;
+	Show_array(arr, ArrSize);
+	Reverse_arr(arr, ArrSize);
+	Show_array(arr, ArrSize);
 }
