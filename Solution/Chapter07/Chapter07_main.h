@@ -220,6 +220,6 @@ void display3(const student pa[], int n);
 void Practice09();
 
 //Practice10
-double calculate(double, double, double*);
+double calculate(double a, double b, double (*func)(double x, double y));
 double add(double, double);
 void Practcie10();
