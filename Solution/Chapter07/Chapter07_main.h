@@ -192,3 +192,9 @@ int Fill_array(double[], int len);
 void Show_array(const double*, int len);
 void Reverse_arr(double*, int len);
 void Practice06();
+
+//Practice08
+const char* seasonNames[Seasons] = { "Spring", "Summer", "Fall", "Winter" };
+void fillPractice08(double season[]);
+void showPractice08(double season[]);
+void Practice08();

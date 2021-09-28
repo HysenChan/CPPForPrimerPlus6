@@ -2,7 +2,8 @@
 
 int main()
 {
-	arrFun3();
+	Practice08();
+	//arrFun3();
 	//Practice06();
 	//Practice05();
 	//Practice04();
@@ -920,4 +921,34 @@ void Practice06()
 	Show_array(arr, ArrSize);
 	Reverse_arr(arr, ArrSize);
 	Show_array(arr, ArrSize);
+}
+
+void fillPractice08(double season[])
+{
+	using namespace std;
+	for (int i = 0; i < Seasons; i++)
+	{
+		cout << "Enter " << seasonNames[i] << " expenses:";
+		cin >> season[i];
+	}
+}
+
+void showPractice08(double season[])
+{
+	using namespace std;
+	double total = 0.0;
+	cout << "\nEXPENSES\n";
+	for (int i = 0; i < Seasons; i++)
+	{
+		cout << seasonNames[i] << ":$" << season[i] << endl;
+		total += season[i];
+	}
+	cout << "Total expenses:$" << total << endl;
+}
+
+void Practice08()
+{
+	double expenses[Seasons];
+	fillPractice08(expenses);
+	showPractice08(expenses);
 }
