@@ -2,7 +2,8 @@
 
 int main()
 {
-	Practice02();
+	Practice03();
+	//Practice02();
 	//Practice01();
 	const int ArrSize = 30;
 	//review12();
@@ -791,4 +792,28 @@ void Practice02()
 	int size = inputScore(scores, Max);
 	displayScore(scores, size);
 	cout << "Average:" << calcAverage(scores, size) << endl;
+}
+
+void showBoxByValue(box b)
+{
+	using namespace std;
+	cout << "-----------------\n";
+	cout << "maker:" << b.maxker << endl;
+	cout << "height:" << b.height << endl;
+	cout << "width:" << b.width << endl;
+	cout << "length:" << b.length << endl;
+	cout << "volume:" << b.volume << endl;
+}
+
+void calcVolumeByReference(box& b)
+{
+	b.volume = b.height * b.width * b.length;
+}
+
+void Practice03()
+{
+	box b = { "box1",10,20,30,20 };
+	showBoxByValue(b);
+	calcVolumeByReference(b);
+	showBoxByValue(b);
 }

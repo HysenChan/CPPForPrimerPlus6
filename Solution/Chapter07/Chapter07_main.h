@@ -157,7 +157,20 @@ void Practice01();
 
 //Practice02
 const int Max = 10;
-int inputScore(double arr[],int limit);
-void displayScore(const double arr[],int n);
-double calcAverage(double arr[],int n);
+int inputScore(double arr[], int limit);
+void displayScore(const double arr[], int n);
+double calcAverage(double arr[], int n);
 void Practice02();
+
+//Practice03
+struct box
+{
+	char maxker[40];
+	float height;
+	float width;
+	float length;
+	float volume;
+};
+void showBoxByValue(box);
+void calcVolumeByReference(box&);
+void Practice03();
