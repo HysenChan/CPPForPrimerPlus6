@@ -946,9 +946,34 @@ void showPractice08(double season[])
 	cout << "Total expenses:$" << total << endl;
 }
 
+void fillByStructPractice08(Cost *c)
+{
+	using namespace std;
+	for (int i = 0; i < Seasons; i++)
+	{
+		cout << "Enter " << seasonNames[i] << " expenses:";
+		cin >> c->arr[i];
+	}
+}
+
+void showByStructPractice08(Cost *c)
+{
+	using namespace std;
+	double total = 0.0;
+	cout << "\nEXPENSES\n";
+	for (int i = 0; i < Seasons; i++)
+	{
+		cout << seasonNames[i] << ":$" << c->arr[i] << endl;
+		total += c->arr[i];
+	}
+	cout << "Total expenses:$" << total << endl;
+}
+
 void Practice08()
 {
-	double expenses[Seasons];
-	fillPractice08(expenses);
-	showPractice08(expenses);
+	Cost expenses;
+	/*fillPractice08(expenses);
+	showPractice08(expenses);*/
+	fillByStructPractice08(&expenses);
+	showByStructPractice08(&expenses);
 }

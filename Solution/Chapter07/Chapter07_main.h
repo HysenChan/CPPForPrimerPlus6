@@ -194,7 +194,13 @@ void Reverse_arr(double*, int len);
 void Practice06();
 
 //Practice08
+struct Cost
+{
+	double arr[Seasons];
+};
 const char* seasonNames[Seasons] = { "Spring", "Summer", "Fall", "Winter" };
 void fillPractice08(double season[]);
 void showPractice08(double season[]);
+void fillByStructPractice08(Cost*);
+void showByStructPractice08(Cost*);
 void Practice08();
