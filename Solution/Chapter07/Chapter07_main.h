@@ -27,9 +27,9 @@ void arrFun1();
 
 void arrFun2();
 
-int fill_array(double ar[], int limit);
-void show_array(const double ar[], int n);
-void revalue(double r, double ar[], int n);
+double* fill_array(double* ar, double* limit);
+void show_array(const double* ar, double* end);
+void revalue(double r, double* ar, double* end);
 void arrFun3();
 
 int sum_arr(const int* begin, const int* end);

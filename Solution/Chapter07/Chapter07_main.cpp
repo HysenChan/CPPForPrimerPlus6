@@ -2,7 +2,8 @@
 
 int main()
 {
-	Practice06();
+	arrFun3();
+	//Practice06();
 	//Practice05();
 	//Practice04();
 	//Practice03();
@@ -167,12 +168,13 @@ void arrFun2()
 	cout << "Last two eater ate " << sum << " cookies.\n";
 }
 
-int fill_array(double ar[], int limit)
+double* fill_array(double* ar, double* limit)
 {
 	using namespace std;
 	double temp;
-	int i;
-	for (i = 0; i < limit; i++)
+	int i = 0;
+	double* p;
+	for (p = ar; p < limit; p++, i++)
 	{
 		cout << "Enter value #" << (i + 1) << ":";
 		cin >> temp;
@@ -186,25 +188,26 @@ int fill_array(double ar[], int limit)
 		}
 		else if (temp < 0)
 			break;
-		ar[i] = temp;
+		*p = temp;
 	}
-	return i;
+	return p;
 }
 
-void show_array(const double ar[], int n)
+void show_array(const double* ar, double* end)
 {
 	using namespace std;
-	for (int i = 0; i < n; i++)
+	int i = 0;
+	for (const double* p = ar; p < end; p++, i++)
 	{
 		cout << "Property #" << i + 1 << ":$";
-		cout << ar[i] << endl;
+		cout << *p << endl;
 	}
 }
 
-void revalue(double r, double ar[], int n)
+void revalue(double r, double* ar, double* end)
 {
-	for (int i = 0; i < n; i++)
-		ar[i] *= r;
+	for (double* p = ar; p < end; p++)
+		(*p) *= r;
 }
 
 void arrFun3()
@@ -213,9 +216,9 @@ void arrFun3()
 	const int Max = 5;
 	double properties[Max];
 
-	int size = fill_array(properties, Max);
-	show_array(properties, size);
-	if (size > 0)
+	double* end = fill_array(properties, properties + Max);
+	show_array(properties, end);
+	if (end > 0)
 	{
 		cout << "Enter revaluation factor:";
 		double factor;
@@ -226,8 +229,8 @@ void arrFun3()
 				continue;
 			cout << "Bad input;Please enter a number:";
 		}
-		revalue(factor, properties, size);
-		show_array(properties, size);
+		revalue(factor, properties, end);
+		show_array(properties, end);
 	}
 	cout << "Done.\n";
 }
