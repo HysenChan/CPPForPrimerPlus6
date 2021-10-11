@@ -18,3 +18,5 @@ void swaps();
 double valueCube(double a);
 double refCube(const double& ra);
 void cubes();
+
+void rightRef();

@@ -2,7 +2,8 @@
 
 int main()
 {
-	cubes();
+	rightRef();
+	//cubes();
 	//swaps();
 	//tempRef();
 	//sceRef();
@@ -140,7 +141,7 @@ double valueCube(double a)
 
 double refCube(const double& ra)
 {
-	return ra*ra*ra;
+	return ra * ra * ra;
 }
 
 void cubes()
@@ -150,4 +151,13 @@ void cubes()
 
 	cout << valueCube(x) << " = cube of " << x << endl;
 	cout << refCube(x) << " = cube of " << x << endl;
+}
+
+void rightRef()
+{
+	double&& rref = std::sqrt(36.00);
+	double j = 15.0;
+	double&& jref = 2.0 * j + 18.5;
+	std::cout << rref << std::ends << &rref << '\n';
+	std::cout << jref << std::ends << &jref << '\n';
 }
