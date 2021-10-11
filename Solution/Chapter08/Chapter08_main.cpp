@@ -2,7 +2,9 @@
 
 int main()
 {
-	tempRef();
+	cubes();
+	//swaps();
+	//tempRef();
 	//sceRef();
 	//firstRef();
 	//inlineBase();
@@ -77,4 +79,75 @@ void tempRef()
 	cout << "*pt:" << *pt << ",pt:" << pt << endl;
 	cout << "rodents:" << rodents << ",&rodents:" << &rodents << endl;
 	cout << "bunnies:" << bunnies << ",&bunnies:" << &bunnies << endl;
+}
+
+void swapr(int& a, int& b)
+{
+	int temp;
+	temp = a;
+	a = b;
+	b = temp;
+}
+
+void swapp(int* p, int* q)
+{
+	int temp;
+	temp = *p;
+	*p = *q;
+	*q = temp;
+}
+
+void swapv(int a, int b)
+{
+	int temp;
+	temp = a;
+	a = b;
+	b = temp;
+}
+
+void displaySwapResult(int a, int b)
+{
+	using namespace std;
+	cout << "---------------------\n";
+	cout << "a:" << a << endl;
+	cout << "b:" << b << endl;
+}
+
+void swaps()
+{
+	using namespace std;
+	int wallet1 = 1;
+	int wallet2 = 2;
+	swapr(wallet1, wallet2);
+	displaySwapResult(wallet1, wallet2);
+
+	wallet1 = 1;
+	wallet2 = 2;
+	swapp(&wallet1, &wallet2);
+	displaySwapResult(wallet1, wallet2);
+
+	wallet1 = 1;
+	wallet2 = 2;
+	swapv(wallet1, wallet2);
+	displaySwapResult(wallet1, wallet2);
+}
+
+double valueCube(double a)
+{
+	a *= a * a;
+	return a;
+}
+
+double refCube(const double& ra)
+{
+	return ra*ra*ra;
+}
+
+void cubes()
+{
+	using namespace std;
+	double x = 3.0;
+
+	cout << valueCube(x) << " = cube of " << x << endl;
+	cout << refCube(x) << " = cube of " << x << endl;
 }
