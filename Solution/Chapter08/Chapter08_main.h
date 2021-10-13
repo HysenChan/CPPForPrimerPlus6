@@ -46,3 +46,7 @@ void strquote();
 const int LIMIT = 5;
 void file_it(ostream& os, double fo, const double fe[]);
 void fileFunc();
+
+const int ArSize = 80;
+char* left(const char* str, int n = 1);
+void left();
