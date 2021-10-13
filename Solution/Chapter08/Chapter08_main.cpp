@@ -2,7 +2,9 @@
 
 int main()
 {
-	strtRef();
+	fileFunc();
+	//strquote();
+	//strtRef();
 	//rightRef();
 	//cubes();
 	//swaps();
@@ -219,4 +221,97 @@ void strtRef()
 	accumulate(dup, five) = four;
 	std::cout << "Displaying dup after ill_advised assignment:\n";
 	display(dup);
+}
+
+string version1(const string& s1, const string& s2)
+{
+	string temp;
+	temp = s2 + s1 + s2;
+	return temp;
+}
+
+const string& version2(string& s1, const string& s2)
+{
+	s1 = s2 + s1 + s2;
+	return s1;
+}
+
+const string& version3(string& s1, const string& s2)
+{
+	string temp;
+	temp = s2 + s1 + s2;
+	return temp;
+}
+
+void strquote()
+{
+	using namespace std;
+	string input;
+	string copy;
+	string result;
+
+	cout << "Enter a string:";
+	getline(cin, input);
+	copy = input;
+	cout << "Your string as entered:" << input << endl;
+	result = version1(input, "***");
+	cout << "Your string enhanced:" << result << endl;
+	cout << "Your original string:" << input << endl;
+
+	result = version2(input, "###");
+	cout << "Your string enhanced:" << result << endl;
+	cout << "Your original string:" << input << endl;
+
+	cout << "Resetting original string.\n";
+	input = copy;
+	result = version3(input, "@@@");
+	cout << "Your string enhanced:" << result << endl;
+	cout << "Your original string:" << input << endl;
+}
+
+void file_it(ostream& os, double fo, const double fe[])
+{
+	ios_base::fmtflags initial;
+	initial = os.setf(ios_base::fixed);
+	os.precision(0);
+	os << "Focal length of objective:" << fo << " mm\n";
+	os.setf(ios::showpoint);
+	os.precision(1);
+	os.width(12);
+	os << "f.1. eyepiece";
+	os.width(15);
+	os << "magnification" << endl;
+	for (int i = 0; i < LIMIT; i++)
+	{
+		os.width(12);
+		os << fe[i];
+		os.widen(15);
+		os << int(fo / fe[i] + 0.5) << endl;
+	}
+	os.setf(initial);
+}
+
+void fileFunc()
+{
+	ofstream fout;
+	const char* fn = "ep-data.txt";
+	fout.open(fn);
+	if (!fout.is_open())
+	{
+		cout << "Can't open " << fn << ".Bye.\n";
+		exit(EXIT_FAILURE);
+	}
+	double objective;
+	cout << "Enter the focal length of your telescope objective in mm:";
+	cin >> objective;
+	double eps[LIMIT];
+	cout << "Enter the focal lengths, in mm, of " << LIMIT << " eyepieces:\n";
+	for (int i = 0; i < LIMIT; i++)
+	{
+		cout << "Eyepiece #" << i + i << ":";
+		cin >> eps[i];
+	}
+	file_it(fout, objective, eps);
+	file_it(cout, objective, eps);
+	cout << "Done.\n";
 }

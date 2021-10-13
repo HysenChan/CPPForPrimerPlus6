@@ -1,5 +1,9 @@
 #pragma once
 #include<iostream>
+#include<fstream>
+#include<string>
+#include<cstdlib>
+using namespace std;
 
 #define SQUARE(X) ((X)*(X))
 inline double square(double x) { return x * x; }
@@ -33,3 +37,12 @@ void display(const free_throws& ft);
 void set_pc(free_throws& ft);
 free_throws& accumulate(free_throws& target, const free_throws& source);
 void strtRef();
+
+string version1(const string& s1, const string& s2);
+const string& version2(string& s1, const string& s2);
+const string& version3(string& s1, const string& s2);
+void strquote();
+
+const int LIMIT = 5;
+void file_it(ostream& os, double fo, const double fe[]);
+void fileFunc();
