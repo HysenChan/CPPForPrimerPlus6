@@ -50,3 +50,11 @@ void fileFunc();
 const int ArSize = 80;
 char* left(const char* str, int n = 1);
 void left();
+
+void stove(double& r1);
+void stove(const double& r2);
+void stove(double&& r3);
+void stoveTest();
+
+unsigned long left(unsigned long num, unsigned ct);
+void leftover();
