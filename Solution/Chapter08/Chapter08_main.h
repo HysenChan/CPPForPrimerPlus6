@@ -58,3 +58,68 @@ void stoveTest();
 
 unsigned long left(unsigned long num, unsigned ct);
 void leftover();
+
+template<typename T>
+void Swap(T& a, T& b);
+template<typename T>
+void displaySwap(T& i, T& j);
+void funtemp();
+
+template<typename T>
+inline void Swap(T& a, T& b)
+{
+	T temp;
+	temp = a;
+	a = b;
+	b = temp;
+}
+
+template<typename T>
+inline void displaySwap(T& i, T& j)
+{
+	cout << "i,j = " << i << "," << j << ".\n";
+	cout << "Using compiler-generated int swapper:\n";
+	Swap(i, j);
+	cout << "Now i,j = " << i << ", " << j << ".\n";
+}
+
+template<typename T>
+void Swap(T* a, T* b, int n);
+void Show(int a[]);
+const int Lim = 8;
+void twotemps();
+
+template<typename T>
+inline void Swap(T* a, T* b, int n)
+{
+	T temp;
+	for (int i = 0; i < n; i++)
+	{
+		temp = a[i];
+		a[i] = b[i];
+		b[i] = temp;
+	}
+}
+
+struct job
+{
+	char name[40];
+	double salary;
+	int floor;
+};
+
+template<> void Swap<job>(job& j1, job& j2);
+template<> inline void Swap(job& j1, job& j2)
+{
+	double t1;
+	t1 = j1.salary;
+	j1.salary = j2.salary;
+	j2.salary = t1;
+
+	int t2;
+	t2 = j1.floor;
+	j1.floor = j2.floor;
+	j2.floor = t2;
+}
+void Show(job& j);
+void twoSwap();

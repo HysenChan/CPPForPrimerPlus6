@@ -2,7 +2,10 @@
 
 int main()
 {
-	leftover();
+	twoSwap();
+	//twotemps();
+	//funtemp();
+	//leftover();
 	//stoveTest();
 	//left();
 	//fileFunc();
@@ -403,4 +406,62 @@ void leftover()
 		cout << temp << endl;
 		delete[] temp;
 	}
+}
+
+void funtemp()
+{
+	int i = 10;
+	int j = 20;
+	displaySwap(i, j);
+
+	double x = 24.5;
+	double y = 81.7;
+	displaySwap(x, y);
+}
+
+void Show(int a[])
+{
+	cout << a[0] << a[1] << "/";
+	cout << a[2] << a[3] << "/";
+	for (int i = 4; i < Lim; i++)
+		cout << a[i];
+	cout << endl;
+}
+
+void twotemps()
+{
+	int i = 10, j = 20;
+	displaySwap(i, j);
+
+	int d1[Lim] = { 0,7,0,4,1,7,7,6 };
+	int d2[Lim] = { 0,7,2,0,1,9,6,9 };
+	cout << "Original arrays:\n";
+	Show(d1);
+	Show(d2);
+	Swap(d1, d2, Lim);
+	Show(d1);
+	Show(d2);
+}
+
+void Show(job& j)
+{
+	cout << j.name << ":$" << j.salary << " on floor " << j.floor << endl;
+}
+
+void twoSwap()
+{
+	cout.precision(2);
+	cout.setf(ios::fixed, ios::floatfield);
+	int i = 10, j = 20;
+	displaySwap(i, j);
+
+	job sue = { "Susan Yaffee",73000.60,7 };
+	job sidney = { "Sidney Taffe",78060.72,9 };
+	cout << "Befort job swapping:\n";
+	Show(sue);
+	Show(sidney);
+	Swap(sue, sidney);
+	cout << "After job swapping:\n";
+	Show(sue);
+	Show(sidney);
 }
