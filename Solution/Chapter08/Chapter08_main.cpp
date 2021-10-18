@@ -2,7 +2,8 @@
 
 int main()
 {
-	choices();
+	Review04();
+	//choices();
 	//tempTempOver();
 	//twoSwap();
 	//twotemps();
@@ -506,4 +507,30 @@ void choices()
 	cout << lesser(x, y) << endl;
 	cout << lesser<>(m, n) << endl;
 	cout << lesser<int>(x, y) << endl;
+}
+
+void showBox(const box* b)
+{
+	cout << "b.maker:" << b->maker << endl;
+	cout << "b.height:" << b->height<< endl;
+	cout << "b.width:" << b->width << endl;
+	cout << "b.length:" << b->length << endl;
+	cout << "b.volume:" << b->volume << endl;
+}
+
+float calcVolume(box& b)
+{
+	b.volume = b.height * b.width * b.length;
+	return b.volume;
+}
+
+void Review04()
+{
+	box* b = new box;
+	*b = { "BOX", 10, 20, 30 };
+	showBox(b);
+	calcVolume(*b);
+	cout << "-----------After calc volume:\n";
+	showBox(b);
+	delete b;
 }

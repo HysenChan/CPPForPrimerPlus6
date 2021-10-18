@@ -171,7 +171,7 @@ void choices();
 template<class T1, class T2>
 void ft(T1 x, T2 y)
 {
-	? type ? xpy = x + y;
+	//? type ? xpy = x + y;
 	decltype(x + y) xpy = x + y;
 }
 
@@ -184,3 +184,17 @@ auto gt(T1 x, T2  y)->decltype(x + y)
 {
 	return x + y;
 }
+
+
+//∏¥œ∞Ã‚Review
+struct box
+{
+	char maker[40];
+	float height;
+	float width;
+	float length;
+	float volume;
+};
+void showBox(const box* b);
+float calcVolume(box& b);
+void Review04();
