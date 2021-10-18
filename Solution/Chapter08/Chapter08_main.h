@@ -167,3 +167,20 @@ inline T lesser(T a, T b)
 
 int lesser(int a, int b);
 void choices();
+
+template<class T1,class T2>
+void ft(T1 x, T2 y)
+{
+	? type ? xpy = x + y;
+	decltype(x + y) xpy = x + y;
+}
+
+//两者等价
+double h(int x, float y);
+auto h(int x, float y)->double;
+
+template<class T1,class T2>
+auto gt(T1 x, T2  y)->decltype(x + y)
+{
+	return x + y;
+}
