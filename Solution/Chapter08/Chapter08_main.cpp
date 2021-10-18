@@ -2,7 +2,8 @@
 
 int main()
 {
-	twoSwap();
+	tempTempOver();
+	//twoSwap();
 	//twotemps();
 	//funtemp();
 	//leftover();
@@ -464,4 +465,24 @@ void twoSwap()
 	cout << "After job swapping:\n";
 	Show(sue);
 	Show(sidney);
+}
+
+void tempTempOver()
+{
+	int things[6] = { 13,31,103,301,310,130 };
+	struct debts mr_E[3] =
+	{
+		{"Ima Wolfe",2400.0},
+		{"Ura Foxe",1300.0},
+		{"Iby Stout",1800.0},
+	};
+	double* pd[3];
+
+	for (int i = 0; i < 3; i++)
+		pd[i] = &mr_E[i].amount;
+
+	cout << "Listring Mr.E's counts of things:\n";
+	ShowArray(things, 6);
+	cout << "Listring Mr.E's debts:\n";
+	ShowArray(pd, 3);
 }

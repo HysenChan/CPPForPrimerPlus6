@@ -121,5 +121,37 @@ template<> inline void Swap(job& j1, job& j2)
 	j1.floor = j2.floor;
 	j2.floor = t2;
 }
+
 void Show(job& j);
 void twoSwap();
+
+template<typename T>
+void ShowArray(T arr[], int n);
+
+template<typename T>
+void ShowArray(T* arr[], int n);
+
+struct debts
+{
+	char name[50];
+	double amount;
+};
+
+void tempTempOver();
+
+template<typename T>
+inline void ShowArray(T arr[], int n)
+{
+	cout << "template A\n";
+	for (int i = 0; i < n; i++)
+		cout << arr[i] << ' ';
+	cout << endl;
+}
+template<typename T>
+inline void ShowArray(T* arr[], int n)
+{
+	cout << "template B\n";
+	for (int i = 0; i < n; i++)
+		cout << *arr[i] << ' ';
+	cout << endl;
+}
