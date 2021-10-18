@@ -155,3 +155,15 @@ inline void ShowArray(T* arr[], int n)
 		cout << *arr[i] << ' ';
 	cout << endl;
 }
+
+template<class T>
+T lesser(T a, T b);
+
+template<class T>
+inline T lesser(T a, T b)
+{
+	return a < b ? a : b;
+}
+
+int lesser(int a, int b);
+void choices();

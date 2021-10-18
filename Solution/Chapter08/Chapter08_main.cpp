@@ -2,7 +2,8 @@
 
 int main()
 {
-	tempTempOver();
+	choices();
+	//tempTempOver();
 	//twoSwap();
 	//twotemps();
 	//funtemp();
@@ -485,4 +486,24 @@ void tempTempOver()
 	ShowArray(things, 6);
 	cout << "Listring Mr.E's debts:\n";
 	ShowArray(pd, 3);
+}
+
+int lesser(int a, int b)
+{
+	a = a < 0 ? -a : a;
+	b = b < 0 ? -b : b;
+	return a < b ? a : b;
+}
+
+void choices()
+{
+	int m = 20;
+	int n = -30;
+	double x = 15.5;
+	double y = 25.9;
+
+	cout << lesser(m, n) << endl;
+	cout << lesser(x, y) << endl;
+	cout << lesser<>(m, n) << endl;
+	cout << lesser<int>(x, y) << endl;
 }
