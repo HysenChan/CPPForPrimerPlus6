@@ -297,3 +297,26 @@ inline char* maxn(char* arr[], int n)
 	return address;
 }
 void Practice06();
+
+//Practice07
+template<typename T> T SumArray(T arr[], int n);
+template<typename T> T SumArray(T* arr[], int n);
+template<typename T>
+inline T SumArray(T arr[], int n)
+{
+	cout << "Template A\n";
+	T sum = 0;
+	for (int i = 0; i < n; i++)
+		sum += arr[i];
+	return sum;
+}
+template<typename T>
+inline T SumArray(T* arr[], int n)
+{
+	cout << "Template B\n";
+	T sum = 0;
+	for (int i = 0; i < n; i++)
+		sum += *arr[i];
+	return sum;
+}
+void Practice07();

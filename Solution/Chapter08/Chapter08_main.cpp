@@ -2,7 +2,8 @@
 
 int main()
 {
-	Practice06();
+	Practice07();
+	//Practice06();
 	//Practice05();
 	//Practice04();
 	//Practice03();
@@ -682,4 +683,24 @@ void Practice06()
 	cout << "max2:" << max2 << endl;
 	cout << "max3:" << &max3 << endl;
 	cout << "Bye!\n";
+}
+
+void Practice07()
+{
+	int things[6] = { 13,31,103,301,310,130 };
+	struct debts mr_E[3] =
+	{
+		{"Ima Wolfe",2400.0},
+		{"Ura Foxe",1300.0},
+		{"Iby Stout",1800.0},
+	};
+	double* pd[3];
+
+	for (int i = 0; i < 3; i++)
+		pd[i] = &mr_E[i].amount;
+
+	int sum1 = SumArray(things, 6);
+	cout << "Sum1:" << sum1 << endl;
+	int sum2 = SumArray(pd, 3);
+	cout << "Sum2:" << sum2 << endl;
 }
