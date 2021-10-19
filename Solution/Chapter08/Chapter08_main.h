@@ -185,8 +185,8 @@ auto gt(T1 x, T2  y)->decltype(x + y)
 	return x + y;
 }
 
-
 //∏¥œ∞Ã‚Review
+//Review04
 struct box
 {
 	char maker[40];
@@ -198,3 +198,13 @@ struct box
 void showBox(const box* b);
 float calcVolume(box& b);
 void Review04();
+
+//Review07
+template<class T>
+T maxValue(T t1, T t2);
+
+template<class T>
+inline T maxValue(T t1, T t2)//T maxValue(const T& t1, const T& t2)
+{
+	return t1 > t2 ? t1 : t2;
+}
