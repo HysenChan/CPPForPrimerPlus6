@@ -267,3 +267,33 @@ inline T max5(T arr[], const int& Limit)
 	return max;
 }
 void Practice05();
+
+//Practice06
+template<typename T>
+T maxn(T arr[], const int length);
+template<typename T>
+inline T maxn(T arr[], const int length)
+{
+	T max = 0;
+	for (int i = 0; i < length; i++)
+		max = max > arr[i] ? max : arr[i];
+	return max;
+}
+template<> char* maxn(char* arr[], int n);
+template<>
+inline char* maxn(char* arr[], int n)
+{
+	int j = 0;
+	int max = 0;
+	for (int i = 0; i < n; i++)
+	{
+		if (max < strlen(arr[i]))
+		{
+			max = strlen(arr[i]);
+			j = i;
+		}
+	}
+	char* address = arr[j];
+	return address;
+}
+void Practice06();

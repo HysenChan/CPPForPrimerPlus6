@@ -2,7 +2,8 @@
 
 int main()
 {
-	Practice05();
+	Practice06();
+	//Practice05();
 	//Practice04();
 	//Practice03();
 	//Practice02();
@@ -664,4 +665,21 @@ void Practice05()
 	double max2 = max5(doubleArr, Limit);
 	cout << "max1:" << max1 << endl;
 	cout << "max2:" << max2 << endl;
+}
+
+void Practice06()
+{
+	int arr1[6] = { 1,2,3,4,5,6 };
+	double arr2[4] = { 1.5,9.0,3.4,0.1 };
+	int max1;
+	double max2;
+	max1 = maxn(arr1, 6);
+	max2 = maxn(arr2, 4);
+	const char* arr3[5] = { "one","two","three","four","five" };
+	const char* max3;
+	max3 = maxn(arr3, 5);
+	cout << "max1:" << max1 << endl;
+	cout << "max2:" << max2 << endl;
+	cout << "max3:" << &max3 << endl;
+	cout << "Bye!\n";
 }
