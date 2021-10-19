@@ -2,7 +2,8 @@
 
 int main()
 {
-	Practice01();
+	Practice02();
+	//Practice01();
 	//Review08();
 	//Review04();
 	//choices();
@@ -570,4 +571,24 @@ void Practice01()
 	print(str, 5);
 	print(str, 16);
 	print(str);
+}
+
+void SetCandyBarValue(CandyBar& cb, const char* str, const double w, const int c)
+{
+	strcpy_s(cb.name, str);
+	cb.weight = w;
+	cb.calories = c;
+	cout << "cb.name:" << cb.name << endl;
+	cout << "cb.weight:" << cb.weight << endl;
+	cout << "cb.calories:" << cb.calories << endl;
+	cout << endl;
+}
+
+void Practice02()
+{
+	CandyBar* cb1 = new CandyBar[2];
+	cb1[0] = { "cb1",30,2000 };
+	SetCandyBarValue(cb1[0]);
+	SetCandyBarValue(cb1[1], "cb2", 50, 1000);
+	delete[]cb1;
 }

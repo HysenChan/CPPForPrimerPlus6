@@ -222,3 +222,13 @@ void Review08();
 //Practice01
 void print(char* str, int n = 0);
 void Practice01();
+
+//Practice02
+struct CandyBar
+{
+	char name[30];
+	float weight;
+	int calories;
+};
+void SetCandyBarValue(CandyBar& cb, const char* str = "Millennium Munch", const double w = 2.85, const int c = 350);
+void Practice02();
