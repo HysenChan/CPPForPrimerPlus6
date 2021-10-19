@@ -18,3 +18,6 @@ C++ Primer Plus（第六版）
 
 # 2021.09.28
 * Finish Chapter07
+
+# 2021.10.19
+* Finish Chapter08
