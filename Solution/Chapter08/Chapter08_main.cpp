@@ -2,7 +2,8 @@
 
 int main()
 {
-	Practice03();
+	Practice04();
+	//Practice03();
 	//Practice02();
 	//Practice01();
 	//Review08();
@@ -616,4 +617,40 @@ void Practice03()
 		getline(cin, str);
 	}
 	cout << "Bye." << endl;
+}
+
+void set(stringy& sy, const char* str)
+{
+	sy.ct = strlen(str) + 1;
+	sy.str = new char[sy.ct];
+	strcpy_s(sy.str, sy.ct, str);
+}
+
+void show(const stringy& sy, const int n)
+{
+	for (int i = 0; i < n; i++)
+		cout << "sy.str:" << sy.str << endl;
+	cout << "sy.ct:" << sy.ct << endl;
+}
+
+void show(const string& str, const int n)
+{
+	for (int i = 0; i < n; i++)
+		cout << "str:" << str << endl;
+	cout << endl;
+}
+
+void Practice04()
+{
+	stringy beany;
+	char testing[] = "Reality isn't what it used to be.";
+
+	set(beany, testing);
+	show(beany);
+	show(beany, 2);
+	testing[0] = 'D';
+	testing[1] = 'u';
+	show(testing);
+	show(testing, 3);
+	show("Done!");
 }

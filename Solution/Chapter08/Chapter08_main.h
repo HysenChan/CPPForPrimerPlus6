@@ -237,3 +237,14 @@ void Practice02();
 //Practice03
 string strToUpper(std::string& str);
 void Practice03();
+
+//Practice04
+struct stringy
+{
+	char* str;
+	int ct;
+};
+void set(stringy& sy, const char* str);
+void show(const stringy& sy, const int n = 1);
+void show(const string& str, const int n = 1);
+void Practice04();
