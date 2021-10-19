@@ -2,7 +2,8 @@
 
 int main()
 {
-	Review04();
+	Review08();
+	//Review04();
 	//choices();
 	//tempTempOver();
 	//twoSwap();
@@ -512,7 +513,7 @@ void choices()
 void showBox(const box* b)
 {
 	cout << "b.maker:" << b->maker << endl;
-	cout << "b.height:" << b->height<< endl;
+	cout << "b.height:" << b->height << endl;
 	cout << "b.width:" << b->width << endl;
 	cout << "b.length:" << b->length << endl;
 	cout << "b.volume:" << b->volume << endl;
@@ -533,4 +534,14 @@ void Review04()
 	cout << "-----------After calc volume:\n";
 	showBox(b);
 	delete b;
+}
+
+void Review08()
+{
+	box* b = new box[2];
+	b[0] = { "b1",1,2,3 };
+	b[1] = { "b2",2,3,4 };
+	box tempB = maxBox(b[0], b[1]);
+	showBox(&tempB);
+	delete[] b;
 }
