@@ -3,6 +3,7 @@
 #include<fstream>
 #include<string>
 #include<cstdlib>
+#include<cctype>
 using namespace std;
 
 #define SQUARE(X) ((X)*(X))
@@ -232,3 +233,7 @@ struct CandyBar
 };
 void SetCandyBarValue(CandyBar& cb, const char* str = "Millennium Munch", const double w = 2.85, const int c = 350);
 void Practice02();
+
+//Practice03
+string strToUpper(std::string& str);
+void Practice03();

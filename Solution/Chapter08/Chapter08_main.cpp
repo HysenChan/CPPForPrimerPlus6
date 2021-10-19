@@ -2,7 +2,8 @@
 
 int main()
 {
-	Practice02();
+	Practice03();
+	//Practice02();
 	//Practice01();
 	//Review08();
 	//Review04();
@@ -591,4 +592,28 @@ void Practice02()
 	SetCandyBarValue(cb1[0]);
 	SetCandyBarValue(cb1[1], "cb2", 50, 1000);
 	delete[]cb1;
+}
+
+string strToUpper(std::string& str)
+{
+	for (int i = 0; str[i]; i++)
+	{
+		str[i] = toupper(str[i]);
+	}
+	return str;
+}
+
+void Practice03()
+{
+	cout << "Enter a string(q to quit):";
+	string str;
+	getline(cin, str);
+	while (str != "q")
+	{
+		str = strToUpper(str);
+		cout << str << endl;
+		cout << "Next string (q to quit):";
+		getline(cin, str);
+	}
+	cout << "Bye." << endl;
 }
