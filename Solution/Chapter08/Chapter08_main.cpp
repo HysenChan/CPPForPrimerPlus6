@@ -2,7 +2,8 @@
 
 int main()
 {
-	Practice04();
+	Practice05();
+	//Practice04();
 	//Practice03();
 	//Practice02();
 	//Practice01();
@@ -653,4 +654,14 @@ void Practice04()
 	show(testing);
 	show(testing, 3);
 	show("Done!");
+}
+
+void Practice05()
+{
+	int intArr[5] = { 1,2,3,4,5 };
+	double doubleArr[5] = { 1.1,2.2,3.3,4.4,5.5 };
+	int max1 = max5(intArr, Limit);
+	double max2 = max5(doubleArr, Limit);
+	cout << "max1:" << max1 << endl;
+	cout << "max2:" << max2 << endl;
 }

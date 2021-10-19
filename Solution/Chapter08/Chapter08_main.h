@@ -248,3 +248,22 @@ void set(stringy& sy, const char* str);
 void show(const stringy& sy, const int n = 1);
 void show(const string& str, const int n = 1);
 void Practice04();
+
+//Practice05
+const int Limit = 5;
+template<typename T>
+T max5(T arr[], const int& Limit);
+
+template<typename T>
+inline T max5(T arr[], const int& Limit)
+{
+	T max;
+	max = arr[0];
+	for (int i = 1; i < Limit; i++)
+	{
+		if (arr[i] > max)
+			max = arr[i];
+	}
+	return max;
+}
+void Practice05();
