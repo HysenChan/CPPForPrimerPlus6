@@ -2,7 +2,8 @@
 
 int main()
 {
-	Review08();
+	Practice01();
+	//Review08();
 	//Review04();
 	//choices();
 	//tempTempOver();
@@ -544,4 +545,29 @@ void Review08()
 	box tempB = maxBox(b[0], b[1]);
 	showBox(&tempB);
 	delete[] b;
+}
+
+void print(char* str, int n)
+{
+	static int flag = 0;
+	flag++;
+	cout << "flag:" << flag << endl;
+	if (n == 0)
+		cout << str << endl;
+	else
+	{
+		for (int i = 0; i < flag; i++)
+			cout << str << endl;
+	}
+	cout << endl;
+	return;
+}
+
+void Practice01()
+{
+	char str[20] = "Hello World!";
+	print(str);
+	print(str, 5);
+	print(str, 16);
+	print(str);
 }

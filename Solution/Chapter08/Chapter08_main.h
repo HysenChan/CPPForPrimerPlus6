@@ -217,3 +217,8 @@ template<class box> box maxBox(box& b1, box& b2)
 	return b1.volume > b2.volume ? b1 : b2;
 }
 void Review08();
+
+//±‡≥Ã¡∑œ∞
+//Practice01
+void print(char* str, int n = 0);
+void Practice01();
