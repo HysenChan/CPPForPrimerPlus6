@@ -140,9 +140,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Chapter09_main.h" />
+    <ClInclude Include="coordin.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Chapter09_main.cpp" />
+    <ClCompile Include="file1.cpp" />
+    <ClCompile Include="file2.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
