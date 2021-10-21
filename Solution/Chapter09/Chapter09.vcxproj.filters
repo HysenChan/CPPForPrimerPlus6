@@ -32,5 +32,11 @@
     <ClCompile Include="file2.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="external.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="support.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

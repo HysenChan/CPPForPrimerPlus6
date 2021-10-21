@@ -1,6 +1,6 @@
 #include"Chapter09_main.h"
 
-int main()
+int main1()
 {
 	autoBase();
 	return 0;

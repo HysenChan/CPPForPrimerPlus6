@@ -144,8 +144,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Chapter09_main.cpp" />
+    <ClCompile Include="external.cpp" />
     <ClCompile Include="file1.cpp" />
     <ClCompile Include="file2.cpp" />
+    <ClCompile Include="support.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
