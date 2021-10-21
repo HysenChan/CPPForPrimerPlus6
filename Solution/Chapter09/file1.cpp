@@ -3,7 +3,7 @@
 
 using namespace std;
 
-int main()
+int mainFile1()
 {
 	rect rPlace;
 	polar pPlace;
