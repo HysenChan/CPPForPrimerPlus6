@@ -1,9 +1,12 @@
 #include"Chapter09_main.h"
 
+static int errors = 20;
+
 extern double warming;
 
 void update(double dt);
 void local();
+void show();
 
 void update(double dt)
 {
@@ -20,4 +23,9 @@ void local()
 	cout << "Local warming = " << warming << " degrees.\n";
 	cout << "But global warming = " << ::warming;
 	cout << " degrees.\n";
+}
+
+void show()
+{
+	cout << errors << endl;
 }
