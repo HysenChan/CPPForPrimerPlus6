@@ -38,5 +38,11 @@
     <ClCompile Include="support.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="twofile1.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="twofile2.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

@@ -7,7 +7,7 @@ void update(double dt);
 void local();
 void show();
 
-int main()
+int main2()
 {
 	/*cout << "Global warming is " << warming << " degrees.\n";
 	update(0.1);
