@@ -6,7 +6,7 @@ static int harry = 300;
 
 void remote_access();
 
-int main()
+int main_twoFile()
 {
 	cout << "main() reports the following addresses:\n";
 	cout << &tom << " = &tom, " << &dick << " = &dick, ";

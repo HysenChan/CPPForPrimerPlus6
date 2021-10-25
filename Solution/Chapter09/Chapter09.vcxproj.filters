@@ -44,5 +44,11 @@
     <ClCompile Include="twofile2.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="useNew.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="newPlace.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

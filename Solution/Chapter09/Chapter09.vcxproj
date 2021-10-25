@@ -147,9 +147,11 @@
     <ClCompile Include="external.cpp" />
     <ClCompile Include="file1.cpp" />
     <ClCompile Include="file2.cpp" />
+    <ClCompile Include="newPlace.cpp" />
     <ClCompile Include="support.cpp" />
     <ClCompile Include="twofile1.cpp" />
     <ClCompile Include="twofile2.cpp" />
+    <ClCompile Include="useNew.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
