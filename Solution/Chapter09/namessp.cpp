@@ -4,7 +4,7 @@
 void other(void);
 void another(void);
 
-int main(void)
+int main_Namessp(void)
 {
 	using debts::Debt;
 

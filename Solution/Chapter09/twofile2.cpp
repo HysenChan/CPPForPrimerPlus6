@@ -7,6 +7,6 @@ int harry = 200;
 void remote_access()
 {
 	cout << "remote_access() reports the following addresses:\n";
-	cout << &tom << " = &tom, " << &dick << " = &dick, ";
+	cout << &tom << " = &tom, tom = " << tom << "," << &dick << " = &dick, ";
 	cout << &harry << " = &harry.\n";
 }
