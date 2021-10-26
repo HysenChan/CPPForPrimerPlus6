@@ -1,8 +1,8 @@
 #include"Chapter09_main.h"
 
-int main1()
+int mainTemp()
 {
-	staticBase();
+	//staticBase();
 	//autoBase();
 	return 0;
 }

@@ -5,7 +5,7 @@ const int BUF = 512;
 const int N = 5;
 char buffer[BUF];
 
-int main()
+int main_NewPlace()
 {
 	using namespace std;
 	double* pd1, * pd2;

@@ -141,12 +141,15 @@
   <ItemGroup>
     <ClInclude Include="Chapter09_main.h" />
     <ClInclude Include="coordin.h" />
+    <ClInclude Include="namesp.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Chapter09_main.cpp" />
     <ClCompile Include="external.cpp" />
     <ClCompile Include="file1.cpp" />
     <ClCompile Include="file2.cpp" />
+    <ClCompile Include="namesp.cpp" />
+    <ClCompile Include="namessp.cpp" />
     <ClCompile Include="newPlace.cpp" />
     <ClCompile Include="support.cpp" />
     <ClCompile Include="twofile1.cpp" />

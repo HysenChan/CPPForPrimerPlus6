@@ -21,6 +21,9 @@
     <ClInclude Include="coordin.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="namesp.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Chapter09_main.cpp">
@@ -48,6 +51,12 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="newPlace.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="namesp.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="namessp.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
