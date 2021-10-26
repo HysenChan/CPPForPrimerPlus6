@@ -142,6 +142,7 @@
     <ClInclude Include="Chapter09_main.h" />
     <ClInclude Include="coordin.h" />
     <ClInclude Include="namesp.h" />
+    <ClInclude Include="review.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Chapter09_main.cpp" />
@@ -151,6 +152,7 @@
     <ClCompile Include="namesp.cpp" />
     <ClCompile Include="namessp.cpp" />
     <ClCompile Include="newPlace.cpp" />
+    <ClCompile Include="review.cpp" />
     <ClCompile Include="support.cpp" />
     <ClCompile Include="twofile1.cpp" />
     <ClCompile Include="twofile2.cpp" />
