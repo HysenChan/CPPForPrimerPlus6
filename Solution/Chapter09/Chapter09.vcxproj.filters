@@ -27,6 +27,12 @@
     <ClInclude Include="review.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="golf.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="practice.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Chapter09_main.cpp">
@@ -66,6 +72,12 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="review01.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="golf.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="practice.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

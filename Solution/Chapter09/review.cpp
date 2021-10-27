@@ -39,7 +39,7 @@ void other1()
 	cout << "Other: " << x << "," << y << endl;
 }
 
-int main()
+int main_review()
 {
 	Review06();
 	return 0;
