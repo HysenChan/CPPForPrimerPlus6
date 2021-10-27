@@ -3,7 +3,8 @@
 
 int main()
 {
-	Practice02();
+	Practice03();
+	//Practice02();
 	//Practice01();
 	return 0;
 }
@@ -65,4 +66,55 @@ void strCount(const std::string str)
 	total += count;
 	std::cout << count << " character\n";
 	std::cout << total << " character total\n";
+}
+
+void showChaff(const chaff& c)
+{
+	using namespace std;
+	cout << c.dross << "," << c.slag << endl;
+}
+
+void Practice03()
+{
+	using namespace std;
+	/*chaff c[2];
+	for (int i = 0; i < 2; i++)
+	{
+		cout << "Enter dross:";
+		cin.getline(c[i].dross, 20);
+		cout << "Enter slag:";
+		cin >> c[i].slag;
+		cin.get();
+	}
+	for (int i = 0; i < 2; i++)
+		showChaff(c[i]);*/
+
+	char buffer1[Buf];
+	chaff* cf1 = new(buffer1) chaff[2];
+	char* buffer2 = new char[Buf];
+	chaff* cf2 = new(buffer2)chaff[2];
+
+	char dross[20] = { 0 };
+	int slag = 0;
+
+	for (int i = 0; i < 2; i++)
+	{
+		cout << "Enter dross:";
+		cin.getline(dross, 20);
+		cout << "Enter slag:";
+		cin >> slag;
+		cin.ignore();
+		strcpy_s(cf1[i].dross, dross);
+		strcpy_s(cf2[i].dross, dross);
+		cf1[i].slag = cf2[i].slag = slag;
+	}
+
+	for (int i = 0; i < 2; i++)
+	{
+		cout << "chaff $" << i + 1 << ":\n";
+		cout << "cf1.dross:" << cf1[i].dross << ",cf1.slag:" << cf1[i].slag << endl;
+		cout << "cf2.dross:" << cf2[i].dross << ",cf2.slag:" << cf2[i].slag << endl;
+	}
+
+	delete[] buffer2;
 }
