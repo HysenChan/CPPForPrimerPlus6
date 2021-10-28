@@ -1,9 +1,11 @@
 #include"golf.h"
 #include "practice.h"
+#include"practice04.h"
 
 int main()
 {
-	Practice03();
+	Practice04();
+	//Practice03();
 	//Practice02();
 	//Practice01();
 	return 0;
@@ -117,4 +119,21 @@ void Practice03()
 	}
 
 	delete[] buffer2;
+}
+
+void Practice04()
+{
+	const int salesSize = 2;
+	using namespace SALES;
+	/*Sales s1;
+	setSales(s1);
+	showSales(s1);*/
+
+	Sales* s2 = new Sales[salesSize];
+	for (int i = 0; i < salesSize; i++)
+	{
+		std::cout << "Please enter NO." << i + 1 << " data:\n";
+		setSales(s2[i]);
+		showSales(s2[i]);
+	}
 }

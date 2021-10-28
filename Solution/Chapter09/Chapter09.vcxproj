@@ -144,6 +144,7 @@
     <ClInclude Include="golf.h" />
     <ClInclude Include="namesp.h" />
     <ClInclude Include="practice.h" />
+    <ClInclude Include="practice04.h" />
     <ClInclude Include="review.h" />
   </ItemGroup>
   <ItemGroup>
@@ -156,6 +157,7 @@
     <ClCompile Include="namessp.cpp" />
     <ClCompile Include="newPlace.cpp" />
     <ClCompile Include="practice.cpp" />
+    <ClCompile Include="practice04.cpp" />
     <ClCompile Include="review.cpp" />
     <ClCompile Include="review01.cpp" />
     <ClCompile Include="support.cpp" />

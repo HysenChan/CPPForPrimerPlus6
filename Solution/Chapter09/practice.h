@@ -13,3 +13,5 @@ struct chaff
 };
 void showChaff(const chaff& c);
 void Practice03();
+
+void Practice04();
