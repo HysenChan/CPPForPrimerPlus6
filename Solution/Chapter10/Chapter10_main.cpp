@@ -1,5 +1,5 @@
 #include"Chapter10_main.h"
-#include"stock00.h"
+#include"stock10.h"
 
 int main()
 {
@@ -9,8 +9,10 @@ int main()
 
 void useStock0()
 {
-	Stock fluffy_the_cat;
-	fluffy_the_cat.acquire("NanoSmatrt", 20, 12.50);
+	//Stock fluffy_the_cat;//默认构造函数
+	//Stock* fluffy_the_cat = new Stock("Furry Mason", 50, 2.5);
+	Stock fluffy_the_cat("Furry Mason", 50, 2.5);//Stock fluffy_the_cat = Stock("Furry Mason", 50, 2.5);
+	//fluffy_the_cat.acquire("NanoSmatrt", 20, 12.50);
 	fluffy_the_cat.show();
 	fluffy_the_cat.buy(15, 18.125);
 	fluffy_the_cat.show();
