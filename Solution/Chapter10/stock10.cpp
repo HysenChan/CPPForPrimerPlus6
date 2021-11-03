@@ -82,7 +82,7 @@ void Stock::update(double price)
 	set_tot();
 }
 
-void Stock::show()
+const void Stock::show()
 {
 	using std::cout;
 	using std::ios_base;
