@@ -13,6 +13,7 @@ void useStock0()
 	//Stock* fluffy_the_cat = new Stock("Furry Mason", 50, 2.5);
 	Stock fluffy_the_cat("Furry Mason", 50, 2.5);//Stock fluffy_the_cat = Stock("Furry Mason", 50, 2.5);
 	//fluffy_the_cat.acquire("NanoSmatrt", 20, 12.50);
+	//Stock fluffy_the_cat{ "Furry Mason", 50, 2.5 };//C++11
 	fluffy_the_cat.show();
 	fluffy_the_cat.buy(15, 18.125);
 	fluffy_the_cat.show();
