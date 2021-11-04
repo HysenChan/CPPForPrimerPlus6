@@ -82,7 +82,7 @@ void Stock::update(double price)
 	set_tot();
 }
 
-const void Stock::show()
+void Stock::show()const
 {
 	using std::cout;
 	using std::ios_base;
@@ -95,4 +95,12 @@ const void Stock::show()
 	cout.setf(orig, ios_base::floatfield);
 	cout.precision(prec);
 	std::cout << "-----------------\n";
+}
+
+const Stock& Stock::topval(const Stock& s) const
+{
+	if (s.total_val > total_val)
+		return s;
+	else
+		return *this;
 }

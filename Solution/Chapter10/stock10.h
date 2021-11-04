@@ -14,7 +14,8 @@ public:
 	void buy(long num, double price);
 	void sell(long num, double price);
 	void update(double price);
-	const void show();
+	void show()const;
+	const Stock& topval(const Stock& s) const;
 
 private:
 	std::string company;
