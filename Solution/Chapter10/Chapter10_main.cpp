@@ -1,9 +1,11 @@
 #include"Chapter10_main.h"
 #include"stock10.h"
+#include"stack.h"
 
 int main()
 {
-	useStock1();
+	stacker();
+	//useStock1();
 	//useStock0();
 	return 0;
 }
@@ -47,4 +49,50 @@ void useStock1()
 
 	std::cout << "\nMost valuable holding:\n";
 	top->show();
+}
+
+void stacker()
+{
+	using namespace std;
+	Stack st;
+	char ch;
+	unsigned long po;
+	cout << "Please enter A to add a puchase order,\n"
+		<< "P to process a PO,or Q to quit.\n";
+	while (cin >> ch && _toupper(ch) != 'Q')
+	{
+		while (cin.get() != '\n')
+			continue;
+		if (!isalpha(ch))
+		{
+			cout << '\a';
+			continue;
+		}
+
+		switch (ch)
+		{
+		case 'A':
+		case 'a':
+			cout << "Enter a PO number to add:";
+			cin >> po;
+			if (st.isFull())
+				cout << "stack already full\n";
+			else
+				st.push(po);
+			break;
+		case 'P':
+		case 'p':
+			if (st.isEmpty())
+				cout << "stack already empty\n";
+			else
+			{
+				st.pop(po);
+				cout << "PO #" << po << " popped\n";
+			}
+			break;
+		}
+		cout << "Please enter A to add a purchase order,\n"
+			<< "P to process a PO, or Q to quit.\n";
+	}
+	cout << "Bye.\n";
 }
