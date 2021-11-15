@@ -1,10 +1,12 @@
 #include"Chapter10_main.h"
 #include"stock10.h"
 #include"stack.h"
+#include"bank.h"
 
 int main()
 {
-	stacker();
+	Review01();
+	//stacker();
 	//useStock1();
 	//useStock0();
 	return 0;
@@ -95,4 +97,12 @@ void stacker()
 			<< "P to process a PO, or Q to quit.\n";
 	}
 	cout << "Bye.\n";
+}
+
+void Review01()
+{
+	Bank bank1;
+	bank1.show();
+	Bank bank2 = Bank("name", "account", 0.0);
+	bank2.show();
 }
