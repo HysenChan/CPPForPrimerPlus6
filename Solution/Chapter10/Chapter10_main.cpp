@@ -101,8 +101,19 @@ void stacker()
 
 void Review01()
 {
-	Bank bank1;
+	using namespace std;
+	/*Bank bank1;
 	bank1.show();
 	Bank bank2 = Bank("name", "account", 0.0);
-	bank2.show();
+	bank2.show();*/
+	Bank bank3;
+	double inPrice, outPrice;
+	cout << "Please enter the in price:";
+	cin >> inPrice;
+	bank3.deposit(inPrice);
+	bank3.show();
+	cout << "Please enter the out price:";
+	cin >> outPrice;
+	bank3.takeOut(outPrice);
+	bank3.show();
 }

@@ -16,18 +16,18 @@ Bank::Bank(const std::string& n, const std::string& acc, double store)
 
 void Bank::deposit(double price)
 {
-	if (price < 0)
-		std::cout << "Please enter more than 0 price:";
+	if (price <= 0)
+		std::cout << "Please enter more than 0 price.\n";
 	else
 		storageMoney += price;
 }
 
 void Bank::takeOut(double price)
 {
-	if (price < 0)
-		std::cout << "Please enter more than 0 price:";
+	if (price <= 0)
+		std::cout << "Please enter more than 0 price.\n";
 	else if (price > storageMoney)
-		std::cout << "Your account not enough " << price;
+		std::cout << "Your account not enough " << price << std::endl;
 	else
 		storageMoney -= price;
 }
