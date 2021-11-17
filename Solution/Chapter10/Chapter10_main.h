@@ -5,5 +5,6 @@ void useStock0();
 void useStock1();
 void stacker();
 
-//Review01
-void Review01();
+//Practice
+void Practice01();
+void Practice02();

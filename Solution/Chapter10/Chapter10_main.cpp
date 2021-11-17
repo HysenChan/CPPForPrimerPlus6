@@ -2,10 +2,12 @@
 #include"stock10.h"
 #include"stack.h"
 #include"bank.h"
+#include"person.h"
 
 int main()
 {
-	Review01();
+	Practice02();
+	//Practice01();
 	//stacker();
 	//useStock1();
 	//useStock0();
@@ -99,7 +101,7 @@ void stacker()
 	cout << "Bye.\n";
 }
 
-void Review01()
+void Practice01()
 {
 	using namespace std;
 	/*Bank bank1;
@@ -116,4 +118,20 @@ void Review01()
 	cin >> outPrice;
 	bank3.takeOut(outPrice);
 	bank3.show();
+}
+
+void Practice02()
+{
+	Person one;
+	Person two("Smythecraft");
+	Person three("Dimwiddy", "Sam");
+	one.Show();
+	one.FormalShow();
+	std::cout << std::endl;
+	two.Show();
+	two.FormalShow();
+	std::cout << std::endl;
+	three.Show();
+	three.FormalShow();
+	std::cout << std::endl;
 }
