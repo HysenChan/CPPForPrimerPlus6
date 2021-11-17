@@ -3,10 +3,12 @@
 #include"stack.h"
 #include"bank.h"
 #include"person.h"
+#include"practice03.h"
 
 int main()
 {
-	Practice02();
+	Practice03();
+	//Practice02();
 	//Practice01();
 	//stacker();
 	//useStock1();
@@ -134,4 +136,15 @@ void Practice02()
 	three.Show();
 	three.FormalShow();
 	std::cout << std::endl;
+}
+
+void Practice03()
+{
+	Golf ann("Ann Birdfree", 24);
+	ann.showgolf();
+
+	Golf ann1;
+	ann1.showgolf();
+	ann1.setHandicap(100);
+	ann1.showgolf();
 }

@@ -30,6 +30,9 @@
     <ClInclude Include="person.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="practice03.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Chapter10_main.cpp">
@@ -45,6 +48,9 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="person.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="practice03.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

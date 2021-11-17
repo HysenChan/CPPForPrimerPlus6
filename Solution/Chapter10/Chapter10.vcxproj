@@ -142,6 +142,7 @@
     <ClInclude Include="bank.h" />
     <ClInclude Include="Chapter10_main.h" />
     <ClInclude Include="person.h" />
+    <ClInclude Include="practice03.h" />
     <ClInclude Include="stack.h" />
     <ClInclude Include="stock10.h" />
   </ItemGroup>
@@ -149,6 +150,7 @@
     <ClCompile Include="bank.cpp" />
     <ClCompile Include="Chapter10_main.cpp" />
     <ClCompile Include="person.cpp" />
+    <ClCompile Include="practice03.cpp" />
     <ClCompile Include="stack.cpp" />
     <ClCompile Include="stock10.cpp" />
   </ItemGroup>
