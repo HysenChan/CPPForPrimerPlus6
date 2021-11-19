@@ -4,10 +4,12 @@
 #include"bank.h"
 #include"person.h"
 #include"practice03.h"
+#include "practice04_10.h"
 
 int main()
 {
-	Practice03();
+	Practice04();
+	//Practice03();
 	//Practice02();
 	//Practice01();
 	//stacker();
@@ -147,4 +149,16 @@ void Practice03()
 	ann1.showgolf();
 	ann1.setHandicap(100);
 	ann1.showgolf();
+}
+
+void Practice04()
+{
+	using namespace SALES_TEN;
+	Sale s1;
+	s1.setSale();
+	s1.showSale();
+	Sale s2;
+	double arr[2]{ 32.3,34.5 };
+	s2.setSale(arr, 2);
+	s2.showSale();
 }
