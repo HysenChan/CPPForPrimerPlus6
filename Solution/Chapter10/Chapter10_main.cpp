@@ -5,10 +5,12 @@
 #include"person.h"
 #include"practice03.h"
 #include "practice04_10.h"
+#include"practice05.h"
 
 int main()
 {
-	Practice04();
+	Practice05();
+	//Practice04();
 	//Practice03();
 	//Practice02();
 	//Practice01();
@@ -161,4 +163,55 @@ void Practice04()
 	double arr[2]{ 32.3,34.5 };
 	s2.setSale(arr, 2);
 	s2.showSale();
+}
+
+void Practice05()
+{
+	using namespace std;
+	Stacks st;
+	char ch;
+	Items temp;
+	double totalPayment = 0.0;
+	cout << "Please enter A to add customer's information, D to delete customer's information, and Q to quit.\n";
+	while (cin >> ch && toupper(ch) != '0')
+	{
+		while (cin.get() != '\n')
+			continue;
+		if (!isalpha(ch))
+		{
+			cout << "\a";
+			continue;
+		}
+		switch (ch)
+		{
+		case'A':
+		case'a':
+			cout << "Enter the name:";
+			cin.getline(temp.fullname, 35);
+			cout << "Enter the payment:";
+			cin >> temp.payment;
+			if (st.isfull())
+				cout << "Stack already full.\n";
+			else
+			{
+				st.push(temp);
+				st.showStacks();
+			}
+			break;
+		case 'D':
+		case 'd':
+			if (st.isempty())
+				cout << "Stack already empty.\n";
+			else
+			{
+				totalPayment += temp.payment;
+				st.pop(temp);
+				st.showStacks();
+				cout << "The information of " << temp.fullname << " has been deleted.\n";
+			}
+			break;
+		}
+		cout << "Please enter A to add customer's information, D to delete customer's information, and Q to quit.\n";
+	}
+	cout << "total payment is " << totalPayment << endl;
 }
