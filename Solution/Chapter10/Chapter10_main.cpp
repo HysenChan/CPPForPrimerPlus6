@@ -6,10 +6,12 @@
 #include"practice03.h"
 #include "practice04_10.h"
 #include"practice05.h"
+#include"practice06.h"
 
 int main()
 {
-	Practice05();
+	Practice06();
+	//Practice05();
 	//Practice04();
 	//Practice03();
 	//Practice02();
@@ -214,4 +216,35 @@ void Practice05()
 		cout << "Please enter A to add customer's information, D to delete customer's information, and Q to quit.\n";
 	}
 	cout << "total payment is " << totalPayment << endl;
+}
+
+void Practice06()
+{
+	using namespace std;
+	Move m0(0, 0);
+	Move m1(2, 3);
+	std::cout << "m0:";
+	m0.showMove();
+	std::cout << "m1:";
+	m1.showMove();
+	double a, b;
+	cout << "x:";
+	cin >> a;
+	cout << "y:";
+	cin >> b;
+	Move m2(a, b);
+	std::cout << "m2:";
+	m2.showMove();
+	std::cout << "m2 + m0:";
+	m2 = m2.add(m0);
+	m2.showMove();
+	std::cout << "m2 + m1:";
+	m2 = m2.add(m1);
+	m2.showMove();
+	std::cout << "reset x:";
+	cin >> a;
+	std::cout << "reset y:";
+	cin >> b;
+	m2.reset(a, b);
+	m2.showMove();
 }
