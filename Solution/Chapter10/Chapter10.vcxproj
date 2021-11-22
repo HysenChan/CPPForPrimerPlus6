@@ -146,6 +146,7 @@
     <ClInclude Include="practice04_10.h" />
     <ClInclude Include="practice05.h" />
     <ClInclude Include="practice06.h" />
+    <ClInclude Include="practice07.h" />
     <ClInclude Include="stack.h" />
     <ClInclude Include="stock10.h" />
   </ItemGroup>
@@ -157,6 +158,7 @@
     <ClCompile Include="practice04_10.cpp" />
     <ClCompile Include="practice05.cpp" />
     <ClCompile Include="practice06.cpp" />
+    <ClCompile Include="practice07.cpp" />
     <ClCompile Include="stack.cpp" />
     <ClCompile Include="stock10.cpp" />
   </ItemGroup>

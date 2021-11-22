@@ -7,10 +7,12 @@
 #include "practice04_10.h"
 #include"practice05.h"
 #include"practice06.h"
+#include"practice07.h"
 
 int main()
 {
-	Practice06();
+	Practice07();
+	//Practice06();
 	//Practice05();
 	//Practice04();
 	//Practice03();
@@ -247,4 +249,17 @@ void Practice06()
 	cin >> b;
 	m2.reset(a, b);
 	m2.showMove();
+}
+
+void Practice07()
+{
+	Plorg p1;
+	p1.ShowPlorg();
+	Plorg p2;
+	char name[20];
+	std::cout << "Please enter the fullName:";
+	std::cin.getline(name, 20);
+	p2.changeName(name);
+	p2.changeCi(30);
+	p2.ShowPlorg();
 }
