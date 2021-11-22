@@ -18,31 +18,10 @@
     <ClInclude Include="Chapter10_main.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="stock10.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="stack.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="bank.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="person.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="practice03.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="practice04_10.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="practice05.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="practice06.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="practice07.h">
+    <ClInclude Include="list10.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
@@ -50,31 +29,10 @@
     <ClCompile Include="Chapter10_main.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="stock10.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="stack.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="bank.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="person.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="practice03.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="practice04_10.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="practice05.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="practice06.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="practice07.cpp">
+    <ClCompile Include="list10.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
