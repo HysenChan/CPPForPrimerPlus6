@@ -67,6 +67,15 @@ Time Time::operator*(double n) const
 	return mult;
 }
 
+Time operator*(double m, const Time& t)
+{
+	Time mult;
+	long totalMinutes = t.hours * m * 60 + t.minutes * m;
+	mult.hours = totalMinutes / 60;
+	mult.minutes = totalMinutes % 60;
+	return mult;
+}
+
 void Time::show() const
 {
 	std::cout << "hours:" << hours << ",minutes:" << minutes << std::endl;

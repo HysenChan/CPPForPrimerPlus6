@@ -46,4 +46,10 @@ void UseTime0()
 	mult = diff * 0.5;
 	mult.show();
 	cout << endl;
+
+	cout << "friend mult time = ";
+	Time multFriend;
+	multFriend = 0.5 * total;
+	multFriend.show();
+	cout << endl;
 }
