@@ -34,4 +34,16 @@ void UseTime0()
 	cout << "total time = ";
 	total.show();
 	cout << endl;
+
+	cout << "diff time = ";
+	Time diff(1, 30);
+	diff = total - diff;
+	diff.show();
+	cout << endl;
+
+	cout << "mult time = ";
+	Time mult;
+	mult = diff * 0.5;
+	mult.show();
+	cout << endl;
 }
