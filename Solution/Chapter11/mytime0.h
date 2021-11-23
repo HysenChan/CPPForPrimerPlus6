@@ -8,7 +8,8 @@ public:
 	void addMin(int m);
 	void addHr(int h);
 	void reset(int h = 0, int m = 0);
-	Time sum(const Time& t)const;
+	//Time sum(const Time& t)const;
+	Time operator+(const Time& t)const;
 	void show()const;
 	~Time();
 

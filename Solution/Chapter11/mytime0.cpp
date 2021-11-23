@@ -29,7 +29,16 @@ void Time::reset(int h, int m)
 	minutes = m;
 }
 
-Time Time::sum(const Time& t) const
+//Time Time::sum(const Time& t) const
+//{
+//	Time sum;
+//	sum.minutes = minutes + t.minutes;
+//	sum.hours = hours + t.hours + sum.minutes / 60;
+//	sum.minutes %= 60;
+//	return sum;
+//}
+
+Time Time::operator+(const Time& t) const
 {
 	Time sum;
 	sum.minutes = minutes + t.minutes;

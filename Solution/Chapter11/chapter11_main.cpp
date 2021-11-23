@@ -27,7 +27,9 @@ void UseTime0()
 	fixing.show();
 	cout << endl;
 
-	total = coding.sum(fixing);
+	//total = coding.sum(fixing);
+	//total = coding.operator+(fixing);
+	total = coding + fixing;
 
 	cout << "total time = ";
 	total.show();
