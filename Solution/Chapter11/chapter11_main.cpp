@@ -52,4 +52,7 @@ void UseTime0()
 	multFriend = 0.5 * total;
 	multFriend.show();
 	cout << endl;
+
+	cout << "friend operator()<<\n";
+	cout << multFriend;
 }
