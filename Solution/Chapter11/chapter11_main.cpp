@@ -55,4 +55,7 @@ void UseTime0()
 
 	cout << "friend operator()<<\n";
 	cout << multFriend;
+
+	cout << "friend os operator()<<\n";
+	cout << "Trip time:" << multFriend << " (Tuesday)\n";
 }

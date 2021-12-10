@@ -13,7 +13,8 @@ public:
 	Time operator-(const Time& t)const;
 	Time operator*(double n) const;
 	friend Time operator*(double m, const Time& t);
-	friend void operator<<(std::ostream& os, const Time& t);
+	//friend void operator<<(std::ostream& os, const Time& t);
+	friend std::ostream& operator<<(std::ostream& os, const Time& t);
 	void show()const;
 	~Time();
 

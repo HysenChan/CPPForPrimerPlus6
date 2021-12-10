@@ -76,9 +76,15 @@ Time operator*(double m, const Time& t)
 	return mult;
 }
 
-void operator<<(std::ostream& os, const Time& t)
+//void operator<<(std::ostream& os, const Time& t)
+//{
+//	os << t.hours << " hours," << t.minutes << " minutes.\n";
+//}
+
+std::ostream& operator<<(std::ostream& os, const Time& t)
 {
 	os << t.hours << " hours," << t.minutes << " minutes.\n";
+	return os;
 }
 
 void Time::show() const
