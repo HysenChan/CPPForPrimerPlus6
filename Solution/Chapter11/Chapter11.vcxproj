@@ -140,11 +140,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="chapter11_main.h" />
+    <ClInclude Include="chapter11_vector.h" />
     <ClInclude Include="mytime0.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="chapter11_main.cpp" />
+    <ClCompile Include="chapter11_vector.cpp" />
     <ClCompile Include="mytime0.cpp" />
+    <ClCompile Include="randwark.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
