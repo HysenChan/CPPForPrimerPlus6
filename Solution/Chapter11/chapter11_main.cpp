@@ -1,9 +1,13 @@
 #include"chapter11_main.h"
 #include"chapter11_vector.h"
+#include"stonewt.h"
+
+void StonewtDisplay(const Stonewt& st, int n);
 
 int main()
 {
-	Randwark();
+	StonewtTest();
+	//Randwark();
 	//UseTime0();
 	return 0;
 }
@@ -103,4 +107,43 @@ void Randwark()
 	cin.clear();
 	while (cin.get() != '\n')
 		continue;
+}
+
+void StonewtTest()
+{
+	using std::cout;
+	Stonewt incognito = 275;
+	Stonewt wolfe(285.7);
+	Stonewt taft(21, 8);
+
+	cout << "The celebrity weighed ";
+	incognito.show_stn();
+
+	cout << "The detective weighed ";
+	wolfe.show_stn();
+
+	cout << "The President weighed ";
+	taft.show_lbs();
+
+	incognito = 276.8;
+	taft = 325;
+
+	cout << "After dinner, the celebrity weighed ";
+	incognito.show_stn();
+
+	cout << "After dinner, the President weighed ";
+	taft.show_lbs();
+	StonewtDisplay(taft, 2);
+	cout << "The wrestler weighed even more.\n";
+	StonewtDisplay(422, 2);
+	cout << "No stone left unearned\n";
+}
+
+void StonewtDisplay(const Stonewt& st, int n)
+{
+	for (int i = 0; i < n; i++)
+	{
+		std::cout << "Wow!";
+		st.show_stn();
+	}
 }

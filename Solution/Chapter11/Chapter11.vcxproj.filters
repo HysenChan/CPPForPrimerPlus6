@@ -24,6 +24,9 @@
     <ClInclude Include="chapter11_vector.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="stonewt.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="chapter11_main.cpp">
@@ -35,7 +38,7 @@
     <ClCompile Include="chapter11_vector.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="randwark.cpp">
+    <ClCompile Include="stonewt.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
