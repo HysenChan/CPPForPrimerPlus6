@@ -5,7 +5,7 @@
 void StonewtDisplay(const Stonewt& st, int n);
 
 int main()
-{	
+{
 	//StonewtTest01();
 	//StonewtTest();
 	Randwark();
@@ -80,6 +80,41 @@ void Randwark()
 	unsigned long steps = 0;
 	double target;
 	double dstep;
+	int N;
+	int maxSteps, minSteps, sumSteps;
+	minSteps = 0;
+	maxSteps = 65535;
+	sumSteps = 0;
+	double aveSteps;
+	cout << "How many times of test would you want:";
+	cin >> N;
+	cout << "\nEnter target distance:";
+	cin >> target;
+	cout << "Enter step length:";
+	cin >> dstep;
+	cout << endl;
+	for (int i = 0; i < N; i++)
+	{
+		while (result.magVal() < target)
+		{
+			direction = rand() % 360;
+			step.reset(dstep, direction, Vector::POL);
+			result = result + step;
+			steps++;
+		}
+		sumSteps += steps;
+		if (steps > maxSteps)
+			maxSteps = steps;
+		if (steps < minSteps)
+			minSteps = steps;
+		steps = 0;
+		result.reset(0.0, 0.0);
+	}
+	aveSteps = sumSteps / N;
+	cout << "Walk finished!\nAfter " << N << " time of test , the result is following:\n";
+	cout << "The maxnum steps is " << maxSteps << " the minnum stpes is " << minSteps << " averSteps:" << aveSteps;
+	cout << "Bye!\n";
+	cin.clear();
 	ofstream fout;
 	fout.open("RandWalk.txt");
 	cout << "Enter target distance (q to quit):";
