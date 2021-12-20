@@ -5,10 +5,10 @@
 void StonewtDisplay(const Stonewt& st, int n);
 
 int main()
-{
-	StonewtTest01();
+{	
+	//StonewtTest01();
 	//StonewtTest();
-	//Randwark();
+	Randwark();
 	//UseTime0();
 	return 0;
 }
@@ -71,8 +71,8 @@ void Randwark()
 {
 	using namespace std;
 	using VECTOR::Vector;
-	fstream fout;
-	fout.open("thewalk.txt");
+	//fstream fout;
+	//fout.open("thewalk.txt");
 	srand(time(0));
 	double direction;
 	Vector step;
@@ -80,22 +80,30 @@ void Randwark()
 	unsigned long steps = 0;
 	double target;
 	double dstep;
+	ofstream fout;
+	fout.open("RandWalk.txt");
 	cout << "Enter target distance (q to quit):";
 	while (cin >> target)
 	{
 		cout << "Enter step length:";
 		if (!(cin >> dstep))
 			break;
+		else
+			fout << "Target Distance:" << target << ", Step Size:" << dstep << endl;
 
+		int i = 0;
 		while (result.magVal() < target)
 		{
 			direction = rand() % 20;
 			step.reset(dstep, direction, Vector::POL);
 			result = result + step;
 			steps++;
+			fout << i << ":(x,y) = (" << result.xVal() << "," << result.yVal() << ")\n";
+			i++;
 		}
 		cout << "After " << steps << " steps, the subject has the floowing location:\n";
 		cout << result << endl;
+		fout << "After " << steps << " steps, the subject has the floowing location:\n";
 		fout << result << endl;
 		result.polar_mode();
 		cout << " or \n" << result << endl;

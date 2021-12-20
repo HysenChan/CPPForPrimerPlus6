@@ -1,0 +1,18 @@
+Target Distance:100, Step Size:20
+0:(x,y) = (20,0)
+1:(x,y) = (39.563,4.15823)
+2:(x,y) = (58.5841,10.3386)
+3:(x,y) = (77.99,15.177)
+4:(x,y) = (97.7438,18.3057)
+5:(x,y) = (116.654,24.8171)
+After 6 steps, the subject has the floowing location:
+(x,y) = (116.654,24.8171)
+Target Distance:100, Step Size:20
+0:(x,y) = (19.3185,5.17638)
+1:(x,y) = (39.2424,6.9195)
+2:(x,y) = (58.2635,13.0998)
+3:(x,y) = (77.6695,17.9383)
+4:(x,y) = (96.988,23.1147)
+5:(x,y) = (116.976,23.8126)
+After 6 steps, the subject has the floowing location:
+(x,y) = (116.976,23.8126)
