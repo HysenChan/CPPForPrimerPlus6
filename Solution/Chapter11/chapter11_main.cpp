@@ -1,14 +1,16 @@
 #include"chapter11_main.h"
 #include"chapter11_vector.h"
 #include"stonewt.h"
+#include"complex.h"
 
 void StonewtDisplay(const Stonewt& st, int n);
 
 int main()
 {
+	Practice07();
 	//StonewtTest01();
 	//StonewtTest();
-	Randwark();
+	//Randwark();
 	//UseTime0();
 	return 0;
 }
@@ -201,4 +203,24 @@ void StonewtDisplay(const Stonewt& st, int n)
 		std::cout << "Wow!";
 		st.show_stn();
 	}
+}
+
+void Practice07()
+{
+	using namespace std;
+	complex a(3.0, 4.0);
+	complex c;
+	cout << "Enter a complex number (q to quit):\n";
+	while (cin >> c)
+	{
+		cout << "c is " << c << "\n";
+		cout << "complex conjugate is " << ~c << "\n";
+		cout << "a is " << a << "\n";
+		cout << "a + c is " << a + c << "\n";
+		cout << "a - c is " << a - c << "\n";
+		cout << "a * c is " << a * c << "\n";
+		cout << "2 * c is " << 2 * c << "\n";
+		cout << "Enter a complex number (q to quit):\n";
+	};
+	cout << "Done!\n";
 }

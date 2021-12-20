@@ -11,3 +11,5 @@ void Randwark();
 
 void StonewtTest();
 void StonewtTest01();
+
+void Practice07();
