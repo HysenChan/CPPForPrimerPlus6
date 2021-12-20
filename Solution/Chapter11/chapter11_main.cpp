@@ -6,7 +6,8 @@ void StonewtDisplay(const Stonewt& st, int n);
 
 int main()
 {
-	StonewtTest();
+	StonewtTest01();
+	//StonewtTest();
 	//Randwark();
 	//UseTime0();
 	return 0;
@@ -137,6 +138,17 @@ void StonewtTest()
 	cout << "The wrestler weighed even more.\n";
 	StonewtDisplay(422, 2);
 	cout << "No stone left unearned\n";
+}
+
+void StonewtTest01()
+{
+	using std::cout;
+	Stonewt poppins(9, 2.8);
+	double p_wt = poppins;
+	cout << "Convert to double => ";
+	cout << "Poppins: " << p_wt << " pounds.\n";
+	cout << "Convert to int => ";
+	cout << "Poppins: " << int(poppins) << " pounds.\n";
 }
 
 void StonewtDisplay(const Stonewt& st, int n)

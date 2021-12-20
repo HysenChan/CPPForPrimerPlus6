@@ -10,3 +10,4 @@ void UseTime0();
 void Randwark();
 
 void StonewtTest();
+void StonewtTest01();
