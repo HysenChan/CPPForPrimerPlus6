@@ -17,8 +17,21 @@ namespace VECTOR
 		~Vector();
 		double xVal() const { return x; }
 		double yVal() const { return y; }
-		double magVal() const { return mag; }
-		double angVal() const { return ang; }
+		double magVal() const
+		{
+			double mag;
+			mag = sqrt(x * x + y * y);
+			return mag;
+		}
+		double angVal() const
+		{
+			double ang;
+			if (x == 0.0 && y == 0.0)
+				ang = 0.0;
+			else
+				ang = atan2(y, x);
+			return ang;
+		}
 		void polar_mode();
 		void rect_mode();
 
@@ -34,13 +47,11 @@ namespace VECTOR
 	private:
 		double x;
 		double y;
-		double mag;
-		double ang;
 		Mode mode;
 
-		void set_mag();
-		void set_ang();
-		void set_x();
-		void set_y();
+		double set_mag();
+		double set_ang();
+		void set_x(double mag, double ang);
+		void set_y(double mag, double ang);
 	};
 }
