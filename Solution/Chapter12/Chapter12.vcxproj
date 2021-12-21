@@ -141,10 +141,12 @@
   <ItemGroup>
     <ClInclude Include="chapter12_main.h" />
     <ClInclude Include="stringBad.h" />
+    <ClInclude Include="stringOfficial.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="chapter12_main.cpp" />
     <ClCompile Include="stringBad.cpp" />
+    <ClCompile Include="stringOfficial.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

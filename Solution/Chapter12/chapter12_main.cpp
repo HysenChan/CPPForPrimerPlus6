@@ -1,9 +1,11 @@
 #include"chapter12_main.h"
 #include"stringBad.h"
+#include"stringOfficial.h"
 
 int main()
 {
-	vegnews();
+	vegnews1();
+	//vegnews();
 	return 0;
 }
 
@@ -45,4 +47,29 @@ void vegnews()
 	knot = headline1;
 	cout << "Knot:" << knot << endl;
 	cout << "Exiting the block.\n";
+}
+
+void callme3(String& rsb)
+{
+	using std::cout;
+	cout << "String psssed by reference:\n";
+	cout << "    \"" << rsb << "\"\n";
+}
+
+void callme4(String vsb)
+{
+	using std::cout;
+	cout << "String psssed by value:\n";
+	cout << "    \"" << vsb << "\"\n";
+}
+
+void vegnews1()
+{
+	using std::cout;
+	using std::endl;
+	String opera("The Magic Flute");
+	cout << opera[2] << endl;
+	String means("might");
+	means[0] = 'r';
+	cout << means << endl;
 }
