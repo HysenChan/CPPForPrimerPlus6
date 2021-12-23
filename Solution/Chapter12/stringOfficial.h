@@ -11,11 +11,12 @@ public:
 	String(const char* s);
 	String(const String& st);
 	String& operator=(const String& st);
+	String& operator=(const char* s);
 	int length() const { return len; }
 	friend bool operator<(const String& st, const String& st2);
 	friend bool operator>(const String& st, const String& st2);
 	friend bool operator==(const String& st, const String& st2);
-	friend void operator>>(istream& is, String& st);
+	friend std::istream& operator>>(istream& is, String& st);
 	char& operator[](int i);
 	const char& operator[](int i)const;
 	static int HowMany();
@@ -26,4 +27,5 @@ private:
 	char* str;
 	int len;
 	static int num_strings;
+	static const int CINLIM = 80;
 };
