@@ -3,6 +3,7 @@
 #include"stringOfficial.h"
 #include<iostream>
 #include<time.h>
+#include<new>
 
 void callme1(StringBad&);
 void callme2(StringBad);
@@ -12,3 +13,4 @@ void callme3(String&);
 void callme4(String);
 void vegnews1();
 void sayings();
+void placenew1();
