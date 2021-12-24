@@ -14,3 +14,6 @@ void callme4(String);
 void vegnews1();
 void sayings();
 void placenew1();
+
+bool newcustomer(double x);
+void bank();

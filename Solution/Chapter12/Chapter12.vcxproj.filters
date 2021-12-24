@@ -24,6 +24,9 @@
     <ClInclude Include="stringOfficial.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="QueueTest.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="chapter12_main.cpp">
@@ -33,6 +36,9 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="stringOfficial.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="QueueTest.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
