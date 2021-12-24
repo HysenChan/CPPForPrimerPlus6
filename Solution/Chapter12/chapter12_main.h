@@ -17,3 +17,5 @@ void placenew1();
 
 bool newcustomer(double x);
 void bank();
+
+void Practice01();

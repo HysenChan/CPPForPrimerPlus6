@@ -140,12 +140,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="chapter12_main.h" />
+    <ClInclude Include="chapter12_practice01.h" />
     <ClInclude Include="QueueTest.h" />
     <ClInclude Include="stringBad.h" />
     <ClInclude Include="stringOfficial.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="chapter12_main.cpp" />
+    <ClCompile Include="chapter12_practice01.cpp" />
     <ClCompile Include="QueueTest.cpp" />
     <ClCompile Include="stringBad.cpp" />
     <ClCompile Include="stringOfficial.cpp" />

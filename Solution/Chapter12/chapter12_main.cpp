@@ -2,6 +2,7 @@
 #include"stringBad.h"
 #include"stringOfficial.h"
 #include"QueueTest.h"
+#include"chapter12_practice01.h"
 
 const int ArSize = 10;
 const int MaxLen = 81;
@@ -10,7 +11,8 @@ const int MIN_PER_HR = 60;
 
 int main()
 {
-	bank();
+	Practice01();
+	//bank();
 	//placenew1();
 	//sayings();
 	//vegnews1();
@@ -278,4 +280,19 @@ void bank()
 	else
 		cout << "No customers!\n";
 	cout << "Done!\n";
+}
+
+void Practice01()
+{
+	cout << "Let's start to see our cows!\n";
+	Cow c1;
+	c1.ShowCow();
+	Cow c2("yellow", "eat grass", 123.456);
+	c2.ShowCow();
+	Cow c3("black", "Drink water", 111.222);
+	c3.ShowCow();
+	c3 = c1;
+	c3.ShowCow();
+	Cow c4(c2);
+	c4.ShowCow();
 }
