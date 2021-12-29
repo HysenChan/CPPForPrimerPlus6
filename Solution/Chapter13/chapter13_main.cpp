@@ -2,10 +2,12 @@
 #include"tabtenn0.h"
 //#include"brass.h"
 #include"acctabc.h"
+#include"dma.h"
 
 int main()
 {
-	usebrass3();
+	usedma();
+	//usebrass3();
 	//usebrass2();
 	//usebrass1();
 	//usett1();
@@ -175,4 +177,27 @@ void usebrass3()
 		delete p_clients[i];
 	}
 	cout << "Done.\n";
+}
+
+void usedma()
+{
+	using namespace std;
+
+	baseDMA shirt("Portablely", 8);
+	lacksDMA balloon("red", "Blimpo", 4);
+	hasDMA map("Mercator", "Buffalo Keys", 5);
+
+	cout << "Displaying baseDMA object:\n";
+	cout << shirt << endl;
+	cout << "Displaying lacksDMA object:\n";
+	cout << balloon << endl;
+	cout << "Displaying hasDMA object:\n";
+	cout << map << endl;
+	lacksDMA balloon2(balloon);
+	cout << "result of lacksDMA copy:\n";
+	cout << balloon2 << endl;
+	hasDMA map2;
+	map2 = map;
+	cout << "Result of hasDMA assignment:\n";
+	cout << map2 << endl;
 }
