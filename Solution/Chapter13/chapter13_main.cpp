@@ -196,8 +196,8 @@ void usedma()
 	lacksDMA balloon2(balloon);
 	cout << "result of lacksDMA copy:\n";
 	cout << balloon2 << endl;
-	hasDMA map2;
-	map2 = map;
+	hasDMA map2;//初始化（默认构造函数）
+	map2 = map;//赋值（赋值运算符）
 	cout << "Result of hasDMA assignment:\n";
 	cout << map2 << endl;
 }
