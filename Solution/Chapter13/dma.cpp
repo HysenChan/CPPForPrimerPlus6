@@ -39,14 +39,14 @@ std::ostream& operator<<(std::ostream& os, const baseDMA& rs)
 
 std::ostream& operator<<(std::ostream& os, const lacksDMA& ls)
 {
-	os << (const baseDMA&)ls;
+	os << (const baseDMA&)ls;//os << dynamic_cast<const baseDMA&>(hs);
 	os << "Color:" << ls.color << std::endl;
 	return os;
 }
 
 std::ostream& operator<<(std::ostream& os, const hasDMA& hs)
 {
-	os << (const baseDMA&)hs;
+	os << (const baseDMA&)hs;//os << dynamic_cast<const baseDMA&>(hs);
 	os << "Style:" << hs.style << std::endl;
 	return os;
 }
