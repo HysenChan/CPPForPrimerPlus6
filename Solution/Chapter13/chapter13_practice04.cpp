@@ -27,13 +27,13 @@ Port& Port::operator=(const Port& p)
 
 Port& Port::operator+=(int b)
 {
-	brand += b;
+	bottles += b;
 	return *this;
 }
 
 Port& Port::operator-=(int b)
 {
-	brand -= b;
+	bottles -= b;
 	return *this;
 }
 
