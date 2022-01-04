@@ -13,3 +13,5 @@ void usedma();
 
 void Bravo(const Cd& disk);
 void Practice01();
+
+void Practice04();
