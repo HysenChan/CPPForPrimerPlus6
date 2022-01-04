@@ -12,8 +12,8 @@ public:
 	virtual Cd& operator=(const Cd& d);
 
 private:
-	char performers[50];
-	char label[20];
+	char* performers;
+	char* label;
 	int selections;
 	double playtime;
 };
@@ -29,5 +29,5 @@ public:
 	Classic& operator=(const Classic& c);
 
 private:
-	char mainworks[50];
+	char* mainworks;
 };
