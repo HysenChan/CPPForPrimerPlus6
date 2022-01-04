@@ -30,6 +30,9 @@
     <ClInclude Include="dma.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="chatper13_practice01.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="chapter13_main.cpp">
@@ -45,6 +48,9 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="dma.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="chatper13_practice01.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
