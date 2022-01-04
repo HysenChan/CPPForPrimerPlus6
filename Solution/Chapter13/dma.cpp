@@ -1,5 +1,13 @@
 #include "dma.h"
 
+ABC::ABC()
+{
+}
+
+ABC::~ABC()
+{
+}
+
 baseDMA::baseDMA(const char* l, int r)
 {
 	label = new char[std::strlen(l) + 1];
@@ -28,6 +36,12 @@ baseDMA& baseDMA::operator=(const baseDMA& rs)
 	std::strcpy(label, rs.label);
 	rating = rs.rating;
 	return *this;
+}
+
+void baseDMA::View()
+{
+	std::cout << "Label:" << label << std::endl;
+	std::cout << "Rating:" << rating << std::endl;
 }
 
 std::ostream& operator<<(std::ostream& os, const baseDMA& rs)
@@ -63,6 +77,12 @@ lacksDMA::lacksDMA(const char* c, const baseDMA& rs) :baseDMA(rs)
 	color[COL_LEN - 1] = '\0';
 }
 
+void lacksDMA::View()
+{
+	baseDMA::View();
+	std::cout << "Color:" << color << std::endl;
+}
+
 hasDMA::hasDMA(const char* s, const char* l, int r) :baseDMA(l, r)
 {
 	style = new char[std::strlen(s) + 1];
@@ -95,4 +115,10 @@ hasDMA& hasDMA::operator=(const hasDMA& hs)
 	style = new char[std::strlen(hs.style) + 1];
 	std::strcpy(style, hs.style);
 	return *this;
+}
+
+void hasDMA::View()
+{
+	baseDMA::View();
+	std::cout << "Style:" << style << std::endl;
 }

@@ -2,7 +2,15 @@
 #pragma warning(disable : 4996)
 #include<iostream>
 
-class baseDMA
+class ABC
+{
+public:
+	ABC();
+	~ABC();
+	virtual void View() = 0;
+};
+
+class baseDMA:public ABC
 {
 public:
 	baseDMA(const char* l = "null", int r = 0);
@@ -10,6 +18,7 @@ public:
 	virtual~baseDMA();
 	baseDMA& operator=(const baseDMA& rs);
 	friend std::ostream& operator<<(std::ostream& os, const baseDMA& rs);
+	virtual void View();
 
 private:
 	char* label;
@@ -22,6 +31,7 @@ public:
 	lacksDMA(const char* c = "blank", const char* l = "null", int r = 0);
 	lacksDMA(const char* c, const baseDMA& rs);
 	friend std::ostream& operator<<(std::ostream& os, const lacksDMA& ls);
+	virtual void View();
 
 private:
 	enum { COL_LEN = 40 };
@@ -37,6 +47,7 @@ public:
 	~hasDMA();
 	hasDMA& operator=(const hasDMA& hs);
 	friend std::ostream& operator<<(std::ostream& os, const hasDMA& hs);
+	virtual void View();
 
 private:
 	char* style;

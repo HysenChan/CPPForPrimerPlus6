@@ -7,8 +7,8 @@
 
 int main()
 {
-	Practice01();
-	//usedma();
+	//Practice01();
+	usedma();
 	//usebrass3();
 	//usebrass2();
 	//usebrass1();
@@ -202,6 +202,15 @@ void usedma()
 	map2 = map;//¸³Öµ£¨¸³ÖµÔËËã·û£©
 	cout << "Result of hasDMA assignment:\n";
 	cout << map2 << endl;
+
+	cout << endl << "Shirt:\n";
+	balloon.View();
+	cout << endl << "Map:\n";
+	map.View();
+	cout << endl << "Balloon2:\n";
+	balloon2.View();
+	cout << endl << "Map2:\n";
+	map2.View();
 }
 
 void Bravo(const Cd& disk)
