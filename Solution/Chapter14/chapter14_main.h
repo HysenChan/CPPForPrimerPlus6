@@ -6,3 +6,5 @@ void set(Student& sa, int n);
 const int pupils = 3;
 const int quizzes = 5;
 void use_stuc();
+
+void worktest();

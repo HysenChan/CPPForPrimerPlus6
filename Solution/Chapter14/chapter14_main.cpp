@@ -1,10 +1,12 @@
 #include"chapter14_main.h"
 #include"studentc.h"
+#include"Worker0.h"
 using namespace std;
 
 int main()
 {
-	use_stuc();
+	worktest();
+	//use_stuc();
 	return 0;
 }
 
@@ -36,4 +38,25 @@ void use_stuc()
 		cout << "average:" << ada[i].Average() << endl;
 	}
 	cout << "Done.\n";
+}
+
+void worktest()
+{
+	const int LIM = 4;
+
+	Waiter bob("Bob Apple", 314L, 5);
+	Singer bev("Beverly Hills", 522L, 3);
+	Waiter w_temp;
+	Singer s_temp;
+
+	Worker* pw[LIM] = { &bob,&bev,&w_temp,&s_temp };
+
+	int i;
+	for (i = 2; i < LIM; i++)
+		pw[i]->Set();
+	for (i = 0; i < LIM; i++)
+	{
+		pw[i]->Show();
+		cout << endl;
+	}
 }
