@@ -10,3 +10,5 @@ void use_stuc();
 void worktest();
 
 void workmi();
+
+void stacktem();

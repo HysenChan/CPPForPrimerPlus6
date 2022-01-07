@@ -1,11 +1,13 @@
 #include"chapter14_main.h"
 #include"studentc.h"
 #include"Worker0.h"
+#include"stacktp.h"
 using namespace std;
 
 int main()
 {
-	workmi();
+	stacktem();
+	//workmi();
 	//worktest();
 	//use_stuc();
 	return 0;
@@ -108,5 +110,49 @@ void workmi()
 	}
 	for (i = 0; i < ct; i++)
 		delete lolas[i];
+	cout << "Bye.\n";
+}
+
+void stacktem()
+{
+	Stack<std::string>st;
+	char ch;
+	std::string po;
+	cout << "Please enter A to add a purchase order,\n"
+		<< "P to process a PO, or Q to quit.\n";
+	while (cin >> ch && std::toupper(ch) != 'Q')
+	{
+		while (cin.get() != '\n')
+			continue;
+		if (!std::isgraph(ch))
+		{
+			cout << '\a';
+			continue;
+		}
+		switch (ch)
+		{
+		case 'A':
+		case 'a':
+			cout << "Enter a PO number to add:";
+			cin >> po;
+			if (st.isfull())
+				cout << "stack already full\n";
+			else
+				st.push(po);
+			break;
+		case 'P':
+		case 'p':
+			if (st.isempty())
+				cout << "stack already empty\n";
+			else
+			{
+				st.pop(po);
+				cout << "PO #" << po << " popped\n";
+				break;
+			}
+		}
+		cout << "Please enter A to add a purchase order,\n"
+			<< "P to process a PO, or Q to quit.\n";
+	}
 	cout << "Bye.\n";
 }

@@ -140,6 +140,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="chapter14_main.h" />
+    <ClInclude Include="stacktp.h" />
     <ClInclude Include="studentc.h" />
     <ClInclude Include="Worker0.h" />
   </ItemGroup>
