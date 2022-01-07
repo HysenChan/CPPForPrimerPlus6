@@ -8,3 +8,5 @@ const int quizzes = 5;
 void use_stuc();
 
 void worktest();
+
+void workmi();
