@@ -4,23 +4,37 @@ template<class Type>
 class Stack
 {
 public:
-	Stack();
+	explicit Stack(int ss = SIZE);
+	Stack(const Stack& st);
+	~Stack();
 	bool isempty();
 	bool isfull();
 	bool push(const Type& item);
 	bool pop(Type& item);
-	~Stack();
+	Stack& operator=(const Stack& st);
 
 private:
-	enum { MAX = 10 };
-	Type items[MAX];
+	enum { SIZE = 10 };
+	//Type items[MAX];
+	int stacksize;
+	Type* items;
 	int top;
 };
 
 template<class Type>
-Stack<Type>::Stack()
+Stack<Type>::Stack(int ss) :stacksize(ss), top(0)
 {
-	top = 0;
+	items = new Type[stacksize];
+}
+
+template<class Type>
+inline Stack<Type>::Stack(const Stack& st)
+{
+	stacksize = st.stacksize;
+	top = st.top;
+	items = new Type[stacksize];
+	for (int i = 0; i < top; i++)
+		items[i] = st.items[i];
 }
 
 template<class Type>
@@ -32,13 +46,13 @@ bool Stack<Type>::isempty()
 template<class Type>
 bool Stack<Type>::isfull()
 {
-	return top == MAX;
+	return top == stacksize;
 }
 
 template<class Type>
 bool Stack<Type>::push(const Type& item)
 {
-	if (top < MAX)
+	if (top < stacksize)
 	{
 		items[top++] = item;
 		return true;
@@ -57,6 +71,20 @@ bool Stack<Type>::pop(Type& item)
 	}
 	else
 		return false;
+}
+
+template<class Type>
+inline Stack<Type>& Stack<Type>::operator=(const Stack& st)
+{
+	if (this == &st)
+		return *this;
+	delete[] items;
+	stacksize = st.stacksize;
+	top = st.top;
+	items = new Type[stacksize];
+	for (int i = 0; i < top; i++)
+		items[i] = st.items[i];
+	return *this;
 }
 
 template<class Type>

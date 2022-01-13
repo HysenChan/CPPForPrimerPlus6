@@ -12,3 +12,5 @@ void worktest();
 void workmi();
 
 void stacktem();
+
+void stkoptr1();

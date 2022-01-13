@@ -2,11 +2,13 @@
 #include"studentc.h"
 #include"Worker0.h"
 #include"stacktp.h"
+#include<ctime>
 using namespace std;
 
 int main()
 {
-	stacktem();
+	stkoptr1();
+	//stacktem();
 	//workmi();
 	//worktest();
 	//use_stuc();
@@ -155,4 +157,42 @@ void stacktem()
 			<< "P to process a PO, or Q to quit.\n";
 	}
 	cout << "Bye.\n";
+}
+
+void stkoptr1()
+{
+	const int Num = 10;
+
+	std::srand(std::time(0));
+	std::cout << "Please enter stack size:";
+	int stacksize;
+	std::cin >> stacksize;
+	Stack<const char*> st(stacksize);
+
+	const char* in[Num] = {
+		" 1: A", " 2: B",
+		" 3: C", " 4: D",
+		" 5: E", " 6: F",
+		" 7: G", " 8: H",
+		" 8: I", " 10: J",
+	};
+
+	const char* out[Num];
+
+	int processed = 0;
+	int nextin = 0;
+	while (processed < Num)
+	{
+		if (st.isempty())
+			st.push(in[nextin++]);
+		else if (st.isfull())
+			st.pop(out[processed++]);
+		else if (std::rand() % 2 && nextin < Num)
+			st.push(in[nextin++]);
+		else
+			st.pop(out[processed++]);
+	}
+	for (int i = 0; i < Num; i++)
+		std::cout << out[i] << std::endl;
+	std::cout << "Bye.\n";
 }
