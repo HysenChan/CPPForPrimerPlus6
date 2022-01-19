@@ -27,6 +27,15 @@
     <ClInclude Include="stacktp.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="arraytp.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="pairs.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="tempmemb.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="chapter14_main.cpp">

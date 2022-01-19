@@ -14,3 +14,8 @@ void workmi();
 void stacktem();
 
 void stkoptr1();
+
+void twod();
+void pairs();
+
+void tempmenb();

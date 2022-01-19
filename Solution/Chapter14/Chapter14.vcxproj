@@ -139,9 +139,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="arraytp.h" />
     <ClInclude Include="chapter14_main.h" />
+    <ClInclude Include="pairs.h" />
     <ClInclude Include="stacktp.h" />
     <ClInclude Include="studentc.h" />
+    <ClInclude Include="tempmemb.h" />
     <ClInclude Include="Worker0.h" />
   </ItemGroup>
   <ItemGroup>

@@ -3,11 +3,17 @@
 #include"Worker0.h"
 #include"stacktp.h"
 #include<ctime>
+#include"arraytp.h"
+#include"pairs.h"
+#include"tempmemb.h"
 using namespace std;
 
 int main()
 {
-	stkoptr1();
+	tempmenb();
+	//pairs();
+	//twod();
+	//stkoptr1();
 	//stacktem();
 	//workmi();
 	//worktest();
@@ -195,4 +201,68 @@ void stkoptr1()
 	for (int i = 0; i < Num; i++)
 		std::cout << out[i] << std::endl;
 	std::cout << "Bye.\n";
+}
+
+void twod()
+{
+	ArrayTP<int, 10> sums;
+	ArrayTP<double, 10> aves;
+	ArrayTP<ArrayTP<int, 5>, 10> twodee;
+
+	int i, j;
+	for (i = 0; i < 10; i++)
+	{
+		sums[i] = 0;
+		for (j = 0; j < 5; j++)
+		{
+			twodee[i][j] = (i + 1) * (j + 1);
+			sums[i] += twodee[i][j];
+		}
+		aves[i] = (double)sums[i] / 10;
+	}
+	for (i = 0; i < 10; i++)
+	{
+		for (j = 0; j < 5; j++)
+		{
+			cout.width(2);
+			cout << twodee[i][j] << ' ';
+		}
+		cout << ": sum = ";
+		cout.width(3);
+		cout << sums[i] << ", average = " << aves[i] << endl;
+	}
+	cout << "Done.\n";
+}
+
+void pairs()
+{
+	Pair<string, int> ratings[4] =
+	{
+		Pair<string,int>("The Purpled Duck",5),
+		Pair<string,int>("Jaquie's Frisco Al Fresco",4),
+		Pair<string,int>("Cafe Souffle",5),
+		Pair<string,int>("Bertie's Eats",3),
+	};
+
+	int joints = sizeof(ratings) / sizeof(Pair<string, int>);
+	cout << "Rating:\t Eatery\n";
+	for (int i = 0; i < joints; i++)
+		cout << ratings[i].second() << ":\t" << ratings[i].first() << endl;
+	cout << "Oops!Revised rating:\n";
+	ratings[3].first() = "Bertie's Fab Eats";
+	ratings[3].second() = 6;
+	cout << ratings[3].second() << ":\t" << ratings[3].first() << endl;
+}
+
+void tempmenb()
+{
+	beta<double> guy(3.5, 3);
+	cout << "T was set to double\n";
+	guy.Show();
+	cout << "V was set to T, which is double, then V was set to int\n";
+	cout << guy.blab(10, 2.3) << endl;
+	cout << "U was set to int\n";
+	cout << guy.blab(10.0, 2.3) << endl;
+	cout << "U was set to double\n";
+	cout << "Done\n";
 }
