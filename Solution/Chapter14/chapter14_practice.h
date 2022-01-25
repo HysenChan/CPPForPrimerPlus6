@@ -251,3 +251,130 @@ Worker::~Worker()
 {
 
 }
+
+///Practice04
+class Person
+{
+public:
+	Person() :firstname("None"), lastname("None") {}
+	Person(string fname, string lname) :firstname(fname), lastname(lname) {}
+	Person(const Person& p);
+	virtual ~Person() = 0;
+	virtual void Show()const = 0 { cout << "Firstname:" << firstname << "\nLastname:" << lastname << endl; }
+
+private:
+	string firstname;
+	string lastname;
+};
+
+class Gunslinger :virtual public Person
+{
+public:
+	Gunslinger(int n = 0, double t = 0) :Person(), nick(n), time(t) {}
+	Gunslinger(const string fname, const string lname, int n, double t) :Person(fname, lname), nick(n), time(t) {}
+	Gunslinger(const Person& p, int n, double t = 0) :Person(p), nick(n), time(t) {}
+	Gunslinger(const Gunslinger& g);
+	~Gunslinger();
+	double Draw()const;
+	void Show()const;
+
+private:
+	int nick;
+	double time;
+};
+
+class PokerPlayer :virtual public Person
+{
+public:
+	int Draw() const;
+	void Show()const;
+	PokerPlayer() :Person() {}
+	PokerPlayer(const string fname, const string lname) :Person(fname, lname) {}
+	PokerPlayer(const Person& p) :Person(p) {}
+	PokerPlayer(const PokerPlayer& p) :Person(p) {}
+	~PokerPlayer();
+
+};
+
+class BadDude :public Gunslinger, public PokerPlayer
+{
+public:
+	BadDude() {}
+	BadDude(const string fname, const string lname, int n, double t) : Person(fname, lname), Gunslinger(fname, lname, n, t), PokerPlayer(fname, lname) {}
+	BadDude(const Person& p, int n, double t) : Person(p), Gunslinger(p, n, t), PokerPlayer(p) {}
+	BadDude(const Gunslinger& g, int n, double t) : Person(g), Gunslinger(g, n, t), PokerPlayer(g) {}
+	BadDude(const PokerPlayer& p, int n, double t) : Person(p), Gunslinger(p, n, t), PokerPlayer(p) {}
+	~BadDude();
+	void Show() const;
+	double Gdraw();
+	int Cdraw();
+
+};
+
+Person::Person(const Person& p)
+{
+	firstname = p.firstname;
+	lastname = p.lastname;
+}
+
+Person::~Person()
+{
+}
+
+Gunslinger::Gunslinger(const Gunslinger& g) : Person(g)
+{
+	nick = g.nick;
+	time = g.time;
+}
+
+double Gunslinger::Draw() const
+{
+	return time;
+}
+
+void Gunslinger::Show() const
+{
+	cout << "Category: Gunslinger\n";
+	Person::Show();
+	cout << "Nicks: " << nick << ", Gun out time: " << time << endl;
+}
+
+Gunslinger::~Gunslinger()
+{
+}
+
+int PokerPlayer::Draw() const
+{
+	return (rand() % 52);
+}
+
+void PokerPlayer::Show() const
+{
+	cout << "Category: PokerPlayer\n";
+	Person::Show();
+}
+
+PokerPlayer::~PokerPlayer()
+{
+}
+
+void BadDude::Show() const
+{
+	cout << "Category: Bad Dude\n";
+	Gunslinger::Show();
+	cout << "Next card: " << PokerPlayer::Draw() << endl;
+}
+
+double BadDude::Gdraw()
+{
+	return Gunslinger::Draw();
+}
+
+int BadDude::Cdraw()
+{
+	return PokerPlayer::Draw();
+}
+
+BadDude::~BadDude()
+{
+}
