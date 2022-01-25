@@ -10,11 +10,13 @@
 #include"frnd2tmp.h"
 #include"tmp2tmp.h"
 #include"manyfmd.h"
+#include"chapter14_practice.h"
 using namespace std;
 
 int main()
 {
-	manyfrnd();
+	Practice01();
+	//manyfrnd();
 	//frnd2tmp();
 	//tempparm();
 	//tempmenb();
@@ -335,4 +337,3 @@ void manyfrnd()
 	cout << "hfdb,hfi2:";
 	show2(hfdb, hfi2);
 }
-
