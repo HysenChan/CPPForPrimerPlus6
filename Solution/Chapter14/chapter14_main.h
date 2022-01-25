@@ -19,3 +19,11 @@ void twod();
 void pairs();
 
 void tempmenb();
+
+void tempparm();
+
+void frnd2tmp();
+
+void tmp2tmp();
+
+void manyfrnd();

@@ -6,11 +6,18 @@
 #include"arraytp.h"
 #include"pairs.h"
 #include"tempmemb.h"
+#include"tempparm.h"
+#include"frnd2tmp.h"
+#include"tmp2tmp.h"
+#include"manyfmd.h"
 using namespace std;
 
 int main()
 {
-	tempmenb();
+	manyfrnd();
+	//frnd2tmp();
+	//tempparm();
+	//tempmenb();
 	//pairs();
 	//twod();
 	//stkoptr1();
@@ -266,3 +273,66 @@ void tempmenb()
 	cout << "U was set to double\n";
 	cout << "Done\n";
 }
+
+void tempparm()
+{
+	Crab<Stack> nebula;
+	int ni;
+	double nb;
+	cout << "Enter int double pairs,such as 4 3.5(0 0 to end):\n";
+	while (cin >> ni >> nb && ni > 0 && nb > 0)
+	{
+		if (!nebula.push(ni, nb))
+			break;
+	}
+	while (nebula.pop(ni, nb))
+		cout << ni << "," << nb << endl;
+	cout << "Done.\n";
+}
+
+void frnd2tmp()
+{
+	cout << "No objects declared:";
+	counts();
+	HasFriend<int> hfi1(10);
+	cout << "After hfi1 declared:";
+	counts();
+	HasFriend<int> hfi2(20);
+	cout << "After hfi2 declared:";
+	counts();
+	HasFriend<double> hfdb(10.5);
+	cout << "After hfdb declared:";
+	counts();
+	reports(hfi1);
+	reports(hfi2);
+	reports(hfdb);
+}
+
+void tmp2tmp()
+{
+	counts<int>();
+	HasFriendT<int> hfi1(10);
+	HasFriendT<int> hfi2(20);
+	HasFriendT<double> hfdb(10.5);
+
+	report(hfi1);
+	report(hfi2);
+	report(hfdb);
+
+	cout << "counts<int>() output:\n";
+	counts<int>();
+	cout << "counts<double() output:\n";
+	counts<double>();
+}
+
+void manyfrnd()
+{
+	ManyFriend<int> hfi1(10);
+	ManyFriend<int> hfi2(20);
+	ManyFriend<double> hfdb(10.5);
+	cout << "hfi1,hfi2:";
+	show2(hfi1, hfi2);
+	cout << "hfdb,hfi2:";
+	show2(hfdb, hfi2);
+}
+

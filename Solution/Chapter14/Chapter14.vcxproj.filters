@@ -36,6 +36,21 @@
     <ClInclude Include="tempmemb.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="tempparm.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="frnd2tmp.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="tmp2tmp.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="manyfmd.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="chapter14_review02.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="chapter14_main.cpp">
@@ -45,6 +60,9 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="Worker0.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="frnd2tmp.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

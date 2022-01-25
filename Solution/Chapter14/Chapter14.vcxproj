@@ -141,14 +141,20 @@
   <ItemGroup>
     <ClInclude Include="arraytp.h" />
     <ClInclude Include="chapter14_main.h" />
+    <ClInclude Include="chapter14_review02.h" />
+    <ClInclude Include="frnd2tmp.h" />
+    <ClInclude Include="manyfmd.h" />
     <ClInclude Include="pairs.h" />
     <ClInclude Include="stacktp.h" />
     <ClInclude Include="studentc.h" />
     <ClInclude Include="tempmemb.h" />
+    <ClInclude Include="tempparm.h" />
+    <ClInclude Include="tmp2tmp.h" />
     <ClInclude Include="Worker0.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="chapter14_main.cpp" />
+    <ClCompile Include="frnd2tmp.cpp" />
     <ClCompile Include="studentc.cpp" />
     <ClCompile Include="Worker0.cpp" />
   </ItemGroup>
