@@ -3,6 +3,7 @@
 #include <iostream>
 #include <valarray>
 #include <string>
+using namespace std;
 
 template <class T1, class T2>
 class Pair
@@ -49,11 +50,9 @@ inline Pair<T1, T2>::~Pair()
 typedef std::valarray<int> ArrayInt;
 typedef Pair<ArrayInt, ArrayInt> PairArray;
 
-class Wine
+class Wine :private std::string, private PairArray
 {
 private:
-	PairArray b;
-	std::string name;
 	int yrs;
 public:
 	Wine(const char* l, int y, const int yr[], const int bot[]);
@@ -65,23 +64,18 @@ public:
 	~Wine();
 };
 
-Wine::Wine(const char* l, int y, const int yr[], const int bot[])
+Wine::Wine(const char* l, int y, const int yr[], const int bot[]) : std::string(l), yrs(y), PairArray(ArrayInt(yr, y), ArrayInt(bot, y))
 {
-	yrs = y;
-	name = l;
-	b.set(ArrayInt(yr, yrs), ArrayInt(bot, yrs));
 }
 
-Wine::Wine(const char* l, int y)
+Wine::Wine(const char* l, int y) : std::string(l), yrs(y)
 {
-	yrs = y;
-	name = l;
 }
 
 void Wine::GetBottles()
 {
 	ArrayInt yr(yrs), bot(yrs);
-	std::cout << "Enter " << name << " data for " << yrs << " year(s):\n";
+	std::cout << "Enter " << (const std::string&)*this << " data for " << yrs << " year(s):\n";
 	for (int i = 0; i < yrs; i++)
 	{
 		std::cout << "Enter year: ";
@@ -89,24 +83,24 @@ void Wine::GetBottles()
 		std::cout << "Enter bottles for that year: ";
 		std::cin >> bot[i];
 	}
-	b.set(yr, bot);
+	PairArray::set(yr, bot);
 }
 
 std::string& Wine::Label()
 {
-	return name;
+	return (std::string&)*this;
 }
 
 int Wine::sum()
 {
-	return b.Sum();
+	return PairArray::Sum();
 }
 
 void Wine::Show()
 {
-	std::cout << "Wine: " << name << std::endl;
+	std::cout << "Wine: " << (const std::string&)*this << std::endl;
 	std::cout << "\t\tYear\tBottles\n";
-	b.Show(yrs);
+	PairArray::Show(yrs);
 }
 
 inline Wine::~Wine()
