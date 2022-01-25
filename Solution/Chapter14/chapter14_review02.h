@@ -11,7 +11,7 @@ public:
 	virtual void tell() { cout << fab; }
 };
 
-class Gloam
+class Gloam :private Frabjous
 {
 public:
 	Gloam(int g = 0, const char* s = "C++");
@@ -20,15 +20,14 @@ public:
 
 private:
 	int glip;
-	Frabjous fb;
 };
 
-Gloam::Gloam(int g, const char* s) : glip(g), fb(s) {}
+Gloam::Gloam(int g, const char* s) : glip(g), Frabjous(s) {}
 
-Gloam::Gloam(int g, const Frabjous& fr) : glip(g), fb(fr) {}
+Gloam::Gloam(int g, const Frabjous& fr) : glip(g), Frabjous(fr) {}
 
 inline void Gloam::tell()
 {
-	fb.tell();
+	Frabjous.tell();
 	cout << glip << endl;
 }
