@@ -1,7 +1,16 @@
 #include"chapter14_practice.h"
 using namespace std;
 
+void Practice02();
+void Practice03();
+
 int main()
+{
+	Practice03();
+	//Practice02();
+}
+
+void Practice02()
 {
 	cout << "Enter name of wine:";
 	char lab[50];
@@ -21,4 +30,28 @@ int main()
 	more.Show();
 	cout << "Total bottles for " << more.Label() << ":" << more.sum() << endl;
 	cout << "Bye.\n";
+}
+
+void Practice03()
+{
+	QueueTP<Worker>* Qworker = new QueueTP<Worker>(20);
+	Worker w1("Leonardo", 1024);
+	Worker w2("Elma", 2035);
+	if (Qworker->isempty())
+		cout << "Qworker is empty!\n";
+	Qworker->enqueue(w1);
+	Qworker->enqueue(w2);
+	cout << "Qworker count:" << Qworker->queuecount() << endl;
+	Worker w3("hello", 2);
+	Qworker->enqueue(w3);
+	Qworker->enqueue(w2);
+	cout << "Qworker count:" << Qworker->queuecount() << endl;
+	Worker temp;
+	Qworker->dequeue(temp);
+	cout << "Dequeue:" << endl;
+	temp.Show();
+	Qworker->dequeue(temp);
+	cout << "Dequeue:" << endl;
+	temp.Show();
+	cout << "Qworker count:" << Qworker->queuecount() << endl;
 }
