@@ -18,7 +18,6 @@ public:
 	void set_mode() { mode = (mode == Antenna) ? Cable : Antenna; }
 	void set_input() { input = (input == TV) ? DVD : TV; }
 	void settings()const;
-	~Tv();
 
 private:
 	int state;
