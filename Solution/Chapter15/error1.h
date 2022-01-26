@@ -2,6 +2,27 @@
 #include<iostream>
 #include<cstdlib>
 
+class demo
+{
+public:
+	demo(const std::string& str)
+	{
+		word = str;
+		std::cout << "demo " << word << " created\n";
+	}
+	~demo()
+	{
+		std::cout << "demo " << word << " destroyed\n";
+	}
+	void show()const
+	{
+		std::cout << "demo " << word << " lives!\n";
+	}
+
+private:
+	std::string word;
+};
+
 class bad_hmean
 {
 public:
@@ -90,27 +111,6 @@ inline bool hmean(double a, double b, double* ans)
 		return true;
 	}
 }
-
-class demo
-{
-public:
-	demo(const std::string& str)
-	{
-		word = str;
-		std::cout << "demo " << word << " created\n";
-	}
-	~demo()
-	{
-		std::cout << "demo " << word << " destroyed\n";
-	}
-	void show()const
-	{
-		std::cout << "demo " << word << " lives!\n";
-	}
-
-private:
-	std::string word;
-};
 
 double hmean(double a, double b);
 double gmean(double a, double b);
