@@ -4,7 +4,7 @@ class Tv
 {
 public:
 	friend class Remote;
-	enum state{ Off, On };
+	enum { Off, On };
 	enum { MinVal, MaxVal = 20 };
 	enum { Antenna, Cable };
 	enum { TV, DVD };
