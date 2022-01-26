@@ -18,6 +18,9 @@
     <ClInclude Include="tv.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="error1.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="chapter15_main.cpp">
