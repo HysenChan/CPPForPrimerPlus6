@@ -1,5 +1,6 @@
 #include"tv.h"
 #include"error1.h"
+#include"rtti1.h"
 #include<iostream>
 using namespace std;
 
@@ -16,6 +17,8 @@ void newexcp();
 
 void use_sales();
 
+void rtti1();
+
 struct Big
 {
 	double stuff[20000];
@@ -23,7 +26,8 @@ struct Big
 
 int main()
 {
-	use_sales();
+	rtti1();
+	//use_sales();
 	//newexcp();
 	//error5();
 	//error1();
@@ -224,5 +228,34 @@ void use_sales()
 			cout << "bad index:" << bad.bi_val() << endl;
 		}
 		cout << "done\n";
+	}
+}
+
+Grand* GetOne()
+{
+	Grand* p{};
+	switch (std::rand() % 3)
+	{
+	case 0:p = new Grand(std::rand() % 100);
+		break;
+	case 1:p = new Superb(std::rand() % 100);
+		break;
+	case 2:p = new Magnificent(std::rand() % 100, 'A' + std::rand() % 26);
+		break;
+	}
+	return p;
+}
+
+void rtti1()
+{
+	std::srand(std::time(0));
+	Grand* pg;
+	Superb* ps;
+	for (int i = 0; i < 5; i++)
+	{
+		pg = GetOne();
+		pg->Speak();
+		if (ps = dynamic_cast<Superb*>(pg))
+			ps->Say();
 	}
 }

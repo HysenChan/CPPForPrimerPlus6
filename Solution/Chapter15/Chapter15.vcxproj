@@ -140,6 +140,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="error1.h" />
+    <ClInclude Include="rtti1.h" />
     <ClInclude Include="tv.h" />
   </ItemGroup>
   <ItemGroup>
