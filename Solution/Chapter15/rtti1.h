@@ -1,6 +1,7 @@
 #pragma once
 #include<iostream>
 #include<ctime>
+#include<typeinfo>
 
 using namespace std;
 
