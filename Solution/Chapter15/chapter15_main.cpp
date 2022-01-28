@@ -19,6 +19,9 @@ void use_sales();
 
 void rtti1();
 
+void change(const int* pt, int n);
+void constcast();
+
 struct Big
 {
 	double stuff[20000];
@@ -26,7 +29,8 @@ struct Big
 
 int main()
 {
-	rtti1();
+	constcast();
+	//rtti1();
 	//use_sales();
 	//newexcp();
 	//error5();
@@ -261,4 +265,22 @@ void rtti1()
 		if (typeid(Magnificent) == typeid(*pg))
 			cout << "Yes, you're really magnificent.\n";
 	}
+}
+
+void change(const int* pt, int n)
+{
+	int* pc;
+	pc = const_cast<int*>(pt);
+	*pc += n;
+}
+
+void constcast()
+{
+	int pop1 = 38383;
+	const int pop2 = 2000;
+
+	cout << "pop1,pop2:" << pop1 << "," << pop2 << endl;
+	change(&pop1, -103);
+	change(&pop2, -103);
+	cout << "pop1,pop2:" << pop1 << "," << pop2 << endl;
 }
